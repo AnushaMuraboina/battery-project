@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- font awesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- slider  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+    <!-- product slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid vehicle-batter-fluid main-navbar-okka">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <nav aria-label="breadcrumb mt-3 ">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item number-breadcrup-text"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item number-breadcrup-text"><a href="#">Vehicle Batteries</a></li>
+                        <li class="breadcrumb-item number-breadcrup-text" aria-current="page"><a href="#">Car and
+                                Truck</a></li>
+                    </ol>
+                </nav>
+                <div class="collapse navbar-collapse battery-navbar-collapse  d-flex justify-content-end " id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 ">
+                        <li class="nav-item d-flex align-items-center search-container">
+                            <input class="form-control" type="search" placeholder="Enter search here"
+                                aria-label="Search">
+                            <i class="fa-solid fa-search search-icon"></i>
+                        </li>
+                        <li class="nav-item d-flex align-items-center ps-5  vehicle-nav-text">
+                            <a class="nav-link ms-2  " href="#"> <i class="fa-solid fa-location-dot"></i>
+                                &nbsp;Locations</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center vehicle-nav-text ps-3">
+                            <a class="nav-link ms-2 " href="#"> <i class="fa-regular fa-user"></i> &nbsp;Signin </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center cart-icon-container ps-3 ">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-cart-shopping text-dark fa-lg"></i>
+                                <span class="badge ">3</span>
+                            </a>
+                            <!-- <a class="nav-link ms-2 " href="#">  &nbsp;Signin </a> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="container-fluid vehicle-batter-fluid navbar-dropdown-full ">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <nav aria-label="breadcrumb mt-3 ">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item number-breadcrup-text"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item number-breadcrup-text"><a href="#">Vehicle Batteries</a></li>
+                        <li class="breadcrumb-item number-breadcrup-text" aria-current="page"><a href="#">Car and
+                                Truck</a></li>
+                    </ol>
+                </nav>
+                <div class="collapse navbar-collapse battery-navbar-collapse  d-flex w-100" id="navbarSupportedContent">
+                    <ul class="navbar-nav battery-navbar-nav mb-2">
+                        <li class="nav-item d-flex align-items-center search-container w-100 mt-3">
+                            <input class="form-control" type="search" placeholder="Enter search here"
+                                aria-label="Search">
+                            <i class="fa-solid fa-search search-icon"></i>
+                        </li>
+                        <ul class="d-flex justify-content-between my-3" style="padding-left: 0px;">
+                        <!-- <ul class="d-flex justify-content-between my-3"> -->
+                        <li class="nav-item d-flex align-items-center   vehicle-nav-text">
+                            <a class="nav-link  " href="#"> <i class="fa-solid fa-location-dot"></i>
+                                &nbsp;Locations</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center vehicle-nav-text ">
+                            <a class="nav-link  " href="#"> <i class="fa-regular fa-user"></i> &nbsp;Signin </a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center cart-icon-container ">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-cart-shopping text-dark fa-lg"></i>
+                                <span class="badge ">3</span>
+                            </a>
+                       
+                        </ul>
+                    <!-- </ul> -->
+                </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+
+
+    <!-- <h1>VEHICLE BATTERIES</h1> -->
+
+
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <h5 class="vehicle-batetry-header py-3">Vehicle Batteries for Car and Truck</h5>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row vehicle-battery-row">
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <button class="btn  vehicle-models-design  d-flex align-items-center  w-100" type="button">
+                        <img src="../images/vehicle-1.png" alt="" class="pe-3">
+                        <!-- <p>Make</p> -->
+                        <h6 class="batteries-sec-text pt-2">Make</h6>
+                    </button>
+                    <button type="button" class="w-1 btn btn-dark  dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        ...
+                    </ul>
+                </div>
+            </div>
+
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <button class="btn vehicle-models-design  d-flex align-items-center w-100" type="button">
+                        <img src="../images/vehicle-2.png" alt="" class="pe-3">
+                        <h6 class="batteries-sec-text pt-2">Make</h6>
+                    </button>
+                    <button type="button" class=" w-1 btn  btn-dark  dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        ...
+                    </ul>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <button class="btn vehicle-models-design  d-flex  align-items-center w-100" type="button">
+                        <img src="../images/vehicle-3.png" alt="" class="pe-3">
+                        <h6 class="batteries-sec-text pt-2">Make</h6>
+                    </button>
+                    <button type="button" class="btn w-1 btn-dark  dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        ...
+                    </ul>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <button class="btn vehicle-models-design  d-flex align-items-center w-100" type="button">
+                        <img src="../images/vehicle-4.png" alt="" class="pe-3">
+                        <h6 class="batteries-sec-text pt-2">Make</h6>
+                    </button>
+                    <button type="button" class="btn w-1  btn-dark  dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        ...
+                    </ul>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <button class="btn vehicle-models-design d-flex  align-items-center w-100" type="button">
+                        <img src="../images/vehicle-5.png" alt="" class="pe-3">
+                        <h6 class="batteries-sec-text pt-2">Make</h6>
+                    </button>
+                    <button type="button" class="btn w-1  btn-dark dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container ">
+        <h5 class=" pt-4 Featured-Make">Featured Make</h5>
+        <div class="row featured-battery-row py-2">
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="container pt-3  pb-4  pt-2 ">
+        <!-- <h5 class="bat-services-header">What Our Customer Says</h5> -->
+        <div class="row ">
+            <div class="my-slider-3 d-flex justify-content-between ">
+                <div class="col-md-3  review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+                <div class="col-md-3  review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+
+                <div class="col-md-3  review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+                <div class="col-md-3  review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+                <div class="col-md-3 review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+                <div class="col-md-3  review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.my-slider-3').slick({
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                arrows: true,
+                dots: false,
+                speed: 300,
+                infinite: true,
+                autoplaySpeed: 5000,
+                autoplay: true,
+                responsive: [
+                    {
+                        breakpoint: 1100,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+</body>
+
+</html>
