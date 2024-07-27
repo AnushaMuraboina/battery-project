@@ -585,8 +585,21 @@ a {
   line-height: 30px;
   text-align: justify;
 }
-
-
+.footer-main-section{
+  border-bottom: 1px solid white;
+  background-color: rgb(25,25,50) ;
+  color:white ;
+}
+.footer-copyrights{
+  background-color: rgb(25,25,50) ;
+  color:white ;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.battery-conditions1{
+  border-right: 1px solid white;
+}
 // slike carousel
 // .slick-prev {
 //   left: 37px;
