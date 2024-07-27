@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing and Shipping Address</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../dist/css/style.css">
+
+</head>
+
+<body>
+<div class="container mt-3">
+    <div class="row">
+        <h4 class="Billing-Address">Check out</h4>
+        <div class=" checkout-customer">
+            <p >Returning Customer? <a href="#" > Click here to Login</a></p>
+        </div>
+        <div class=" checkout-customer">
+            <p >Have a Coupon? <a href="#" > Click here to enter your code</a></p>
+        </div>
+    </div>
+</div>
+
+    <div class="container my-3 checkoutpage-container">
+        <div class="row">
+            <!-- Billing Address -->
+            <div class="col-md-6">
+                <div class="address-section">
+                    <h4 class="Billing-Address">Billing Address</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="billingfirstName" class="form-label checkout-form-lable">FIrst Name</label>
+                            <input type="text" class="form-control checkout-form-input" id="billingfirstName" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="billinglastName" class="form-label checkout-form-lable">Last Name</label>
+                            <input type="text" class="form-control checkout-form-input" id="billinglastName" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="billingcompanyname" class="form-label checkout-form-lable">Company Name(Optional)</label>
+                            <input type="text" class="form-control checkout-form-input" id="billingcompanyname" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="billingstreetAddress" class="form-label checkout-form-lable">Street Address</label>
+                            <input type="text" class="form-control checkout-form-input mb-4" id="billingstreetAddress" >
+                            <input type="text" class="form-control checkout-form-input" id="billingstreetAddress">
+                        </div>
+                        <div class="mb-3">
+                            <label for="billingCity" class="form-label checkout-form-lable">Town\City</label>
+                            <input type="text" class="form-control checkout-form-input" id="billingCity" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="billingState" class="form-label checkout-form-lable">State*</label>
+                            <input type="text" class="form-control checkout-form-input " id="billingState" >
+                            
+                        </div>
+                        <div class="mb-3">
+                            <label for="billingZip" class="form-label checkout-form-lable">Zip Code</label>
+                            <input type="text" class="form-control checkout-form-input" id="billingZip" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="billingCountry" class="form-label checkout-form-lable">Country/Religion</label>
+                            <input type="text" class="form-control checkout-form-input" id="billingCountry" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="billingphonenumber" class="form-label checkout-form-lable">Phone Number</label>
+                            <input type="text" class="form-control checkout-form-input" id="billinglastName" >
+                        </div>
+                        <div class="mb-3">
+                            <label for="billinglastName" class="form-label checkout-form-lable">Email address</label>
+                            <input type="text" class="form-control checkout-form-input" id="billinglastName" >
+                        </div>
+                        <div class="form-check d-flex align-items-center ">
+                            <input class="form-check-input checkout-form-input" type="checkbox" value="" id="flex-create-account">
+                            <label class="form-check-label ps-3 checkout-form-lable" for="flex-create-account">
+                              Create An Account
+                            </label>
+                          </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="col-md-6 pt-5">
+                <div class="address-section">
+                    <form>
+                        <div class="form-check d-flex align-items-center pb-3">
+                            <input class="form-check-input checkout-form-input" type="checkbox" value="" id="flex-create-account">
+                            <label class="form-check-label ps-2  Billing-Address" for="flex-create-account">
+                             Shipping Address
+                            </label>
+                          </div>
+                        <div class="mb-3">
+                            <label for="shippingName" class="form-label checkout-form-lable">ORDER NOTES(OPTIONAL)</label>
+                            <input type="text" class="form-control  checkout-form-input" id="shippingName"  placeholder="Note about Your Order, eg:Special notes for delivary" >
+                            <!-- <textarea name="address" id="shippingName" rows="3" cols="50" placeholder="Note about Your Order, eg:Special notes for delivary"></textarea> -->
+                        </div>
+
+                        <div class="mb-3 p-3 your-orders-section">
+                            <div class="your-order-sec1">
+                                <h2 class="checkoutpage-head-text">YOUR ORDER</h2>
+                            </div>
+                            <div class="d-flex your-order-sec1 pb-4 justify-content-between  align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="../images/60-ah-low-maintenance-exide-car-battery-12v-with-48-months-warranty-730 1.png"
+                                        alt="">
+                                    <p class="checkoutpage-head-text ps-3">Car Battery</p>
+                                </div>
+                                <p class="checkoutpage-head-text">$100.00</p>
+                            </div>
+                            <div class="sub-total-amount your-order-sec1">
+                                <div class="d-flex justify-content-between">
+                                    <p class="checkoutpage-head-text">Subtotal</p>
+                                    <p class="checkoutpage-head-text">$100.00</p>
+                                </div>
+                                <p class="shipping-add-text" >Shipping</p>
+                                <p class="shipping-add-text">Free Shipping</p>
+                            </div>
+                            <div class="battery-total-amount d-flex justify-content-between">
+                                <p class="checkoutpage-head-text">Total</p>
+                                <p class="checkoutpage-head-text">$100.00</p>
+                            </div>
+                            <div class="place-order-buttons">
+                                <a href="#" class="place-order-button ">Place Order</a>
+                                <!-- <button class="btn " type="button">Button</button> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

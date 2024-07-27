@@ -146,7 +146,8 @@ a {
   line-height: 55px;
 }
 
-.banner-image-text3 {
+.banner-image-text3,
+.banner-image-text4 {
   font-size: 17px;
   font-weight: 400;
   color: white;
@@ -182,6 +183,11 @@ a {
   font-size: 14px;
   font-weight: 400;
   line-height: 35px;
+}
+
+.delivary-text-header {
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .bat-services-header {
@@ -257,7 +263,7 @@ a {
 }
 .service-footer-card .service-addtocart-text {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Slider */
@@ -464,7 +470,7 @@ a {
 
 .footer-sub-head {
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .review-says-card {
@@ -650,13 +656,7 @@ a {
     top: 10%;
   }
   .banner-image-text4 {
-    color: #FF4500;
-  }
-  .banner-image-text5 {
-    color: white;
-  }
-  .banner-image-text6 {
-    color: white;
+    display: none;
   }
   .banner-image-button {
     font-size: 14px;
@@ -861,7 +861,7 @@ i {
 }
 
 .number-breadcrup-text a {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: rgb(95, 91, 91);
   text-decoration: none;
@@ -944,8 +944,8 @@ i {
 }
 
 .bosch-text {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 .para-text-vehicle {
@@ -1088,7 +1088,7 @@ i {
   font-weight: bold;
 }
 
-.strike-amount {
+.strike-amount-display {
   font-size: 20px;
   font-weight: 500;
   color: grey;
@@ -1107,4 +1107,273 @@ i {
     display: flex;
     flex-direction: column;
   }
+}
+.batteries-selection-product {
+  padding: 20px 15px;
+}
+.batteries-selection-product .product-batery-text {
+  font-size: 25px;
+  font-weight: 700;
+}
+.batteries-selection-product .product-battery-card {
+  padding: 20px 10px;
+  box-shadow: 3px 4px 3px 2px rgb(204, 202, 202);
+  border: 1px solid rgb(236, 235, 235);
+  border-radius: 5px;
+}
+
+.cartpage-container {
+  box-shadow: 0px 0px 6px 0px grey;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+.cartpage-container .cartpage-counting-input {
+  max-width: 50px;
+  max-height: 40px;
+  background-color: #FF4500;
+  color: white;
+}
+.cartpage-container .cartpage_minuicon-input,
+.cartpage-container .cartpage_plusicon-input,
+.cartpage-container .cartpage-counting-input {
+  font-size: 24px;
+  font-weight: 500;
+}
+.cartpage-container .delivary-installation {
+  border: 1px solid #FF4500;
+  border-radius: 10px;
+}
+.cartpage-container .delivary-vehicles {
+  text-align: right;
+}
+
+.battery-list-amount {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.checkout-button-main {
+  text-align: end;
+}
+.checkout-button-main .checkout-button-changes {
+  background-color: #FF4500;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.continue-arrow {
+  font-size: 30px;
+  color: black;
+}
+
+@media (max-width: 1000px) {
+  .bosch-text {
+    font-size: 20px;
+  }
+  .battery-list-amount {
+    text-align: left;
+  }
+  .checkout-button-main {
+    text-align: start;
+  }
+  .delivary-vehicles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+}
+.aboutus-page-header {
+  font-size: 32px;
+  font-weight: 500;
+  color: #FF4500;
+}
+
+.availability-products {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.aboutus-page-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.buy-products {
+  padding-top: 10px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.about-battery-banner {
+  position: relative;
+}
+
+.aboutbanner-image-text {
+  position: absolute;
+  top: 20%;
+  right: 0px;
+  max-width: 50%;
+}
+
+@media (max-width: 1000px) {
+  .aboutbanner-image-text {
+    position: absolute;
+    top: 10px;
+    max-width: 100%;
+    left: 10px;
+  }
+  .banner-image-text1 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #FF4500;
+    line-height: 20px;
+  }
+  .banner-image-text2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    line-height: 20px;
+  }
+  .banner-image-text3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: white;
+  }
+  .aboutus-section {
+    padding-left: 5px !important;
+  }
+}
+.checkout-customer p {
+  border: 1px solid rgb(170, 164, 164);
+  padding: 10px 20px;
+  font-size: 18px;
+  display: inline-block;
+  font-weight: 400;
+  border-radius: 5px;
+  background-color: rgb(241, 241, 241);
+}
+.checkout-customer p a {
+  color: #FF4500;
+  padding-left: 5px;
+}
+
+.Billing-Address {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.checkoutpage-container .place-order-buttons {
+  text-align: center;
+  background-color: #FF4500;
+  padding: 15px 0px;
+}
+.checkoutpage-container .place-order-buttons .place-order-button {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+.checkoutpage-container .checkout-form-lable {
+  font-size: 18px;
+  font-weight: 400;
+}
+.checkoutpage-container .checkout-form-input {
+  border: 1px solid rgb(204, 201, 201);
+  border-radius: 5px;
+  background-color: rgb(241, 241, 241);
+  padding: 12px;
+}
+.checkoutpage-container .checkoutpage-head-text {
+  font-size: 25px;
+  font-weight: 500;
+}
+.checkoutpage-container .shipping-add-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: grey;
+  line-height: 20px;
+}
+.checkoutpage-container .your-orders-section {
+  border: 1px solid rgb(201, 194, 194);
+  background-color: rgb(241, 241, 241);
+  border-radius: 3px;
+}
+.checkoutpage-container .your-order-sec1 {
+  border-bottom: 1px solid rgb(226, 223, 223);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1000px) {
+  .checkoutpage-container .checkout-form-lable {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .checkoutpage-container .checkoutpage-head-text {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.select-product-header {
+  font-size: 32px;
+  font-weight: 500;
+  color: #FF4500;
+}
+
+@media (max-width: 1000px) {
+  .select-product-header {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+.contact-submit-buttons {
+  text-align: center;
+  background-color: #FF4500;
+  padding: 15px 0px;
+}
+.contact-submit-buttons .contact-sub-button {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.contact-address-info {
+  line-height: 15px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contact-quick-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.contact-form-input {
+  border: 2px solid rgb(214, 210, 210);
+  padding: 15px;
+}
+.contact-form-input::placeholder {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(168, 163, 163);
+}
+
+.contact-headings {
+  font-size: 25px;
+  font-weight: 500;
+}
+.contact-headings a {
+  color: black;
+}
+
+.main-headings {
+  font-size: 32px;
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */

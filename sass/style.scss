@@ -135,7 +135,7 @@ a {
 
 @media (max-width: 1200px) {
   .cards-dispaly-services {
-    @include flex-columns ;
+    @include flex-columns;
   }
 
   .navbar-menus-sec {
@@ -197,7 +197,8 @@ a {
   line-height: 55px;
 }
 
-.banner-image-text3 {
+.banner-image-text3,
+.banner-image-text4 {
   font-size: 17px;
   font-weight: 400;
   color: white;
@@ -243,6 +244,11 @@ a {
     @include ft-size-md-sm;
     line-height: 35px;
   }
+}
+
+.delivary-text-header {
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .bat-services-header {
@@ -323,8 +329,7 @@ a {
   border-radius: 10px;
 
   .service-addtocart-text {
-    font-size: 20px;
-    font-weight: 600;
+    @include ft-size-20;
   }
 
 }
@@ -552,8 +557,7 @@ a {
 }
 
 .footer-sub-head {
-  font-size: 20px;
-  font-weight: 800;
+  @include ft-size-20;
 }
 
 //   reviews section
@@ -585,21 +589,25 @@ a {
   line-height: 30px;
   text-align: justify;
 }
-.footer-main-section{
+
+.footer-main-section {
   border-bottom: 1px solid white;
-  background-color: rgb(25,25,50) ;
-  color:white ;
+  background-color: rgb(25, 25, 50);
+  color: white;
 }
-.footer-copyrights{
-  background-color: rgb(25,25,50) ;
-  color:white ;
+
+.footer-copyrights {
+  background-color: rgb(25, 25, 50);
+  color: white;
   padding-top: 10px;
   font-size: 16px;
   font-weight: 400;
 }
-.battery-conditions1{
+
+.battery-conditions1 {
   border-right: 1px solid white;
 }
+
 // slike carousel
 // .slick-prev {
 //   left: 37px;
@@ -764,25 +772,10 @@ a {
   }
 
   .banner-image-text4 {
-    // font-size: 20px;
-    // font-weight: 500;
-    color: $bg-medium-orange;
-    // line-height: 55px;
+    display: none;
   }
 
-  .banner-image-text5 {
-    // font-size: 20px;
-    // font-weight: 500;
-    color: $bg-white;
-    // line-height: 55px;
-  }
 
-  .banner-image-text6 {
-    // font-size: 16px;
-    // font-weight: 400;
-    color: $bg-white;
-    // line-height: 30px;
-  }
 
   .banner-image-button {
     font-size: 14px;
@@ -843,7 +836,7 @@ a {
   }
 
   .service-section-row {
-    @include flex-columns ;
+    @include flex-columns;
   }
 
   .registration-form-container {
@@ -1005,7 +998,7 @@ i {
 }
 
 .number-breadcrup-text a {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   color: rgb(95, 91, 91);
   text-decoration: none;
@@ -1058,16 +1051,18 @@ i {
 
 
 @media (max-width: 1200px) {
-  
+
   .vehicle-battery-row,
   .featured-battery-row {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .number-breadcrup-text a {
     font-size: 14px;
   }
+
   // .battery-navbar-collapse {
-  
+
   // }
   .battery-navbar-nav {
     width: 100%;
@@ -1103,8 +1098,8 @@ i {
 }
 
 .bosch-text {
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 .para-text-vehicle {
@@ -1245,7 +1240,7 @@ i {
   font-weight: bold;
 }
 
-.strike-amount {
+.strike-amount-display {
   @include ft-size-20;
   color: grey;
   padding-left: 20px;
@@ -1256,16 +1251,351 @@ i {
   .regular-text-vehicle {
     text-align: justify;
   }
-  .reset-field-legend{
+
+  .reset-field-legend {
     font-size: 16px
   }
 
   .addtocart-section-vehicle {
-@include flex-columns ;
+    @include flex-columns;
   }
 
   // .vehicle-bat-section {
   //   @include flex-columns ;
   //   padding: 0px !important;
   // }
+}
+
+
+
+
+// product list
+.batteries-selection-product {
+  padding: 20px 15px;
+
+  .product-batery-text {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  .product-battery-card {
+    padding: 20px 10px;
+    box-shadow: 3px 4px 3px 2px rgb(204, 202, 202);
+    border: 1px solid rgb(236, 235, 235);
+    border-radius: 5px;
+  }
+}
+
+
+// cart page
+.cartpage-container {
+  // border: 1px solid grey;
+  box-shadow: 0px 0px 6px 0px grey;
+  border-radius: 10px;
+  padding: 10px 30px;
+
+  // .battery-list-amount {
+  //   font-size: 25px;
+  //   font-weight: 700;
+  // }
+
+  .cartpage-counting-input {
+    max-width: 50px;
+    max-height: 40px;
+    background-color: $bg-medium-orange ;
+    color: white;
+  }
+
+  .cartpage_minuicon-input,
+  .cartpage_plusicon-input,
+  .cartpage-counting-input {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .delivary-installation {
+    border: 1px solid $bg-medium-orange ;
+    border-radius: 10px;
+  }
+
+  .delivary-vehicles {
+    text-align: right;
+  }
+}
+
+.battery-list-amount {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.checkout-button-main {
+  text-align: end;
+
+  .checkout-button-changes {
+    background-color: $bg-medium-orange;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.continue-arrow {
+  font-size: 30px;
+  color: black;
+}
+
+@media (max-width: 1000px) {
+  .bosch-text {
+    font-size: 20px;
+  }
+
+  .battery-list-amount {
+    text-align: left;
+  }
+
+  .checkout-button-main {
+    text-align: start;
+  }
+
+  .delivary-vehicles {
+    @include justify-space-between;
+    margin: 0 auto;
+
+  }
+}
+
+//about us
+.aboutus-page-header {
+  font-size: 32px;
+  font-weight: 500;
+  color: $bg-medium-orange;
+}
+
+.availability-products {
+  @include ft-size-20;
+}
+
+.aboutus-page-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.buy-products {
+  padding-top: 10px;
+  @include ft-size-25;
+}
+
+
+.about-battery-banner {
+  position: relative;
+}
+
+.aboutbanner-image-text {
+  position: absolute;
+  top: 20%;
+  right: 0px;
+  max-width: 50%;
+  // left: 15%;
+}
+
+@media (max-width: 1000px) {
+  .aboutbanner-image-text {
+    position: absolute;
+    top: 10px;
+    max-width: 100%;
+    left: 10px;
+  }
+
+  .banner-image-text1 {
+    font-size: 14px;
+    font-weight: 500;
+    color: $bg-medium-orange;
+    line-height: 20px;
+    // line-height: 55px;
+  }
+
+  .banner-image-text2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: $bg-white;
+    line-height: 20px;
+    // line-height: 55px;
+  }
+
+  .banner-image-text3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $bg-white;
+    // line-height: 30px;
+  }
+
+  .aboutus-section {
+    padding-left: 5px !important;
+  }
+
+}
+
+// checkout page
+.checkout-customer p {
+  border: 1px solid rgb(170, 164, 164);
+  padding: 10px 20px;
+  font-size: 18px;
+  display: inline-block;
+  font-weight: 400;
+  border-radius: 5px;
+  background-color: rgb(241, 241, 241);
+
+  a {
+    color: $bg-medium-orange;
+    padding-left: 5px;
+  }
+}
+
+.Billing-Address {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.checkoutpage-container {
+  .place-order-buttons {
+    text-align: center;
+    background-color: $bg-medium-orange;
+    padding: 15px 0px;
+
+    .place-order-button {
+      font-size: 18px;
+      font-weight: 500;
+      color: white;
+    }
+  }
+
+  .checkout-form-lable {
+    // @include ft-sie-bat-500;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .checkout-form-input {
+    border: 1px solid rgb(204, 201, 201);
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
+    padding: 12px;
+  }
+
+  .checkoutpage-head-text {
+    @include ft-size-25;
+  }
+
+  .shipping-add-text {
+    @include ft-sie-bat-500;
+    color: grey;
+    line-height: 20px;
+  }
+
+  .your-orders-section {
+    border: 1px solid rgb(201, 194, 194);
+    background-color: rgb(241, 241, 241);
+    border-radius: 3px;
+    // padding: 0px 3px;
+  }
+
+  .your-order-sec1 {
+    border-bottom: 1px solid rgb(226, 223, 223);
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .checkoutpage-container {
+    .checkout-form-lable {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .checkoutpage-head-text {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+}
+
+// selct product
+.select-product-header {
+  font-size: 32px;
+  font-weight: 500;
+  color: $bg-medium-orange;
+}
+
+@media (max-width: 1000px) {
+  .select-product-header {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+}
+
+
+
+
+// contact form
+
+.contact-submit-buttons {
+  text-align: center;
+  background-color: $bg-medium-orange;
+  padding: 15px 0px;
+
+  .contact-sub-button {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+  }
+}
+
+.contact-address-info {
+  line-height: 15px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contact-quick-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.contact-form-input {
+  border: 2px solid rgb(214, 210, 210);
+  padding: 15px;
+  &::placeholder{
+    font-size: 18px;
+    font-weight: 500;
+    color:rgb(168, 163, 163);
+  }
+}
+
+.contact-headings{
+  font-size: 25px;
+  font-weight: 500;
+  a{
+    color: black;
+  }
+}
+
+
+
+
+
+
+// main headings
+.main-headings {
+  font-size: 32px;
+  font-weight: 500;
+
 }
