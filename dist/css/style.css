@@ -130,6 +130,7 @@ a {
 .banner-image-text {
   position: absolute;
   top: 25%;
+  max-width: 50%;
 }
 
 .banner-image-text1 {
@@ -216,7 +217,7 @@ a {
   color: white;
 }
 .service-addtocart-icon:hover {
-  color: black;
+  color: white;
 }
 
 .service-card-main {
@@ -224,8 +225,8 @@ a {
 }
 
 .service-image-main {
-  box-shadow: 2px 3px 4px 5px 3px rgb(14, 13, 13) !important;
   border: 1px solid rgb(230, 221, 221);
+  box-shadow: 0 0PX 3PX 0PX grey;
   margin-bottom: 10px;
 }
 
@@ -264,6 +265,7 @@ a {
 .service-footer-card .service-addtocart-text {
   font-size: 20px;
   font-weight: 500;
+  color: white !important;
 }
 
 /* Slider */
@@ -650,10 +652,6 @@ a {
     width: 100% !important;
     height: auto;
     padding: 0;
-  }
-  .banner-image-text {
-    position: absolute;
-    top: 10%;
   }
   .banner-image-text4 {
     display: none;
@@ -1221,10 +1219,16 @@ i {
   max-width: 50%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
   .aboutbanner-image-text {
     position: absolute;
     top: 10px;
+    max-width: 100%;
+    left: 10px;
+  }
+  .banner-image-text {
+    position: absolute;
+    top: 10%;
     max-width: 100%;
     left: 10px;
   }
@@ -1376,4 +1380,84 @@ i {
 .main-headings {
   font-size: 32px;
   font-weight: 500;
+}
+
+.signupform-container {
+  background-color: rgb(255, 222, 211);
+}
+.signupform-container .signup-form-button,
+.signupform-container .signin-form-login {
+  background-color: #FF4500;
+  color: white !important;
+  padding: 10px 0px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+.signupform-container .signup-form-button .signup-button-changes,
+.signupform-container .signup-form-button .signin-button-login,
+.signupform-container .signin-form-login .signup-button-changes,
+.signupform-container .signin-form-login .signin-button-login {
+  color: white;
+}
+.signupform-container .vehi-signup-form {
+  padding: 0px 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+.signupform-container .vehi-signup-form .signup-foem-head {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #FF4500;
+}
+.signupform-container .vehi-signup-form .signupform-input {
+  border: 1px solid rgb(218, 213, 213);
+  padding: 10px;
+  box-shadow: 0px 2px 3px 0px grey;
+}
+.signupform-container .vehi-signup-form .signin-account {
+  padding-top: 20px;
+  text-align: end;
+  color: grey;
+  font-size: 14px;
+  font-weight: 400;
+}
+.signupform-container .vehi-signup-form .signin-account a {
+  color: grey;
+}
+.signupform-container .vehi-signup-form .signin-account a:hover {
+  color: #FF4500;
+}
+
+.input-icon-container {
+  position: relative;
+}
+.input-icon-container i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: grey;
+  font-size: 18px;
+}
+.input-icon-container input {
+  padding-left: 50px;
+  border: 1px solid rgb(218, 213, 213);
+  box-shadow: 0px 2px 3px 0px grey;
+}
+
+@media (max-width: 1000px) {
+  .signupform-rows {
+    display: flex;
+    flex-direction: column;
+  }
+  .vehi-signup-form {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .signupform-image {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
