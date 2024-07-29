@@ -228,6 +228,7 @@ a {
   border: 1px solid rgb(230, 221, 221);
   box-shadow: 0 0PX 3PX 0PX grey;
   margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .service-body-main {
@@ -242,12 +243,12 @@ a {
 }
 .service-body-main .service-card-text {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 30px;
-  color: black;
+  color: rgb(65, 59, 59);
 }
 .service-body-main .bat-service-amount {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
   padding-right: 10px;
 }
@@ -807,6 +808,7 @@ i {
   font-size: 16px;
   font-weight: 400;
   color: black !important;
+  list-style-type: none;
 }
 
 .vehicle-nav-text a {
@@ -830,6 +832,7 @@ i {
   position: relative;
   font-size: 16px;
   font-weight: 400;
+  list-style-type: none;
 }
 
 .cart-icon-container .badge {
@@ -908,6 +911,29 @@ i {
 
 .batteries-selection {
   margin: 10px 0;
+}
+
+.icon-container-search {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+  width: 40px;
+  /* border-radius: 50%; */
+  justify-content: center;
+  margin-left: auto;
+}
+.icon-container-search i {
+  color: white;
+  font-size: 16px;
+}
+
+.vehicle-dropdown-menu, .dropdown-menu {
+  width: 225px;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  margin: 0px -3px;
+  transform: translate(1374px, 198px);
 }
 
 @media (max-width: 1200px) {

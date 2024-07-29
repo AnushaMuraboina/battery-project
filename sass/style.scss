@@ -294,6 +294,7 @@ a {
   border: 1px solid rgb(230, 221, 221);
   box-shadow: 0 0PX 3PX 0PX grey;
   margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .service-body-main {
@@ -308,13 +309,13 @@ a {
   }
 
   .service-card-text {
-    @include ft-size-md;
+    @include ft-sie-bat-500;
     line-height: 30px;
-    color: black;
+    color: rgb(65, 59, 59);
   }
 
   .bat-service-amount {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     padding-right: 10px;
   }
@@ -950,11 +951,13 @@ i {
 .vehicle-nav-text {
   @include ft-size-16;
   color: black !important;
+  list-style-type: none;
 }
 
 .vehicle-nav-text a {
   color: rgb(27, 27, 27);
   text-decoration: none;
+
 }
 
 .vehicle-nav-text a:hover {
@@ -972,6 +975,7 @@ i {
 .cart-icon-container {
   position: relative;
   @include ft-size-16;
+  list-style-type: none;
 }
 
 .cart-icon-container .badge {
@@ -1053,6 +1057,28 @@ i {
 
 
 
+.icon-container-search {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+  width: 40px;
+  /* border-radius: 50%; */
+  justify-content: center;
+  margin-left: auto;
+  i{
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.vehicle-dropdown-menu,.dropdown-menu{
+    width: 225px ;
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0px -3px;
+    transform: translate(1374px, 198px);
+}
 @media (max-width: 1200px) {
 
   .vehicle-battery-row,

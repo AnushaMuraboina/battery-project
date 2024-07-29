@@ -44,18 +44,19 @@
                                 Truck</a></li>
                     </ol>
                 </nav>
-                <div class="collapse navbar-collapse battery-navbar-collapse  d-flex justify-content-end " id="navbarSupportedContent">
+                <div class="collapse navbar-collapse battery-navbar-collapse  d-flex justify-content-end align-content-center"
+                    id="navbarSupportedContent">
                     <ul class="navbar-nav  mb-2 ">
-                        <li class="nav-item d-flex align-items-center search-container">
+                        <li class="nav-item  align-items-center search-container">
                             <input class="form-control" type="search" placeholder="Enter search here"
                                 aria-label="Search">
                             <i class="fa-solid fa-search search-icon"></i>
                         </li>
-                        <li class="nav-item d-flex align-items-center ps-5  vehicle-nav-text">
+                        <li class="nav-item  align-items-center ps-5  vehicle-nav-text">
                             <a class="nav-link ms-2  " href="#"> <i class="fa-solid fa-location-dot"></i>
                                 &nbsp;Locations</a>
                         </li>
-                        <li class="nav-item d-flex align-items-center vehicle-nav-text ps-3">
+                        <li class="nav-item align-items-center vehicle-nav-text ps-3">
                             <a class="nav-link ms-2 " href="#"> <i class="fa-regular fa-user"></i> &nbsp;Signin </a>
                         </li>
                         <li class="nav-item d-flex align-items-center cart-icon-container ps-3 ">
@@ -91,23 +92,23 @@
                             <i class="fa-solid fa-search search-icon"></i>
                         </li>
                         <ul class="d-flex justify-content-between my-3" style="padding-left: 0px;">
-                        <!-- <ul class="d-flex justify-content-between my-3"> -->
-                        <li class="nav-item d-flex align-items-center   vehicle-nav-text">
-                            <a class="nav-link  " href="#"> <i class="fa-solid fa-location-dot"></i>
-                                &nbsp;Locations</a>
-                        </li>
-                        <li class="nav-item d-flex align-items-center vehicle-nav-text ">
-                            <a class="nav-link  " href="#"> <i class="fa-regular fa-user"></i> &nbsp;Signin </a>
-                        </li>
-                        <li class="nav-item d-flex align-items-center cart-icon-container ">
-                            <a class="nav-link" href="#">
-                                <i class="fa-solid fa-cart-shopping text-dark fa-lg"></i>
-                                <span class="badge ">3</span>
-                            </a>
-                       
+                            <!-- <ul class="d-flex justify-content-between my-3"> -->
+                            <li class="nav-item d-flex align-items-center   vehicle-nav-text">
+                                <a class="nav-link  " href="#"> <i class="fa-solid fa-location-dot"></i>
+                                    &nbsp;Locations</a>
+                            </li>
+                            <li class="nav-item  align-items-center vehicle-nav-text ">
+                                <a class="nav-link " href="#"> <i class="fa-regular fa-user"></i> &nbsp;Signin </a>
+                            </li>
+                            <li class="nav-item  align-items-center cart-icon-container ">
+                                <a class="nav-link" href="#">
+                                    <i class="fa-solid fa-cart-shopping text-dark fa-lg"></i>
+                                    <span class="badge ">3</span>
+                                </a>
+
                         </ul>
-                    <!-- </ul> -->
-                </li>
+                        <!-- </ul> -->
+                        </li>
 
                     </ul>
                 </div>
@@ -133,42 +134,78 @@
     <div class="container">
         <div class="row vehicle-battery-row">
             <div class="batteries-selection col">
-                <div class="btn-group w-100">
-                    <button class="btn  vehicle-models-design  d-flex align-items-center  w-100" type="button">
-                        <img src="../images/vehicle-1.png" alt="" class="pe-3">
-                        <!-- <p>Make</p> -->
+                <div class=" w-100">
+                    <div class=" vehicle-models-design d-flex align-items-center w-100 "
+                        data-bs-toggle="dropdown" aria-expanded="false" >
+                        <img src="../images/vehicle-1.png" alt="" class="px-3">
                         <h6 class="batteries-sec-text pt-2">Make</h6>
-                    </button>
-                    <button type="button" class="w-1 btn btn-dark  dropdown-toggle dropdown-toggle-split"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        ...
+                        <span class="icon-container-search ms-auto">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-menu vehicle-dropdown-menu">
+
+                        <li><a class="dropdown-item" href="#">Link 1</a></li>
+                        <li><a class="dropdown-item" href="#">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        <li><a class="dropdown-item" href="#">Another link</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="batteries-selection col">
-                <div class="btn-group w-100">
-                    <button class="btn vehicle-models-design  d-flex align-items-center w-100" type="button">
-                        <img src="../images/vehicle-2.png" alt="" class="pe-3">
-                        <h6 class="batteries-sec-text pt-2">Make</h6>
-                    </button>
-                    <button type="button" class=" w-1 btn  btn-dark  dropdown-toggle dropdown-toggle-split"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        ...
+                <div class=" w-100">
+                    <div class=" vehicle-models-design d-flex align-items-center w-100 "
+                        data-bs-toggle="dropdown" aria-expanded="false" >
+                        <img src="../images/vehicle-2.png" alt="" class="px-3">
+                        <h6 class="batteries-sec-text pt-2">Modal</h6>
+                        <span class="icon-container-search ms-auto">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-menu vehicle-dropdown-menu">
+
+                        <li><a class="dropdown-item" href="#">Link 1</a></li>
+                        <li><a class="dropdown-item" href="#">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        <li><a class="dropdown-item" href="#">Another link</a></li>
                     </ul>
                 </div>
             </div>
+
             <div class="batteries-selection col">
+                <div class=" w-100">
+                    <div class=" vehicle-models-design d-flex align-items-center w-100 "
+                        data-bs-toggle="dropdown" aria-expanded="false" >
+                        <img src="../images/vehicle-3.png" alt="" class="px-3">
+                        <h6 class="batteries-sec-text pt-2">Year</h6>
+                        <span class="icon-container-search ms-auto">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-menu vehicle-dropdown-menu">
+
+                        <li><a class="dropdown-item" href="#">Link 1</a></li>
+                        <li><a class="dropdown-item" href="#">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        <li><a class="dropdown-item" href="#">Another link</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div class="batteries-selection col">
                 <div class="btn-group w-100">
                     <button class="btn vehicle-models-design  d-flex  align-items-center w-100" type="button">
                         <img src="../images/vehicle-3.png" alt="" class="pe-3">
                         <h6 class="batteries-sec-text pt-2">Make</h6>
+                        <ul class="dropdown-menu">
+                            <li><h5 class="dropdown-header">Dropdown header 1</h5></li>
+                            <li><a class="dropdown-item" href="#">Link 1</a></li>
+                            <li><a class="dropdown-item" href="#">Link 2</a></li>
+                            <li><a class="dropdown-item" href="#">Link 3</a></li>
+                            <li><h5 class="dropdown-header">Dropdown header 2</h5></li>
+                            <li><a class="dropdown-item" href="#">Another link</a></li>
+                          </ul>
                     </button>
                     <button type="button" class="btn w-1 btn-dark  dropdown-toggle dropdown-toggle-split"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -178,40 +215,47 @@
                         ...
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <div class="batteries-selection col">
-                <div class="btn-group w-100">
-                    <button class="btn vehicle-models-design  d-flex align-items-center w-100" type="button">
-                        <img src="../images/vehicle-4.png" alt="" class="pe-3">
-                        <h6 class="batteries-sec-text pt-2">Make</h6>
-                    </button>
-                    <button type="button" class="btn w-1  btn-dark  dropdown-toggle dropdown-toggle-split"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        ...
+                <div class=" w-100">
+                    <div class=" vehicle-models-design d-flex align-items-center w-100 "
+                        data-bs-toggle="dropdown" aria-expanded="false" >
+                        <img src="../images/vehicle-4.png" alt="" class="px-3">
+                        <h6 class="batteries-sec-text pt-2">Engine</h6>
+                        <span class="icon-container-search ms-auto">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-menu vehicle-dropdown-menu">
+
+                        <li><a class="dropdown-item" href="#">Link 1</a></li>
+                        <li><a class="dropdown-item" href="#">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        <li><a class="dropdown-item" href="#">Another link</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="batteries-selection col">
-                <div class="btn-group w-100">
-                    <button class="btn vehicle-models-design d-flex  align-items-center w-100" type="button">
-                        <img src="../images/vehicle-5.png" alt="" class="pe-3">
-                        <h6 class="batteries-sec-text pt-2">Make</h6>
-                    </button>
-                    <button type="button" class="btn w-1  btn-dark dropdown-toggle dropdown-toggle-split"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="visually-hidden">Toggle Dropdown</span>
-                    </button>
-                    <ul class="dropdown-menu">
+            <div class="batteries-selection col ">
+                <!-- <div class=" w-100"> -->
+                    <div class=" vehicle-models-design d-flex align-items-center w-100 "
+                        data-bs-toggle="dropdown" aria-expanded="false" >
+                        <img src="../images/vehicle-5.png" alt="" class="px-3">
+                        <h6 class="batteries-sec-text pt-2">Chassis</h6>
+                        <span class="icon-container-search ms-auto">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-menu vehicle-dropdown-menu col ">
+  
+                        <li><a class="dropdown-item" href="#">Link 1</a></li>
+                        <li><a class="dropdown-item" href="#">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        <li><a class="dropdown-item" href="#">Another link</a></li>
                     </ul>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
-
-
 
     <div class="container ">
         <h5 class=" pt-4 Featured-Make">Featured Make</h5>
