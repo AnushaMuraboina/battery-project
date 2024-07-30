@@ -9,6 +9,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="../dist/css/style.css">
     <style>
         .hidden-checkout {
@@ -42,7 +44,7 @@
                                 Billing Address
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <form>
@@ -103,33 +105,8 @@
                                         <input type="text" class="form-control checkout-form-input"
                                             id="billinglastName">
                                     </div>
-
-                                    <!-- <button type="button" class="btn btn-danger">Continue</button> -->
-                                    <!-- <div class="form-check d-flex align-items-center ">
-                                        <input class="form-check-input checkout-form-input" type="checkbox" value=""
-                                            id="flex-create-account">
-                                        <label class="form-check-label ps-3 checkout-form-lable"
-                                            for="flex-create-account">
-                                            Create An Account
-                                        </label>
-                                    </div> -->
-
-
-
-
-
-
-
                                 </form>
-                                
-                                <!-- <div class="form-check d-flex align-items-center " >
-                                    <input class="form-check-input checkout-form-input" onclick="toggleForm_check()" type="checkbox" value=""
-                                        id="flex-create-account">
-                                    <label class="form-check-label ps-3 checkout-form-lable" 
-                                        for="flex-create-account">
-                                        Create An Account
-                                    </label>
-                                </div> -->
+
 
                                 <!-- form toggles -->
                                 <form>
@@ -139,7 +116,6 @@
                                         <label class="form-check-label check-shipping-radio" for="saveInfo-re">Shipping
                                             address</label>
                                     </div>
-
                                     <div id="formElements_check">
                                         <div class="mb-3">
                                             <label for="billingfirstName" class="form-label checkout-form-lable">FIrst
@@ -154,13 +130,15 @@
                                                 id="billinglastName">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="billingcompanyname" class="form-label checkout-form-lable">Company
+                                            <label for="billingcompanyname"
+                                                class="form-label checkout-form-lable">Company
                                                 Name(Optional)</label>
                                             <input type="text" class="form-control checkout-form-input"
                                                 id="billingcompanyname">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="billingstreetAddress" class="form-label checkout-form-lable">Street
+                                            <label for="billingstreetAddress"
+                                                class="form-label checkout-form-lable">Street
                                                 Address</label>
                                             <input type="text" class="form-control checkout-form-input mb-4"
                                                 id="billingstreetAddress">
@@ -170,21 +148,26 @@
                                         <div class="mb-3">
                                             <label for="billingCity"
                                                 class="form-label checkout-form-lable">Town\City</label>
-                                            <input type="text" class="form-control checkout-form-input" id="billingCity">
+                                            <input type="text" class="form-control checkout-form-input"
+                                                id="billingCity">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="billingState" class="form-label checkout-form-lable">State*</label>
-                                            <input type="text" class="form-control checkout-form-input " id="billingState">
-    
+                                            <label for="billingState"
+                                                class="form-label checkout-form-lable">State*</label>
+                                            <input type="text" class="form-control checkout-form-input "
+                                                id="billingState">
+
                                         </div>
                                         <div class="mb-3">
-                                            <label for="billingZip" class="form-label checkout-form-lable">Zip Code</label>
+                                            <label for="billingZip" class="form-label checkout-form-lable">Zip
+                                                Code</label>
                                             <input type="text" class="form-control checkout-form-input" id="billingZip">
                                         </div>
                                         <div class="mb-3">
                                             <label for="billingCountry"
                                                 class="form-label checkout-form-lable">Country/Religion</label>
-                                            <input type="text" class="form-control checkout-form-input" id="billingCountry">
+                                            <input type="text" class="form-control checkout-form-input"
+                                                id="billingCountry">
                                         </div>
                                         <div class="mb-3">
                                             <label for="billingphonenumber" class="form-label checkout-form-lable">Phone
@@ -199,76 +182,14 @@
                                                 id="billinglastName">
                                         </div>
                                     </div>
-                                </form> 
-
-
-
-
-<!-- 
-                                 <form id="formElements_check">
-                                    <div class="mb-3">
-                                        <label for="billingfirstName" class="form-label checkout-form-lable">FIrst
-                                            Name</label>
-                                        <input type="text" class="form-control checkout-form-input"
-                                            id="billingfirstName">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billinglastName" class="form-label checkout-form-lable">Last
-                                            Name</label>
-                                        <input type="text" class="form-control checkout-form-input"
-                                            id="billinglastName">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingcompanyname" class="form-label checkout-form-lable">Company
-                                            Name(Optional)</label>
-                                        <input type="text" class="form-control checkout-form-input"
-                                            id="billingcompanyname">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingstreetAddress" class="form-label checkout-form-lable">Street
-                                            Address</label>
-                                        <input type="text" class="form-control checkout-form-input mb-4"
-                                            id="billingstreetAddress">
-                                        <input type="text" class="form-control checkout-form-input"
-                                            id="billingstreetAddress">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingCity"
-                                            class="form-label checkout-form-lable">Town\City</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingCity">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingState" class="form-label checkout-form-lable">State*</label>
-                                        <input type="text" class="form-control checkout-form-input " id="billingState">
-
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingZip" class="form-label checkout-form-lable">Zip Code</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingZip">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingCountry"
-                                            class="form-label checkout-form-lable">Country/Religion</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingCountry">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingphonenumber" class="form-label checkout-form-lable">Phone
-                                            Number</label>
-                                        <input type="text" class="form-control checkout-form-input"
-                                            id="billinglastName">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billinglastName" class="form-label checkout-form-lable">Email
-                                            address</label>
-                                        <input type="text" class="form-control checkout-form-input"
-                                            id="billinglastName">
-                                    </div>
-
-                                </form>  -->
-                                <button type="button" class="btn btn-danger">Continue</button>
+                                </form>
+                                <div class="d-flex justify-content-end">
+                                <button type="button" class="btn bill-ship-buttton ">Continue</button>
+                            </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -278,9 +199,41 @@
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                             data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <input type="datetime-local">
+
+                            <div class="accordion-body dateandtime-sec">
+                                <!-- <input type="datetime-local" class="dateandtime"> -->
+
+                                <!-- 
+                                <button onclick="checkFunction()">
+                                    input
+                                </button> -->
+
+
+
+                                <div class="form-check">
+                                    <input class="form-check-input" onclick="checkFunction()" type="radio"
+                                        name="datetime-section" id="datetime-section1">
+                                    <label class="form-check-label" for="datetime-section1">
+                                        Select Date and Time
+                                    </label>
+                                </div>
+                                <div id="checkout-installtion">
+                                    <div class="date-picker">
+                                        <div class="input">
+                                            <div class="result">Select Date: <span></span></div>
+                                            <!-- <button><i class="zmdi zmdi-calendar"></i></button> -->
+                                        </div>
+                                        <div class="calendar"></div>
+                                    </div>
+                                    
+                                </div>
                             </div>
+
+                            <div class=" d-flex justify-content-end">
+                                <button type="button" class="btn installation-continue my-2 mx-3">Continue</button>
+                                <button type="button" class="btn bill-ship-buttton1 my-2 mx-3">Next</button>
+                            </div>
+                            <!-- <button type="button" class="btn  installation-continue">Continue</button> -->
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -293,7 +246,19 @@
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="PaymentRazorpay"
+                                        id="PaymentRazorpay1">
+                                    <label class="form-check-label" for="PaymentRazorpay1">
+                                        Razorpay
+                                    </label>
+                                </div>
+                                <!-- <button type="button" class="btn payment-continue">Continue</button> -->
 
+                                <div class=" d-flex justify-content-end">
+                                    <button type="button" class="btn payment-continue  my-2 mx-3">Continue</button>
+                                    <button type="button" class="btn bill-ship-buttton1 my-2 mx-3">Next</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -303,20 +268,20 @@
             <div class="col-md-6">
                 <div class="address-section">
                     <form>
-                        <div class="form-check d-flex align-items-center pb-3">
+                        <!-- <div class="form-check d-flex align-items-center pb-3">
                             <input class="form-check-input checkout-form-input" type="checkbox" value=""
                                 id="flex-create-account">
                             <label class="form-check-label ps-2  Billing-Address" for="flex-create-account">
                                 Shipping Address
                             </label>
-                        </div>
-                        <div class="mb-3">
+                        </div> -->
+                        <!-- <div class="mb-3">
                             <label for="shippingName" class="form-label checkout-form-lable">ORDER
                                 NOTES(OPTIONAL)</label>
                             <input type="text" class="form-control  checkout-form-input" id="shippingName"
                                 placeholder="Note about Your Order, eg:Special notes for delivary">
-                            <!-- <textarea name="address" id="shippingName" rows="3" cols="50" placeholder="Note about Your Order, eg:Special notes for delivary"></textarea> -->
-                        </div>
+                        
+                        </div> -->
                         <div class="mb-3 p-3 your-orders-section">
                             <div class="your-order-sec1">
                                 <h2 class="checkoutpage-head-text">YOUR ORDER</h2>
@@ -341,15 +306,76 @@
                                 <p class="checkoutpage-head-text">Total</p>
                                 <p class="checkoutpage-head-text">$100.00</p>
                             </div>
-                            <div class="place-order-buttons">
-                                <a href="#" class="place-order-button ">Place Order</a>
-                                <!-- <button class="btn " type="button">Button</button> -->
+                            <div class="accordion-item checkout-accordation-item">
+                                <h5 class="accordion-header" id="headingSix">
+                                    <button class=" text-dark w-100 d-flex  align-items-center read-prod-toggle1"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                        aria-expanded="true" aria-controls="collapseSix">
+                                        <!-- <span>ACCESSOTRIES</span> -->
+                                        <!-- <ul class="news-list-icon"><li>
+                                         </li></ul> -->
+                                        <div class="news-list-icon"></div>
+                                        Direct Bank Transfer
+                                        <i class="fa-solid fa-plus text-dark" id="dropdownIcon"></i>
+                                    </button>
+                                </h5>
+                                <div id="collapseSix" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body checkout-accordation-body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore excepturi
+                                        esse eum tempora mollitia minus? Animi, molestias possimus expedita, explicabo
+                                        rem sint laboriosam sunt fuga, velit quod neque eligendi fugit?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item checkout-accordation-item">
+                                <h5 class="accordion-header" id="headingSeven">
+                                    <button class=" text-dark w-100 d-flex  align-items-center read-prod-toggle1"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                        aria-expanded="true" aria-controls="collapseSeven">
+                                        <div class="news-list-icon"></div>
+                                        Check Payment
+                                        <i class="fa-solid fa-plus text-dark" id="dropdownIcon"></i>
+                                    </button>
+                                </h5>
+                                <div id="collapseSeven" class="accordion-collapse collapse"
+                                    aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body checkout-accordation-body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore excepturi
+                                        esse eum tempora mollitia minus? Animi, molestias possimus expedita, explicabo
+                                        rem sint laboriosam sunt fuga, velit quod neque eligendi fugit?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item checkout-accordation-item">
+                                <h5 class="accordion-header" id="headingEight">
+                                    <button class=" text-dark w-100 d-flex align-items-center read-prod-toggle1"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                        aria-expanded="true" aria-controls="collapseEight">
+                                        <div class="news-list-icon"></div>
+                                        Cash On Delivary
+                                        <i class="fa-solid fa-plus text-dark" id="dropdownIcon"></i>
+                                    </button>
+                                </h5>
+                                <div id="collapseEight" class="accordion-collapse collapse"
+                                    aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body checkout-accordation-body1">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore excepturi
+                                        esse eum tempora mollitia minus? Animi, molestias possimus expedita, explicabo
+                                        rem sint laboriosam sunt fuga, velit quod neque eligendi fugit?
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </form>
+                        <div class="place-order-buttons">
+                            <a href="#" class="place-order-button ">Place Order</a>
+                            <!-- <button class="btn " type="button">Button</button> -->
+                        </div>
                 </div>
+                </form>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -552,6 +578,9 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
 
     <script>
         // form toggles script 
@@ -569,6 +598,39 @@
         window.onload = function () {
             toggleForm_check();
         }
+
+
+        function checkFunction() {
+            var x = document.getElementById("checkout-installtion");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        $(function () {
+            $(".calendar").datepicker({
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1
+            });
+
+            $(document).on('click', '.date-picker .input', function (e) {
+                var $me = $(this),
+                    $parent = $me.parents('.date-picker');
+                $parent.toggleClass('open');
+            });
+
+
+            $(".calendar").on("change", function () {
+                var $me = $(this),
+                    $selected = $me.val(),
+                    $parent = $me.parents('.date-picker');
+                $parent.find('.result').children('span').html($selected);
+            });
+        });
+
+
     </script>
 
 </body>

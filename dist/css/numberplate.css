@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.vehicle-batter-fluid {
+  border-bottom: 1px solid #cea99c;
+}
+
+.vehicle-nav-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: black !important;
+  list-style-type: none;
+}
+
+.vehicle-nav-text a {
+  color: rgb(27, 27, 27);
+  text-decoration: none;
+}
+
+.vehicle-nav-text a:hover {
+  color: #FF4500;
+}
+
+.vehicle-nav-text i {
+  color: rgb(29, 28, 28);
+}
+
+.vehicle-nav-text i:hover {
+  color: #FF4500;
+}
+
+.cart-icon-container {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  list-style-type: none;
+}
+
+.cart-icon-container .badge {
+  position: absolute;
+  top: 4px;
+  right: 0px;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+  background-color: #FF4500;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-container .form-control {
+  padding-right: 3rem;
+}
+
+.search-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  margin-left: 0.5rem;
+}
+
+.number-breadcrup-text a {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(95, 91, 91);
+  text-decoration: none;
+}
+
+.number-breadcrup-text a:hover {
+  color: #FF4500;
+}
+
+.vehicle-batetry-header {
+  font-size: 25px;
+  font-weight: 500;
+  color: #FF4500;
+  text-align: center;
+  border-bottom: 1px solid #FF4500;
+}
+
+.Featured-Make {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.feature-batery-text {
+  font-size: 22px;
+  font-weight: 500;
+  padding-left: 20px;
+}
+
+.vehicle-models-design {
+  background-color: rgb(245, 242, 242);
+  box-shadow: 0px 0px 1px 1px rgb(196, 193, 193);
+}
+
+.vehicle-battery-row,
+.featured-battery-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.featured-bat-card {
+  padding: 8px 20px;
+  box-shadow: 0px 0px 1px 2px rgb(218, 215, 215);
+  border-radius: 5px;
+}
+
+.batteries-selection {
+  margin: 10px 0;
+}
+
+.icon-container-search {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  height: 50px;
+  width: 40px;
+  /* border-radius: 50%; */
+  justify-content: center;
+  margin-left: auto;
+}
+.icon-container-search i {
+  color: white;
+  font-size: 16px;
+}
+
+.vehicle-dropdown-menu, .dropdown-menu {
+  width: 225px;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  margin: 0px -3px;
+  transform: translate(1374px, 198px);
+}
+
+@media (max-width: 1200px) {
+  .vehicle-battery-row,
+  .featured-battery-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .number-breadcrup-text a {
+    font-size: 14px;
+  }
+  .battery-navbar-nav {
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .vehicle-battery-row,
+  .featured-battery-row {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .vehicle-nav-text {
+    font-size: 14px;
+  }
+  .search-container .form-control {
+    padding-right: 2.5rem;
+  }
+}/*# sourceMappingURL=numberplate.css.map */

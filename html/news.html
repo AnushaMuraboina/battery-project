@@ -33,6 +33,76 @@
 
 <body>
 
+    <div class="container-fluid vehicle-batter-fluid main-navbar-okka">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <nav aria-label="breadcrumb mt-3 ">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item number-breadcrup-text"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item number-breadcrup-text"><a href="#">News</a></li>
+                        <!-- <li class="breadcrumb-item number-breadcrup-text" aria-current="page"><a href="#">Car and
+                                Truck</a></li> -->
+                    </ol>
+                </nav>
+                <div class="collapse navbar-collapse battery-navbar-collapse  d-flex justify-content-end align-content-center"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 ">
+                        <li class="nav-item  align-items-center search-container">
+                            <input class="form-control" type="search" placeholder="Enter search here"
+                                aria-label="Search">
+                            <i class="fa-solid fa-search search-icon"></i>
+                        </li>
+                        <li class="nav-item  align-items-center ps-5  vehicle-nav-text">
+                            <a class="nav-link ms-2  " href="#"> <i class="fa-solid fa-location-dot"></i>
+                                &nbsp;Locations</a>
+                        </li>
+                        <!-- <li class="nav-item align-items-center vehicle-nav-text ps-3">
+                            <a class="nav-link ms-2 " href="#"> <i class="fa-regular fa-user"></i> &nbsp;Signin </a>
+                        </li> -->
+                        <!-- 
+                        <li class="nav-item align-items-center vehicle-nav-text ps-3">
+                            <a class="nav-link ms-2 " href="#"> <i class="fa-regular fa-user"></i> &nbsp;Signin </a>
+                        </li>  -->
+
+                        <div class="d-flex align-items-center justify-content-between ">
+                            <ul class="navbar-nav offcanvas-navbar-nav nav-log-wish">
+                                <li class="nav-item nav-log-sections">
+                                    <button type="button" style="border: none; background-color: white;"
+                                        class="nav-link navbar-log-text  text-dark " data-bs-toggle="dropdown">
+                                        <i class="fa-regular fa-user text-dark"></i> &nbsp;Signin
+                                    </button>
+                                    <ul class="dropdown-menu nav-dropdown-menu-1 bg-white text-dark battery-login-menu">
+                                        <li><a class="dropdown-item nav-dropdown-login"
+                                                href="{% url 'my-account' %}">Dashboard</a></li>
+                                        <li><a class="dropdown-item nav-dropdown-login"
+                                                href="{% url 'user-order' %}">Orders</a></li>
+                                        <!-- <li><a class="dropdown-item nav-dropdown-login" href="{% url 'balance' %}">Gift card balance</a></li> -->
+                                        <!-- <li><a class="dropdown-item nav-dropdown-login" href="#">Downloads</a></li> -->
+                                        <li><a class="dropdown-item nav-dropdown-login"
+                                                href="{% url 'address' %}">Addresses</a></li>
+                                        <!-- <li><a class="dropdown-item nav-dropdown-login" href="{% url 'warranty_requests' %}">Request Return</a></li> -->
+                                        <li><a class="dropdown-item nav-dropdown-login"
+                                                href="{% url 'edit_account' %}">Account Details</a></li>
+                                        <li><a class="dropdown-item nav-dropdown-login"
+                                                href="{% url 'wishlist' %}">Wishlist</a></li>
+                                        <li><a class="dropdown-item nav-dropdown-login"
+                                                href="{% url 'logout' %}">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <li class="nav-item d-flex align-items-center cart-icon-container ps-3 ">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-cart-shopping text-dark fa-lg"></i>
+                                <span class="badge ">3</span>
+                            </a>
+                            <!-- <a class="nav-link ms-2 " href="#">  &nbsp;Signin </a> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
 
     <div class="container">
         <div class="row">
@@ -40,20 +110,20 @@
                 <div class="row my-4">
                     <div class="col-md-6  ">
                         <div class="card news-cards-sec">
-                            <!-- <img src="../images/Mask group 7.png" alt="card-img-top"> -->
-                            <div class="card-body">
+                            <img src="../images/Mask group 7.png" alt="card-img-top" height="250px">
+                            <div class="card-body ps-0">
                                 <h6 class="card-title1">Lorem ipsum dolor sit amet.</h6>
                                 <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
-                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                <p class="card-text ">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                                     Consectetur est cupiditate dignissimos, eum soluta exercitationem deserunt nemo
                                     expedita impedit voluptas?</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6  ">
+                    <div class="col-md-6 ">
                         <div class="card news-cards-sec">
-                            <!-- <img src="../images/Mask group 7.png" alt="card-img-top"> -->
-                            <div class="card-body">
+                            <img src="../images/Mask group 7.png" alt="card-img-top" height="250px">
+                            <div class="card-body ps-0">
                                 <h6 class="card-title1">Lorem ipsum dolor sit amet.</h6>
                                 <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
                                 <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -66,8 +136,8 @@
                 <div class="row">
                     <div class="col-md-6  ">
                         <div class="card news-cards-sec">
-                            <!-- <img src="../images/Mask group 7.png" alt="card-img-top"> -->
-                            <div class="card-body">
+                            <img src="../images/Mask group 7.png" alt="card-img-top" height="250px">
+                            <div class="card-body ps-0">
                                 <h6 class="card-title1">Lorem ipsum dolor sit amet.</h6>
                                 <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
                                 <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -78,8 +148,8 @@
                     </div>
                     <div class="col-md-6  ">
                         <div class="card news-cards-sec">
-                            <!-- <img src="../images/Mask group 7.png" alt="card-img-top"> -->
-                            <div class="card-body">
+                            <img src="../images/Mask group 7.png" alt="card-img-top" height="250px">
+                            <div class="card-body ps-0">
                                 <h6 class="card-title1">Lorem ipsum dolor sit amet.</h6>
                                 <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
                                 <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -98,15 +168,15 @@
                         <p> 2</p>
                     </div>
                     <div class=" d-flex justify-content-between">
-                        <p>Batteries</p>
+                        <p>News</p>
                         <p> 2</p>
                     </div>
                     <div class=" d-flex justify-content-between">
-                        <p>Batteries</p>
+                        <p>Uncategorised</p>
                         <p> 2</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="products-dispaly-news">
                     <h2 class="news-headings">Products</h2>
                     <div class=" d-flex py-2">
                         <img src="../images/image 35.png" alt="" width="80px" height="80px">
@@ -130,8 +200,73 @@
                         </div>
                     </div>
                 </div>
+                <div class="recentpost-dispaly-news">
+                    <h2 class="news-headings">Resent Post</h2>
+                    <p class="news-resentpost-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus delectus alias illo, expedita
+                        tempore minima dolorem enim odio harum?</p>
+                </div>
+                <div class="pro-categories-dispaly-news">
+                    <h2 class="news-headings">Product Categories</h2>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item news-accordation-item ">
+                            <h5 class="accordion-header" id="headingOne">
+                                <button
+                                    class=" text-dark w-100 d-flex justify-content-between align-items-center read-prod-toggle"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    <span>ACCESSOTRIES</span>
+                                    <i class="fa-solid fa-plus text-dark" id="dropdownIcon"></i>
+                                </button>
+                            </h5>
+                            <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body news-accordation-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. At aliquam numquam voluptates earum necessitatibus totam cum est saepe maiores quos.
+                                </div>
+                            </div>
+                        </div>
 
-
+                        <div class="accordion-item news-accordation-item">
+                            <h5 class="accordion-header" id="headingTwo">
+                                <button
+                                    class=" text-dark w-100 d-flex justify-content-between align-items-center read-prod-toggle"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                    aria-expanded="true" aria-controls="collapseTwo">
+                                    <span>ACCESSOTRIES</span>
+                                    <i class="fa-solid fa-plus text-dark" id="dropdownIcon"></i>
+                                </button>
+                            </h5>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body news-accordation-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At aliquam numquam voluptates earum necessitatibus totam cum est saepe maiores quos.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item news-accordation-item">
+                            <h5 class="accordion-header" id="headingThree">
+                                <button
+                                    class=" text-dark w-100 d-flex justify-content-between align-items-center read-prod-toggle"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                    aria-expanded="true" aria-controls="collapseThree">
+                                    <span>ACCESSOTRIES</span>
+                                    <i class="fa-solid fa-plus text-dark" id="dropdownIcon"></i>
+                                </button>
+                            </h5>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body news-accordation-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. At aliquam numquam voluptates earum necessitatibus totam cum est saepe maiores quos.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="d-flex my-4 ">
+                    <input class="form-control  news-search-input" type="search" placeholder="Search Products" aria-label="Search ">
+                    <!-- <button class="btn news-search-button" type="submit">Search</button> -->
+                    <button type="button" class="btn news-search-button"  type="submit">Search</button>
+                  </form>
             </div>
         </div>
     </div>
