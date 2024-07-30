@@ -587,6 +587,7 @@ a {
     color: $bg-medium-orange;
   }
 }
+
 //   reviews section
 .review-says-card {
   border: 2px solid rgb(218, 213, 213);
@@ -1661,7 +1662,6 @@ i {
 .main-headings {
   font-size: 32px;
   font-weight: 500;
-
 }
 
 
@@ -1763,5 +1763,113 @@ i {
   }
   .signupform-image{
     display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// navbar section profile dropdown
+.nav-log-wish {
+  position: relative;
+}
+.nav-log-wish .dropdown-menu {
+  display: block;
+  /* visibility: hidden; */
+  opacity: 0;
+  position: absolute;
+  /* will-change: transform; */
+  top: 100%;
+  left: 0px;
+  margin-top: 10px;
+  /* right: 150px; */
+  /* transform: translate3d(0, 0, 0); */
+  /* transition: visibility 0s, opacity 0.3s ease-in-out; */
+}
+
+.nav-log-wish:hover .dropdown-menu,
+.nav-log-wish:focus-within .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.battery-login-menu {
+  position: absolute;
+  top: calc(100% + 24px);
+  right: 16px;
+  width: 200px;
+  min-height: 100px;
+  background: blue;
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, .2); */
+  opacity: 0;
+  transform: translateY(-10px);
+  visibility: hidden;
+  transition: 300ms;
+  
+
+}
+.battery-login-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  /* right: 14px; */
+  left: 40px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-top: 1px solid rgba(0, 0, 0, .2);
+  border-left: 1px solid rgba(0, 0, 0, .2);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, .2); */
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+
+// news page
+.news-headings{
+  font-size: 25px;
+  font-weight: 500;
+}
+.news-bat-text {
+  padding-left: 20px;
+  h6{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  p{
+    font-size: 18px;
+    font-weight: 500;
+    strike{
+      color:$bg-medium-orange;
+      padding-right: 20px;
+    }
+  }
+}
+
+
+.news-cards-sec{
+  border: none;
+  .card-title1{
+    font-size: 18px;
+    font-weight: 400;
+    
+  }
+  .card-title{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .card-text{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: justify;
   }
 }
