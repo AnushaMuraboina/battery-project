@@ -564,6 +564,29 @@ a {
   @include ft-size-20;
 }
 
+.quick_links_sub {
+  display: flex;
+  align-items: baseline;
+  a{
+    color: white !important;
+    &:hover{
+      color: $bg-medium-orange;
+    }
+  }
+  i{
+    color: white;
+    font-size: 16px;
+    padding-right: 12px;
+  }
+
+}
+.footer-zinavo{
+  color: white !important;
+  &:hover
+  {
+    color: $bg-medium-orange;
+  }
+}
 //   reviews section
 .review-says-card {
   border: 2px solid rgb(218, 213, 213);
@@ -610,6 +633,7 @@ a {
 
 .battery-conditions1 {
   border-right: 1px solid white;
+  color: white !important;
 }
 
 // slike carousel

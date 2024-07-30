@@ -476,6 +476,29 @@ a {
   font-weight: 500;
 }
 
+.quick_links_sub {
+  display: flex;
+  align-items: baseline;
+}
+.quick_links_sub a {
+  color: white !important;
+}
+.quick_links_sub a:hover {
+  color: #FF4500;
+}
+.quick_links_sub i {
+  color: white;
+  font-size: 16px;
+  padding-right: 12px;
+}
+
+.footer-zinavo {
+  color: white !important;
+}
+.footer-zinavo:hover {
+  color: #FF4500;
+}
+
 .review-says-card {
   border: 2px solid rgb(218, 213, 213);
   border-radius: 10px;
@@ -521,6 +544,7 @@ a {
 
 .battery-conditions1 {
   border-right: 1px solid white;
+  color: white !important;
 }
 
 .slick-dots {

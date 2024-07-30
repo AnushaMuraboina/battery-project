@@ -5,72 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap 5 Cards with Grid</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+
   <style>
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1rem;
-    }
-    .card {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 1rem;
-      border: 1px solid #dee2e6;
-      border-radius: 0.375rem;
-    }
-    .card img {
-      max-width: 100px;
-      margin-right: 1rem;
-    }
-    .card-body {
-      display: flex;
-      flex-direction: column;
-    }
+    .hidden-checkout {
+  display: none;
+}  
   </style>
 </head>
 <body>
-  <div class="container mt-4">
-    <div class="card-container">
-      <div class="card">
-        <img src="https://via.placeholder.com/100" alt="Card Image">
-        <div class="card-body">
-          <h5 class="card-title">Card Title 1</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/100" alt="Card Image">
-        <div class="card-body">
-          <h5 class="card-title">Card Title 2</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/100" alt="Card Image">
-        <div class="card-body">
-          <h5 class="card-title">Card Title 3</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/100" alt="Card Image">
-        <div class="card-body">
-          <h5 class="card-title">Card Title 4</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/100" alt="Card Image">
-        <div class="card-body">
-          <h5 class="card-title">Card Title 5</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
+  
+  <form>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="saveInfo-re" onclick="toggleForm_check()" checked>
+        <label class="form-check-label check-shipping-radio" for="saveInfo-re">Ship to a different address?</label>
     </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <div id="formElements_check">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="first_name-re" class="form-label checkout-form-label">First name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control checkout-form-input" id="first_name-re" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="last_name-re" class="form-label checkout-form-label">Last name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control checkout-form-input" id="last_name-re" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="full_Name" class="form-label checkout-form-label">Full Name</label>
+            <input type="text" class="form-control checkout-form-input" id="full_Name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="street_address-re" class="form-label checkout-form-label">Street Address<span class="text-danger">*</span></label>
+            <input type="text" class="form-control checkout-form-input mb-3" id="street_address-re" required>
+            <input type="text" class="form-control checkout-form-input" id="street_address_num" required>
+        </div>
+
+        <div class="custom-dropdown mb-3" id="dropdown-3">
+            <label for="countrySelect" class="form-label checkout-form-label">State/Country<span class="text-danger">*</span></label>
+            <input type="text" class="form-control dropdown-search-input" id="dropdown-search-input-3" onclick="toggleDropdown(3)" readonly>
+            <i class="fa-solid fa-chevron-down dropdown-search-icon"></i>
+            <div class="dropdown-menu p-0" id="dropdown-menu-3">
+                <div class="dropdown-search">
+                    <input type="text" class="form-control inner-search-input" id="inner-search-input-3" onkeyup="filterDropdownItems(3)">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="list-group drop-list-group border-none">
+                    <a href="#" class="list-group-item list-group-item-action list-clicking items">Billy</a>
+                    <a href="#" class="list-group-item list-group-item-action list-clicking items">Bob</a>
+                    <a href="#" class="list-group-item list-group-item-action list-clicking items">Billy</a>
+                    <a href="#" class="list-group-item list-group-item-action list-clicking items">Bob</a>
+                    <a href="#" class="list-group-item list-group-item-action list-clicking items">Billy</a>
+                    <a href="#" class="list-group-item list-group-item-action list-clicking items">Bob</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="city_town_add-2" class="form-label checkout-form-label">Town/City<span class="text-danger">*</span></label>
+            <input type="text" class="form-control checkout-form-input mb-3" id="city_town_add-2" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="zip_code-re" class="form-label checkout-form-label">Zip Code<span class="text-danger">*</span></label>
+            <input type="text" class="form-control checkout-form-input" id="zip_code-re" required>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label checkout-form-label">Order Notes<span class="text-danger">*</span></label>
+        <textarea class="form-control checkout-form-input" id="exampleFormControlTextarea1" rows="5"></textarea>
+    </div>
+</form>
 </body>
 </html>

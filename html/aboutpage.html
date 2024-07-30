@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Checkout</h2>
+        <div class="accordion" id="checkoutAccordion">
+            <!-- Billing Address -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="billingAddressHeading">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#billingAddress" aria-expanded="true" aria-controls="billingAddress">
+                        Billing Address
+                    </button>
+                </h2>
+                <div id="billingAddress" class="accordion-collapse collapse show" aria-labelledby="billingAddressHeading" data-bs-parent="#checkoutAccordion">
+                    <div class="accordion-body">
+                        <form id="billingForm">
+                            <div class="mb-3">
+                                <label for="billingName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="billingName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="billingAddressInput" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="billingAddressInput">
+                            </div>
+                            <div class="mb-3">
+                                <label for="billingCity" class="form-label">City</label>
+                                <input type="text" class="form-control" id="billingCity">
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="sameAsBilling">
+                                <label class="form-check-label" for="sameAsBilling">
+                                    Shipping address same as billing address
+                                </label>
+                            </div>
+                            <button type="button" class="btn btn-primary mt-3" onclick="showNextSection()">Next</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="accordion-item hidden" id="shippingSection">
+                <h2 class="accordion-header" id="shippingAddressHeading">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#shippingAddress" aria-expanded="false" aria-controls="shippingAddress">
+                        Shipping Address
+                    </button>
+                </h2>
+                <div id="shippingAddress" class="accordion-collapse collapse" aria-labelledby="shippingAddressHeading" data-bs-parent="#checkoutAccordion">
+                    <div class="accordion-body">
+                        <form id="shippingForm">
+                            <div class="mb-3">
+                                <label for="shippingName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="shippingName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="shippingAddressInput" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="shippingAddressInput">
+                            </div>
+                            <div class="mb-3">
+                                <label for="shippingCity" class="form-label">City</label>
+                                <input type="text" class="form-control" id="shippingCity">
+                            </div>
+                            <button type="button" class="btn btn-primary mt-3" onclick="showInstallation()">Next</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation -->
+            <div class="accordion-item hidden" id="installationSection">
+                <h2 class="accordion-header" id="installationHeading">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#installation" aria-expanded="false" aria-controls="installation">
+                        Installation
+                    </button>
+                </h2>
+                <div id="installation" class="accordion-collapse collapse" aria-labelledby="installationHeading" data-bs-parent="#checkoutAccordion">
+                    <div class="accordion-body">
+                        <p>Installation details go here...</p>
+                        <!-- Add installation form or details as needed -->
+                        <button type="button" class="btn btn-primary mt-3" onclick="finishCheckout()">Finish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showNextSection() {
+            const sameAsBilling = document.getElementById('sameAsBilling').checked;
+            const shippingSection = document.getElementById('shippingSection');
+
+            if (!sameAsBilling) {
+                shippingSection.classList.remove('hidden');
+            }
+
+            const billingAddressCollapse = document.getElementById('billingAddress');
+            const shippingAddressCollapse = document.getElementById('shippingAddress');
+
+            if (billingAddressCollapse.classList.contains('show')) {
+                billingAddressCollapse.classList.remove('show');
+                billingAddressCollapse.classList.add('collapse');
+                shippingAddressCollapse.classList.add('show');
+            }
+        }
+
+        function showInstallation() {
+            document.getElementById('installationSection').classList.remove('hidden');
+            const shippingAddressCollapse = document.getElementById('shippingAddress');
+            const installationCollapse = document.getElementById('installation');
+
+            if (shippingAddressCollapse.classList.contains('show')) {
+                shippingAddressCollapse.classList.remove('show');
+                shippingAddressCollapse.classList.add('collapse');
+                installationCollapse.classList.add('show');
+            }
+        }
+
+        function finishCheckout() {
+            alert('Checkout completed!'); 
+        }
+    </script>
+</body>
+</html>
