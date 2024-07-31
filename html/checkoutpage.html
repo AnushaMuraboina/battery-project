@@ -10,11 +10,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+
+
+<!-- country -->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css'><link rel="stylesheet" href="./style.css"> 
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" /> 
+     
+     
+
     <link rel="stylesheet" href="../dist/css/style.css">
     <style>
         .hidden-checkout {
             display: none;
+        }
+
+        .form-section {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        .visible {
+            display: block;
         }
     </style>
 </head>
@@ -39,6 +59,11 @@
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
+                            <!-- <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                id="billingAddressSection" class="form-section visible" data-bs-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Billing Address
+                            </button> -->
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Billing Address
@@ -79,20 +104,31 @@
                                             class="form-label checkout-form-lable">Town\City</label>
                                         <input type="text" class="form-control checkout-form-input" id="billingCity">
                                     </div>
-                                    <div class="mb-3">
+                                    <div data-toggle-group="location">
+                                        <div class="form-group  mb-3">
+                                            <label class="checkout-form-lable">Country</label>
+                                            <select class="form-control checkout-form-input" name="country" data-toggle="country" data-country=""></select>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label class="checkout-form-lable">State</label>
+                                            <select class="form-control checkout-form-input" name="country" data-toggle="state" data-state=""
+                                                placeholder="Select State"></select>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="mb-3">
                                         <label for="billingState" class="form-label checkout-form-lable">State*</label>
                                         <input type="text" class="form-control checkout-form-input " id="billingState">
 
-                                    </div>
+                                    </div> -->
                                     <div class="mb-3">
                                         <label for="billingZip" class="form-label checkout-form-lable">Zip Code</label>
                                         <input type="text" class="form-control checkout-form-input" id="billingZip">
                                     </div>
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label for="billingCountry"
                                             class="form-label checkout-form-lable">Country/Religion</label>
                                         <input type="text" class="form-control checkout-form-input" id="billingCountry">
-                                    </div>
+                                    </div> -->
                                     <div class="mb-3">
                                         <label for="billingphonenumber" class="form-label checkout-form-lable">Phone
                                             Number</label>
@@ -107,12 +143,11 @@
                                     </div>
                                 </form>
 
-
                                 <!-- form toggles -->
                                 <form>
                                     <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="saveInfo-re"
-                                            onclick="toggleForm_check()" checked>
+                                        <input type="checkbox" class="form-check-input " id="saveInfo-re"
+                                            onclick="toggleForm_check()">
                                         <label class="form-check-label check-shipping-radio" for="saveInfo-re">Shipping
                                             address</label>
                                     </div>
@@ -151,24 +186,35 @@
                                             <input type="text" class="form-control checkout-form-input"
                                                 id="billingCity">
                                         </div>
-                                        <div class="mb-3">
+                                        <!-- <div class="mb-3">
                                             <label for="billingState"
                                                 class="form-label checkout-form-lable">State*</label>
                                             <input type="text" class="form-control checkout-form-input "
                                                 id="billingState">
 
-                                        </div>
+                                        </div> -->
                                         <div class="mb-3">
                                             <label for="billingZip" class="form-label checkout-form-lable">Zip
                                                 Code</label>
                                             <input type="text" class="form-control checkout-form-input" id="billingZip">
                                         </div>
-                                        <div class="mb-3">
+                                        <div data-toggle-group="location">
+                                            <div class="form-group  mb-3">
+                                                <label class="checkout-form-lable">Country</label>
+                                                <select class="form-control checkout-form-input" name="country" data-toggle="country" data-country=""></select>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label class="checkout-form-lable">State</label>
+                                                <select class="form-control checkout-form-input" name="country" data-toggle="state" data-state=""
+                                                    placeholder="Select State"></select>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="mb-3">
                                             <label for="billingCountry"
                                                 class="form-label checkout-form-lable">Country/Religion</label>
                                             <input type="text" class="form-control checkout-form-input"
                                                 id="billingCountry">
-                                        </div>
+                                        </div> -->
                                         <div class="mb-3">
                                             <label for="billingphonenumber" class="form-label checkout-form-lable">Phone
                                                 Number</label>
@@ -183,9 +229,11 @@
                                         </div>
                                     </div>
                                 </form>
+                                <!-- <input type="checkbox" id="sameAsBilling"> Same as Billing Address<br><br> -->
                                 <div class="d-flex justify-content-end">
-                                <button type="button" class="btn bill-ship-buttton ">Continue</button>
-                            </div>
+                                    <button type="button" class="btn bill-ship-buttton py-2 px-4 "
+                                        onclick="nextStep() ">Next</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -193,11 +241,11 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
                                 Installation
                             </button>
                         </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo1"
                             data-bs-parent="#accordionExample">
 
                             <div class="accordion-body dateandtime-sec">
@@ -207,13 +255,10 @@
                                 <button onclick="checkFunction()">
                                     input
                                 </button> -->
-
-
-
                                 <div class="form-check">
                                     <input class="form-check-input" onclick="checkFunction()" type="radio"
                                         name="datetime-section" id="datetime-section1">
-                                    <label class="form-check-label" for="datetime-section1">
+                                    <label class="form-check-label result" for="datetime-section1">
                                         Select Date and Time
                                     </label>
                                 </div>
@@ -225,25 +270,35 @@
                                         </div>
                                         <div class="calendar"></div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
 
-                            <div class=" d-flex justify-content-end">
+                            <!-- <div class=" d-flex justify-content-end">
                                 <button type="button" class="btn installation-continue my-2 mx-3">Continue</button>
                                 <button type="button" class="btn bill-ship-buttton1 my-2 mx-3">Next</button>
+                            </div> -->
+                            <div class="d-flex justify-content-end">
+                                <button onclick="prevStep()"
+                                    class="btn installation-continue my-2 mx-3">Previous</button>
+                                <button onclick="nextStep()" class="btn bill-ship-buttton1 my-2 mx-3">Next</button>
                             </div>
                             <!-- <button type="button" class="btn  installation-continue">Continue</button> -->
                         </div>
                     </div>
                     <div class="accordion-item">
+                        <!-- <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                                Payment Method
+                            </button> -->
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
                                 Payment Method
                             </button>
                         </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree1"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <div class="form-check">
@@ -254,10 +309,9 @@
                                     </label>
                                 </div>
                                 <!-- <button type="button" class="btn payment-continue">Continue</button> -->
-
-                                <div class=" d-flex justify-content-end">
-                                    <button type="button" class="btn payment-continue  my-2 mx-3">Continue</button>
-                                    <button type="button" class="btn bill-ship-buttton1 my-2 mx-3">Next</button>
+                                <div class="d-flex justify-content-end">
+                                    <button onclick="prevStep()" class="btn payment-continue my-2 mx-3">Previous</button>
+                                    <!-- <button type="button" class="btn bill-ship-buttton2 my-2 mx-3">Next</button> -->
                                 </div>
                             </div>
                         </div>
@@ -306,20 +360,17 @@
                                 <p class="checkoutpage-head-text">Total</p>
                                 <p class="checkoutpage-head-text">$100.00</p>
                             </div>
-                            <div class="accordion-item checkout-accordation-item">
+                            <!-- <div class="accordion-item checkout-accordation-item">
                                 <h5 class="accordion-header" id="headingSix">
                                     <button class=" text-dark w-100 d-flex  align-items-center read-prod-toggle1"
                                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
                                         aria-expanded="true" aria-controls="collapseSix">
-                                        <!-- <span>ACCESSOTRIES</span> -->
-                                        <!-- <ul class="news-list-icon"><li>
-                                         </li></ul> -->
                                         <div class="news-list-icon"></div>
                                         Direct Bank Transfer
                                         <i class="fa-solid fa-plus text-dark" id="dropdownIcon"></i>
                                     </button>
                                 </h5>
-                                <div id="collapseSix" class="accordion-collapse collapse show"
+                                <div id="collapseSix" class="accordion-collapse collapse "
                                     aria-labelledby="headingSix" data-bs-parent="#accordionExample">
                                     <div class="accordion-body checkout-accordation-body">
                                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore excepturi
@@ -327,8 +378,8 @@
                                         rem sint laboriosam sunt fuga, velit quod neque eligendi fugit?
                                     </div>
                                 </div>
-                            </div>
-                            <div class="accordion-item checkout-accordation-item">
+                            </div> -->
+                            <!-- <div class="accordion-item checkout-accordation-item">
                                 <h5 class="accordion-header" id="headingSeven">
                                     <button class=" text-dark w-100 d-flex  align-items-center read-prod-toggle1"
                                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
@@ -346,8 +397,8 @@
                                         rem sint laboriosam sunt fuga, velit quod neque eligendi fugit?
                                     </div>
                                 </div>
-                            </div>
-                            <div class="accordion-item checkout-accordation-item">
+                            </div> -->
+                            <!-- <div class="accordion-item checkout-accordation-item">
                                 <h5 class="accordion-header" id="headingEight">
                                     <button class=" text-dark w-100 d-flex align-items-center read-prod-toggle1"
                                         type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight"
@@ -365,7 +416,7 @@
                                         rem sint laboriosam sunt fuga, velit quod neque eligendi fugit?
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="place-order-buttons">
                             <a href="#" class="place-order-button ">Place Order</a>
@@ -381,217 +432,52 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                          <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                         Billing Address
-                            </button>
-                          </h2>
-                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="billingfirstName" class="form-label checkout-form-lable">FIrst Name</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingfirstName" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billinglastName" class="form-label checkout-form-lable">Last Name</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billinglastName" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingcompanyname" class="form-label checkout-form-lable">Company Name(Optional)</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingcompanyname" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingstreetAddress" class="form-label checkout-form-lable">Street Address</label>
-                                        <input type="text" class="form-control checkout-form-input mb-4" id="billingstreetAddress" >
-                                        <input type="text" class="form-control checkout-form-input" id="billingstreetAddress">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingCity" class="form-label checkout-form-lable">Town\City</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingCity" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingState" class="form-label checkout-form-lable">State*</label>
-                                        <input type="text" class="form-control checkout-form-input " id="billingState" >
-                                        
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingZip" class="form-label checkout-form-lable">Zip Code</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingZip" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingCountry" class="form-label checkout-form-lable">Country/Religion</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingCountry" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingphonenumber" class="form-label checkout-form-lable">Phone Number</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billinglastName" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billinglastName" class="form-label checkout-form-lable">Email address</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billinglastName" >
-                                    </div>
-                                    <div class="form-check d-flex align-items-center ">
-                                        <input class="form-check-input checkout-form-input" type="checkbox" value="" id="flex-create-account">
-                                        <label class="form-check-label ps-3 checkout-form-lable" for="flex-create-account">
-                                          Create An Account
-                                        </label>
-                                      </div>
-                                </form>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Shipping Address
-                              </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="billingfirstName" class="form-label checkout-form-lable">FIrst Name</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingfirstName" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billinglastName" class="form-label checkout-form-lable">Last Name</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billinglastName" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingcompanyname" class="form-label checkout-form-lable">Company Name(Optional)</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingcompanyname" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingstreetAddress" class="form-label checkout-form-lable">Street Address</label>
-                                        <input type="text" class="form-control checkout-form-input mb-4" id="billingstreetAddress" >
-                                        <input type="text" class="form-control checkout-form-input" id="billingstreetAddress">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingCity" class="form-label checkout-form-lable">Town\City</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingCity" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingState" class="form-label checkout-form-lable">State*</label>
-                                        <input type="text" class="form-control checkout-form-input " id="billingState" >
-                                        
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingZip" class="form-label checkout-form-lable">Zip Code</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingZip" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingCountry" class="form-label checkout-form-lable">Country/Religion</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billingCountry" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billingphonenumber" class="form-label checkout-form-lable">Phone Number</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billinglastName" >
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="billinglastName" class="form-label checkout-form-lable">Email address</label>
-                                        <input type="text" class="form-control checkout-form-input" id="billinglastName" >
-                                    </div>
-                                    <div class="form-check d-flex align-items-center ">
-                                        <input class="form-check-input checkout-form-input" type="checkbox" value="" id="flex-create-account">
-                                        <label class="form-check-label ps-3 checkout-form-lable" for="flex-create-account">
-                                          Create An Account
-                                        </label>
-                                      </div>
-                                </form>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Installation
-                              </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                              <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                              </div>
-                            </div>
-                          </div>
-                </div>
-            </div>
-
-
-
-        </div>
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- -->
-
-
-
-
-
-
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 
 
+    <!-- <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script> -->
+     <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script> 
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script> 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/gh/linuxguist/countries@main/script.js"></script>
+
+ 
+
+    <script type="text/javascript">
+        document.addEventListener("load", loadCountries());
+        document.getElementById('single').value = "";
+    </script>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script> 
     <script>
-        // form toggles script 
+        $("#single").select2({
+            // placeholder: "Select a programming language",
+            allowClear: true
+        });
+        $("#multiple").select2({
+            // placeholder: "Select a programming language",
+            allowClear: true
+        });
+    </script>
+    <script>
+
         function toggleForm_check() {
-            const formElements_check = document.getElementById('formElements_check');
-            if (document.getElementById('saveInfo-re').checked) {
-                formElements_check.classList.remove('hidden-checkout');
-                // formElements_check.classList.add('hidden-checkout');
+            const formElementsCheck = document.getElementById('formElements_check');
+            const shippingCostDetails = document.getElementById('shippingCostDetails');
+            const isChecked = document.getElementById('saveInfo-re').checked;
+
+            if (isChecked) {
+                formElementsCheck.classList.remove('hidden-checkout');
+                shippingCostDetails.classList.add('hidden-checkout');
             } else {
-                formElements_check.classList.add('hidden-checkout');
-                // formElements_check.classList.remove('hidden-checkout');
+                formElementsCheck.classList.add('hidden-checkout');
+                shippingCostDetails.classList.remove('hidden-checkout');
             }
         }
 
@@ -631,8 +517,60 @@
         });
 
 
+        function nextStep() {
+            var billingAddressCollapse = document.getElementById('collapseOne');
+            var installationCollapse = document.getElementById('collapseTwo');
+            var paymentMethodCollapse = document.getElementById('collapseThree');
+
+            if (billingAddressCollapse.classList.contains('show')) {
+                var bsCollapse = new bootstrap.Collapse(billingAddressCollapse, { toggle: false });
+                bsCollapse.hide();
+                var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: true });
+                bsCollapseInstallation.show();
+            } else if (installationCollapse.classList.contains('show')) {
+                var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: false });
+                bsCollapseInstallation.hide();
+                var bsCollapsePayment = new bootstrap.Collapse(paymentMethodCollapse, { toggle: true });
+                bsCollapsePayment.show();
+            }
+        }
+
+        function prevStep() {
+            var billingAddressCollapse = document.getElementById('collapseOne');
+            var installationCollapse = document.getElementById('collapseTwo');
+            var paymentMethodCollapse = document.getElementById('collapseThree');
+
+            if (installationCollapse.classList.contains('show')) {
+                var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: false });
+                bsCollapseInstallation.hide();
+                var bsCollapseBilling = new bootstrap.Collapse(billingAddressCollapse, { toggle: true });
+                bsCollapseBilling.show();
+            } else if (paymentMethodCollapse.classList.contains('show')) {
+                var bsCollapsePayment = new bootstrap.Collapse(paymentMethodCollapse, { toggle: false });
+                bsCollapsePayment.hide();
+                var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: true });
+                bsCollapseInstallation.show();
+            }
+        }
     </script>
 
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>List of Countries, States and ISD Code Phone Number</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Stylesheets -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+  
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #e0e3e8;
+        }
+        .form-area {
+            background-color: #fff;
+            box-shadow: 0px 5px 10px rgba(90, 116, 148, 0.3);
+            padding: 40px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            height: auto;
+            padding: 15px 19px;
+            font-size: 1rem;
+            line-height: 1.4;
+            color: #475F7B;
+            background-color: #FFF;
+            border: 1px solid #DFE3E7;
+            border-radius: .267rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+        .form-control:focus {
+            color: #475F7B;
+            border-color: #5A8DEE;
+            outline: 0;
+            box-shadow: 0 3px 8px 0 rgb(0 0 0 / 10%);
+        }
+        .intl-tel-input,
+        .iti {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5 mb-4">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div data-toggle-group="location">
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select class="form-control" id="country-select" name="country"></select>
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <select class="form-control" id="state-select" name="state"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center"></footer>
+
+    <!-- Scripts -->
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/gh/linuxguist/countries@main/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Initialize select2 for country and state selects
+            $('#country-select').select2({
+                placeholder: "Select a country",
+                allowClear: true
+            });
+            $('#state-select').select2({
+                placeholder: "Select a state",
+                allowClear: true
+            });
+
+            // Load countries
+            function loadCountries() {
+                // Use the countries data from the external script
+                if (typeof window.countries !== 'undefined') {
+                    var countryOptions = window.countries.map(function(country) {
+                        return '<option value="' + country.code + '">' + country.name + '</option>';
+                    });
+                    $('#country-select').html(countryOptions.join('')).trigger('change');
+                }
+            }
+
+            // Load states based on selected country
+            function loadStates(countryCode) {
+                // Use the states data from the external script
+                if (typeof window.states !== 'undefined' && window.states[countryCode]) {
+                    var stateOptions = window.states[countryCode].map(function(state) {
+                        return '<option value="' + state.code + '">' + state.name + '</option>';
+                    });
+                    $('#state-select').html(stateOptions.join('')).trigger('change');
+                } else {
+                    $('#state-select').html('<option value="">No states available</option>').trigger('change');
+                }
+            }
+
+            // Load countries on page load
+            loadCountries();
+
+            // Event listener for country change
+            $('#country-select').on('change', function() {
+                var selectedCountry = $(this).val();
+                loadStates(selectedCountry);
+            });
+        });
+    </script>
+</body>
+
+</html>

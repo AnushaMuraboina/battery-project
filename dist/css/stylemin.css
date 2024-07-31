@@ -1402,12 +1402,14 @@ i {
   color: white;
 }
 
-.bill-ship-buttton1 {
+.bill-ship-buttton1,
+.bill-ship-buttton2 {
   background-color: rgb(25, 25, 50);
   color: white;
   padding: 0px 30px;
 }
-.bill-ship-buttton1:hover {
+.bill-ship-buttton1:hover,
+.bill-ship-buttton2:hover {
   color: white;
 }
 
