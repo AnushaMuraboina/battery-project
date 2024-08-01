@@ -243,6 +243,7 @@ a {
   box-shadow: 2px 3px 4px 5px 3px rgb(14, 13, 13) !important;
   background-color: rgb(245, 245, 245);
   border-radius: 10px;
+  min-height: 170px;
 }
 .service-body-main .service-card-body {
   font-size: 20px;

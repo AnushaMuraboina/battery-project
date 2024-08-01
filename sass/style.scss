@@ -308,6 +308,8 @@ a {
   // border: 1px solid rgb(230, 221, 221);
   background-color: rgb(245, 245, 245);
   border-radius: 10px;
+  min-height: 170px;
+  // max-height: 200px;
 
   .service-card-body {
     @include ft-size-20;
