@@ -27,12 +27,30 @@
     <!-- product slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
-    <link rel="stylesheet" href="../dist/css/signup.css">
-</head>
+   
 
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+         -->
+    <!-- country -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css'>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="../dist/css/signup.css"> -->
+    <link rel="stylesheet" href="../dist/css/style.css">
+</head>
 <body>
 <div class="signupform-container">
-
 <div class="container py-5">
     <div class="row signupform-rows ">
         <div class="col-md-7  d-flex justify-content-center align-items-center">
@@ -71,5 +89,142 @@
     </div>
 </div>
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.min.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.css">
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+
+<!-- <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script> -->
+<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js'></script>
+<script src="https://cdn.jsdelivr.net/gh/linuxguist/countries@main/script.js"></script>
+
+
+
+<!-- <script type="text/javascript">
+    document.addEventListener("load", loadCountries());
+    document.getElementById('single').value = "";
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script> 
+<script>
+    $("#single").select2({
+        // placeholder: "Select a programming language",
+        allowClear: true
+    });
+    $("#multiple").select2({
+        // placeholder: "Select a programming language",
+        allowClear: true
+    });
+</script> -->
+<script>
+
+    function toggleForm_check() {
+        const formElementsCheck = document.getElementById('formElements_check');
+        const shippingCostDetails = document.getElementById('shippingCostDetails');
+        const isChecked = document.getElementById('saveInfo-re').checked;
+
+        if (isChecked) {
+            formElementsCheck.classList.remove('hidden-checkout');
+            shippingCostDetails.classList.add('hidden-checkout');
+        } else {
+            formElementsCheck.classList.add('hidden-checkout');
+            shippingCostDetails.classList.remove('hidden-checkout');
+        }
+    }
+
+    window.onload = function () {
+        toggleForm_check();
+    }
+    function checkFunction() {
+        var x = document.getElementById("checkout-installtion");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+    $(function () {
+        $(".calendar").datepicker({
+            dateFormat: 'dd/mm/yy',
+            firstDay: 1
+        });
+        $(document).on('click', ' .input-checkout', function (e) {
+            var $me = $(this),
+                $parent = $me.parents('');
+            $parent.toggleClass('open');
+        });
+        $(".calendar").on("change", function () {
+            var $me = $(this),
+                $selected = $me.val(),
+                $parent = $me.parents('');
+            $parent.find('.result').children('span').html($selected);
+        });
+    });
+
+
+    function nextStep() {
+        var billingAddressCollapse = document.getElementById('collapseOne');
+        var installationCollapse = document.getElementById('collapseTwo');
+        var paymentMethodCollapse = document.getElementById('collapseThree');
+
+        if (billingAddressCollapse.classList.contains('show')) {
+            var bsCollapse = new bootstrap.Collapse(billingAddressCollapse, { toggle: false });
+            bsCollapse.hide();
+            var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: true });
+            bsCollapseInstallation.show();
+        } else if (installationCollapse.classList.contains('show')) {
+            var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: false });
+            bsCollapseInstallation.hide();
+            var bsCollapsePayment = new bootstrap.Collapse(paymentMethodCollapse, { toggle: true });
+            bsCollapsePayment.show();
+        }
+    }
+
+    function prevStep() {
+        var billingAddressCollapse = document.getElementById('collapseOne');
+        var installationCollapse = document.getElementById('collapseTwo');
+        var paymentMethodCollapse = document.getElementById('collapseThree');
+
+        if (installationCollapse.classList.contains('show')) {
+            var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: false });
+            bsCollapseInstallation.hide();
+            var bsCollapseBilling = new bootstrap.Collapse(billingAddressCollapse, { toggle: true });
+            bsCollapseBilling.show();
+        } else if (paymentMethodCollapse.classList.contains('show')) {
+            var bsCollapsePayment = new bootstrap.Collapse(paymentMethodCollapse, { toggle: false });
+            bsCollapsePayment.hide();
+            var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: true });
+            bsCollapseInstallation.show();
+        }
+    }
+
+    // timepicker
+    document.addEventListener('DOMContentLoaded', function () {
+        flatpickr("#timePicker", {
+            enableTime: true,
+            noCalendar: true,
+            // dateFormat: "H:i ",
+            dateFormat: "h:i K",
+            time_24hr: false,
+            // time_24hr: true,
+            disableMobile: true
+        });
+    });
+
+</script>
+
 </body>
 </html>

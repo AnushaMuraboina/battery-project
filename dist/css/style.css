@@ -1245,6 +1245,85 @@ i {
     margin: 0 auto;
   }
 }
+.signupform-container {
+  background-color: rgb(255, 222, 211);
+}
+.signupform-container .signup-form-button,
+.signupform-container .signin-form-login {
+  background-color: #FF4500;
+  color: white !important;
+  padding: 10px 0px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+.signupform-container .signup-form-button .signup-button-changes,
+.signupform-container .signup-form-button .signin-button-login,
+.signupform-container .signin-form-login .signup-button-changes,
+.signupform-container .signin-form-login .signin-button-login {
+  color: white;
+}
+.signupform-container .vehi-signup-form {
+  padding: 0px 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+.signupform-container .vehi-signup-form .signup-foem-head {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #FF4500;
+}
+.signupform-container .vehi-signup-form .signupform-input {
+  border: 1px solid rgb(218, 213, 213);
+  padding: 10px;
+  box-shadow: 0px 2px 3px 0px grey;
+}
+.signupform-container .vehi-signup-form .signin-account {
+  padding-top: 20px;
+  text-align: end;
+  color: grey;
+  font-size: 14px;
+  font-weight: 400;
+}
+.signupform-container .vehi-signup-form .signin-account a {
+  color: grey;
+}
+.signupform-container .vehi-signup-form .signin-account a:hover {
+  color: #FF4500;
+}
+
+.input-icon-container {
+  position: relative;
+}
+.input-icon-container i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: grey;
+  font-size: 18px;
+}
+.input-icon-container input {
+  padding-left: 50px;
+  border: 1px solid rgb(218, 213, 213);
+  box-shadow: 0px 2px 3px 0px grey;
+}
+
+@media (max-width: 1000px) {
+  .signupform-rows {
+    display: flex;
+    flex-direction: column;
+  }
+  .vehi-signup-form {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .signupform-image {
+    display: none;
+  }
+}
 .aboutus-page-header {
   font-size: 32px;
   font-weight: 500;
@@ -1665,8 +1744,8 @@ i {
   border: none;
 }
 
-.date-picker {
-  width: 300px;
+.datepicker {
+  width: 100%;
   height: auto;
   max-height: 50px;
   background: #e2e2e2;
@@ -1675,7 +1754,7 @@ i {
   transition: all 0.3s 0s ease-in-out;
 }
 
-.date-picker .input {
+.input-checkout {
   width: 100%;
   height: 50px;
   font-size: 0;
@@ -1683,12 +1762,13 @@ i {
   background-color: white;
 }
 
-.date-picker .input .result, .date-picker .input button {
+.input-checkout .result,
+.input-checkout button {
   display: inline-block;
   vertical-align: top;
 }
 
-.date-picker .input .result {
+.input-checkout .result {
   width: calc(100% - 50px);
   height: 50px;
   line-height: 50px;
@@ -1698,7 +1778,7 @@ i {
   box-sizing: border-box;
 }
 
-.date-picker .input button {
+.input-checkout button {
   width: 50px;
   height: 50px;
   background-color: white;
@@ -1709,29 +1789,28 @@ i {
   padding: 0;
 }
 
-.date-picker .input button:hover {
+.input-checkout button:hover {
   background-color: white;
   color: black;
 }
 
-.date-picker .input button:focus {
+.input-checkout button:focus {
   outline: 0;
 }
 
-.date-picker .calendar {
+.calendar {
   position: relative;
   width: 100%;
   background: #fff;
   border-radius: 0px;
-  overflow: hidden;
 }
 
-.date-picker .ui-datepicker-inline {
+.ui-datepicker-inline {
   position: relative;
   width: 100%;
 }
 
-.date-picker .ui-datepicker-header {
+.ui-datepicker-header {
   height: 100%;
   line-height: 50px;
   background: white;
@@ -1739,7 +1818,8 @@ i {
   margin-bottom: 10px;
 }
 
-.date-picker .ui-datepicker-prev, .date-picker .ui-datepicker-next {
+.ui-datepicker-prev,
+.ui-datepicker-next {
   width: 20px;
   height: 20px;
   text-indent: 9999px;
@@ -1750,31 +1830,32 @@ i {
   margin-top: 12px;
 }
 
-.date-picker .ui-datepicker-prev {
+.ui-datepicker-prev {
   float: left;
-  margin-left: 12px;
+  margin-left: 38px;
   color: black;
 }
 
-.date-picker .ui-datepicker-prev:after {
+.ui-datepicker-prev:after {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   margin: -43px 0px 0px 8px;
 }
 
-.date-picker .ui-datepicker-next {
+.ui-datepicker-next {
   float: right;
-  margin-right: 12px;
+  margin-right: 34px;
   color: black !important;
 }
 
-.date-picker .ui-datepicker-next:after {
+.ui-datepicker-next:after {
   -webkit-transform: rotate(-135deg);
   transform: rotate(-135deg);
   margin: -43px 0px 0px 6px;
 }
 
-.date-picker .ui-datepicker-prev:after, .date-picker .ui-datepicker-next:after {
+.ui-datepicker-prev:after,
+.ui-datepicker-next:after {
   content: "";
   position: absolute;
   display: block;
@@ -1784,20 +1865,23 @@ i {
   border-bottom: 2px solid black;
 }
 
-.date-picker .ui-datepicker-prev:hover, .date-picker .ui-datepicker-next:hover, .date-picker .ui-datepicker-prev:hover:after, .date-picker .ui-datepicker-next:hover:after {
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover,
+.ui-datepicker-prev:hover:after,
+.ui-datepicker-next:hover:after {
   border-color: black;
 }
 
-.date-picker .ui-datepicker-title {
+.ui-datepicker-title {
   text-align: center;
 }
 
-.date-picker .ui-datepicker-calendar {
+.ui-datepicker-calendar {
   width: 100%;
   text-align: center;
 }
 
-.date-picker .ui-datepicker-calendar thead tr th span {
+.ui-datepicker-calendar thead tr th span {
   display: block;
   width: 100%;
   color: #8392A7;
@@ -1805,41 +1889,233 @@ i {
   font-size: 13px;
 }
 
-.date-picker .ui-state-default {
+.ui-state-default {
   display: block;
   text-decoration: none;
   color: black;
   line-height: 40px;
+  margin: 0px 20px;
   font-size: 12px;
 }
 
-.date-picker .ui-state-default:hover {
-  background: skyblue;
+.ui-state-default:hover {
+  background: rgb(25, 25, 50);
   border-radius: 50%;
   color: white;
 }
 
-.date-picker .ui-state-highlight {
+.ui-state-highlight {
   color: #68768A;
 }
 
-.date-picker .ui-state-active {
+.ui-state-active {
   color: white;
-  background: skyblue;
+  background: #FF4500;
   border-radius: 50%;
   color: white;
   font-weight: 600;
 }
 
-.date-picker .ui-datepicker-unselectable .ui-state-default {
+.ui-datepicker-unselectable .ui-state-default {
   color: #eee;
   border: 2px solid transparent;
 }
 
-.date-picker.open {
+.open {
   max-height: 400px;
 }
 
-.date-picker.open .input button {
+.open .input-checkout button {
   background: white;
+}
+
+.flatpickr-time input.flatpickr-hour {
+  background-color: white;
+}
+.flatpickr-time input.flatpickr-hour:hover {
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+
+.flatpickr-time input.flatpickr-minute {
+  background-color: white;
+}
+.flatpickr-time input.flatpickr-minute:hover {
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+
+.flatpickr-time .flatpickr-am-pm {
+  background-color: white;
+}
+.flatpickr-time .flatpickr-am-pm:hover {
+  color: black;
+  font-weight: bold;
+  background-color: white;
+}
+
+.profile-headings {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.profile-okka-tab {
+  width: 30%;
+}
+.profile-okka-tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 10px 15px;
+  line-height: 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.profile-okka-tab button a {
+  color: rgb(36, 36, 36);
+  font-size: 14px;
+  font-weight: 600;
+}
+.profile-okka-tab button:hover {
+  background-color: white;
+}
+.profile-okka-tab button.active {
+  background-color: rgb(241, 241, 241);
+}
+
+.profile-form-label {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.reset-password-profile {
+  font-size: 22px;
+  font-family: 600;
+  color: rgb(36, 36, 36);
+}
+
+fieldset {
+  border: 2px solid rgb(228, 222, 222) !important;
+}
+
+fieldset,
+legend {
+  all: revert;
+}
+
+.profiles-menus-head p {
+  font-size: 18px;
+  font-weight: 400;
+}
+.profiles-menus-head p i {
+  font-size: 20px;
+  color: rgb(39, 38, 38);
+}
+.profiles-menus-head p i:hover {
+  color: #FF4500;
+}
+.profiles-menus-head p:hover {
+  color: #FF4500;
+}
+
+.profile-field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+}
+.profile-field-icon:hover {
+  color: rgb(165, 165, 165);
+}
+
+.profile-acont-sabe-btn {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #FF4500;
+  text-align: center;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.checkout-form-input::placeholder {
+  font-size: 17px;
+  color: grey;
+}
+
+.checkout-radio-label {
+  font-size: 17px;
+  color: grey;
+  padding: 0px 10px;
+}
+
+.profile-user-detail {
+  box-shadow: 0px 0px 3px 0px grey;
+}
+.profile-user-detail .profile-greeting {
+  font-size: 16px;
+  font-weight: 400;
+  color: grey;
+}
+.profile-user-detail .profile-user {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+.profile-menus-detail {
+  box-shadow: 0px 0px 2px 0px rgb(173, 171, 171);
+  height: 63vh;
+}
+
+.logout-profile-menu {
+  box-shadow: 0px 0px 2px 0px rgb(199, 196, 196);
+}
+
+.profile-tab-content {
+  padding: 10px 22px;
+  width: 70%;
+  border: 1px solid grey;
+}
+
+@media screen and (max-width: 1120px) {
+  .profile-page-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-form-label {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .tab.profile-okka-tab {
+    width: 100%;
+    border: none;
+  }
+  fieldset.reset.px-5.py-4.profile-form-label {
+    padding: 20px !important;
+  }
+  .profile-tab-content {
+    width: 100%;
+  }
+}
+.orderpage-success {
+  background-color: #FF4500;
+  color: white;
+  padding: 25px;
+  font-size: 25px;
+  font-weight: 500;
+}
+.orderpage-success:hover {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
