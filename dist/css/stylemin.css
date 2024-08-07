@@ -2113,9 +2113,183 @@ legend {
   background-color: #FF4500;
   color: white;
   padding: 25px;
-  font-size: 25px;
+  width: 60%;
+  border-radius: 10px;
+  font-size: 32px;
   font-weight: 500;
 }
 .orderpage-success:hover {
   color: white;
+}
+
+.order-link-date {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+}
+.order-link-date a {
+  color: #FF4500;
+}
+
+.order-normal-total {
+  font-size: 30px;
+  color: #FF4500;
+  font-weight: 500;
+}
+
+.order-sub-heading {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: start;
+  padding: 10px 0px;
+  border-bottom: 1px solid rgb(168, 164, 164);
+}
+
+.hh-grayBox {
+  /* background-color: #F8F8F8; */
+  /* margin-bottom: 20px; */
+  padding: 35px;
+  margin-top: 60px;
+}
+
+.order-tracking {
+  text-align: center;
+  /* width: 33.33%; */
+  width: 25%;
+  position: relative;
+  display: block;
+}
+
+.order-tracking .is-complete {
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: 0px solid #AFAFAF;
+  background-color: rgb(206, 202, 202);
+  margin: 0 auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+  z-index: 2;
+}
+
+.order-tracking .is-complete:after {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 7px;
+  top: -2px;
+  bottom: 0;
+  left: 5px;
+  margin: auto 0;
+  border: 0px solid #AFAFAF;
+  border-width: 0px 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.order-tracking.completed .is-complete {
+  border-color: rgb(182, 255, 93);
+  border-width: 0px;
+  background-color: rgb(182, 255, 93);
+}
+
+.order-tracking.completed .is-complete:after {
+  border-color: black;
+  border-width: 0px 3px 3px 0;
+  width: 7px;
+  left: 11px;
+  opacity: 1;
+}
+
+.order-tracking p {
+  color: black;
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  line-height: 20px;
+}
+
+.order-tracking p span {
+  font-size: 14px;
+}
+
+.order-tracking.completed p {
+  color: #000;
+}
+
+.order-tracking::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: calc(100% - 40px);
+  background-color: rgb(206, 202, 202);
+  top: 13px;
+  position: absolute;
+  left: calc(-50% + 20px);
+  z-index: 0;
+}
+
+.order-tracking:first-child:before {
+  display: none;
+}
+
+.order-tracking.completed:before {
+  background-color: #27aa80;
+}
+
+.order-product-display {
+  border-top: 1px solid rgb(202, 196, 196);
+}
+
+.order-place-head {
+  font-size: 18px;
+  color: grey;
+  font-weight: 500;
+}
+
+.order-normal-text {
+  font-size: 19px;
+  font-weight: 400;
+  color: black;
+  line-height: 25px;
+}
+
+.orderpage-row {
+  box-shadow: 0px 0px 3px 0px grey;
+}
+
+@media screen and (max-width: 1120px) {
+  .orderpage-success-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .orderpage-success {
+    margin: 10px !important;
+    width: 100%;
+    padding: 7px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .hh-grayBox {
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .order-sub-heading {
+    font-size: 20px;
+    text-align: center;
+  }
+  .order-product-display {
+    padding-left: 0px !important;
+  }
+  .Payment-Method {
+    justify-content: start;
+    text-align: left;
+  }
+  .Payment-Method .order-sub-heading {
+    text-align: left;
+  }
 }/*# sourceMappingURL=stylemin.css.map */

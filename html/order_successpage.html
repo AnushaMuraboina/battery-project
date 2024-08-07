@@ -21,169 +21,38 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         crossorigin="anonymous">
     <link rel="stylesheet" href="../dist/css/style.css">
-    <style>
-        .orderpage-truck {
-            font-size: 18px;
-            font-weight: 400;
-        }
 
-        .hh-grayBox {
-            /* background-color: #F8F8F8; */
-            margin-bottom: 20px;
-            padding: 35px;
-            margin-top: 20px;
-        }
-
-        .pt45 {
-            padding-top: 45px;
-        }
-
-        .order-tracking {
-            text-align: center;
-            /* width: 33.33%; */
-            width: 25%;
-            position: relative;
-            display: block;
-        }
-
-        .order-tracking .is-complete {
-            display: block;
-            position: relative;
-            border-radius: 50%;
-            height: 30px;
-            width: 30px;
-            border: 0px solid #AFAFAF;
-            background-color: rgb(206, 202, 202);
-            margin: 0 auto;
-            transition: background 0.25s linear;
-            -webkit-transition: background 0.25s linear;
-            z-index: 2;
-        }
-
-        .order-tracking .is-complete:after {
-            display: block;
-            position: absolute;
-            content: '';
-            height: 14px;
-            width: 7px;
-            top: -2px;
-            bottom: 0;
-            left: 5px;
-            margin: auto 0;
-            border: 0px solid #AFAFAF;
-            border-width: 0px 2px 2px 0;
-            transform: rotate(45deg);
-            opacity: 0;
-        }
-
-        .order-tracking.completed .is-complete {
-            border-color: rgb(182, 255, 93);
-            border-width: 0px;
-            background-color: rgb(182, 255, 93);
-        }
-
-        .order-tracking.completed .is-complete:after {
-            border-color: black;
-            border-width: 0px 3px 3px 0;
-            width: 7px;
-            left: 11px;
-            opacity: 1;
-        }
-
-        .order-tracking p {
-            color: black;
-            font-size: 16px;
-            margin-top: 8px;
-            margin-bottom: 0;
-            line-height: 20px;
-        }
-
-        .order-tracking p span {
-            font-size: 14px;
-        }
-
-        .order-tracking.completed p {
-            color: #000;
-        }
-
-        .order-tracking::before {
-            content: '';
-            display: block;
-            height: 3px;
-            width: calc(100% - 40px);
-            background-color: rgb(206, 202, 202);
-            top: 13px;
-            position: absolute;
-            left: calc(-50% + 20px);
-            z-index: 0;
-        }
-
-        .order-tracking:first-child:before {
-            display: none;
-        }
-
-        .order-tracking.completed:before {
-            background-color: #27aa80;
-        }
-
-        .order-product-display{
-            border-top: 1px solid rgb(202, 196, 196);
-        }
-        .order-sub-heading{
-            /* border-bottom: 1px solid grey; */
-            font-size: 20px;
-            font-weight: 500;
-            padding-bottom: 20px;
-        }
-        .order-place-head{
-            font-size: 18px;
-            color: grey;
-            font-weight: 500;
-        }
-        .order-normal-text{
-            font-size: 16px;
-            font-weight: 400;
-            color: black;
-        }
-    </style>
 </head>
-
 <body>
-
-
-    <div class="container">
-        <div class="row">
+    <div class="container ">
+        <div class="row d-flex orderpage-success-head  justify-content-center">
             <button type="button" class="btn orderpage-success my-5">Thank You For Your Order</button>
         </div>
-        <div class="row border pt-5 px-3 mb-5">
+        <div class="row orderpage-row  pt-5 px-3 mb-5">
             <div class="col-md-7">
-                <div class="d-flex orderpage-truck">
+                <div class="d-flex orderpage-truck pb-4 align-items-baseline">
                     <i class="fa-solid fa-truck text-dark pe-4"></i>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit..</p>
+                    <p class="order-normal-text "> We'll send you an email address with tracking informationwhen your items ships.</p>
                 </div>
                 <div class="row ">
                     <div class="col-md-6">
                         <p class="order-place-head">Order Placed</p>
                         <p class="order-normal-text">Value Shopping</p>
-                        <h5>Arrives By <a href="#" class="order-link-date">Tuesday May 10</a></h5>
+                        <h5 class="order-link-date">Arrives By <a href="#" class="">Tuesday May 10</a></h5>
                         <p class="order-normal-text">Sold By Lorem</p>
                         <p class="order-normal-text">Order #987654356789</p>
                     </div>
                     <div class="col-md-6">
                         <p class="order-place-head">Shopping Address</p>
-                        <h6 class="order-normal-text">John Mercent</h6>
-                        <!-- <p>Arrives By <a href="#" class="order-link-date">Tuesday May 10</a></p> -->
+                        <h6 class="order-link-date">John Mercent</h6>
                         <p class="order-normal-text">225 Church Street</p>
                         <p class="order-normal-text">Bannergata Road</p>
                         <p class="order-normal-text">Banglore</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-5  hh-grayBox">
-                <!-- <div class="container">
-                    <div class="row"> -->
-                <!-- <div class="hh-grayBox "> -->
-                <div class="row justify-content-between pb-3">
+            <div class="col-md-5  hh-grayBox ">
+                <div class="row justify-content-between pb-5">
                     <div class="order-tracking completed">
                         <span class="is-complete"></span>
                         <p >Ordered Placed</p>
@@ -201,19 +70,13 @@
                         <p>Delivered</p>
                     </div>
                 </div>
-                <!-- <div class="row d-flex justify-content-between" >
-                        <img src="../images/image 23.png" alt="" width="60px" height="60px">
-                        <h6>Car Battery</h6>
-                        <p>Quantity : 1</p>
-                        <p>$20</p>
-                    </div> -->
-                <div class="row ps-4 py-4  order-product-display">
+                <div class="row ps-4 py-5  order-product-display">
                     <table >
                         <tr>
-                            <td>  <img src="../images/image 13.png" alt=""> </td>
-                            <td>   <h6>Car Battery</h6> </td>
-                            <td>  <p>Quantity : 1</p>  </td>
-                            <td> <p>$20</p>  </td>
+                            <td>  <img src="../images/image 35.png" alt="" width="80px" height="80px"> </td>
+                            <td>   <h6 class="order-link-date">Car Battery</h6> </td>
+                            <td>  <p class="order-normal-text">Quantity : 1</p>  </td>
+                            <td> <p class="order-normal-text">$20</p>  </td>
                         </tr>
                     </table>
                 </div>
@@ -224,33 +87,44 @@
         </div>
         <div class="row">
             <div class="col-md-3">
-                <h4 class="order-sub-heading">Order Summary</h4>
-
-                <div class="d-flex justify-content-between">
-                    <p>Subtotal(1 item)</p>
-                    <p>$345</p>
+                <div class=" d-flex ">
+                    <h4 class="order-sub-heading">Order Summary</h4>
+                </div>
+               <div class="order-sub-heading">
+                <div class="d-flex justify-content-between pt-2 ">
+                    <p class="order-normal-text">Subtotal(1 item)</p>
+                    <p class="order-normal-text">$345.00</p>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <p>Subtotal(1 item)</p>
-                    <p>$345</p>
+                    <p class="order-normal-text">Value Shipping</p>
+                    <p class="order-normal-text">$345.00</p>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <p>Subtotal(1 item)</p>
-                    <p>$345</p>
+                    <p class="order-normal-text">Eat Tax</p>
+                    <p class="order-normal-text">$345</p>
                 </div>
             </div>
-            <div class="col-md-5 text-center align-items-center">
-                <h4 class="order-sub-heading">Payment Method</h4>
-                <img src="../images/image 40-2.png" alt="">
+                <div class="d-flex justify-content-between pt-3">
+                    <p class="order-normal-total">Total</p>
+                    <p class="order-normal-total">$22.90</p>
+                </div>
+            </div>
+            
+            <div class="col-md-5 text-center align-items-center Payment-Method">
+                <div class=" d-flex justify-content-center ">
+                    <h4 class="order-sub-heading">Payment Method</h4>
+                </div>
+               
+                <img src="../images/image 40-2.png" alt="" class="pt-2">
             </div>
             <div class="col-md-4">
-                <h4 class="order-sub-heading">Shipping Address</h4>
-                <p>Shopping Address</p>
-                <h6>John Mercent</h6>
-                <!-- <p>Arrives By <a href="#" class="order-link-date">Tuesday May 10</a></p> -->
-                <p>225 Church Street</p>
-                <p>Bannergata Road</p>
-                <p>Banglore</p>
+                <div class=" d-flex ">
+                    <h4 class="order-sub-heading">Shipping Address</h4>
+                </div>
+                <h6 class="order-link-date">John Mercent</h6>
+                <p class="order-normal-text">225 Church Street</p>
+                <p class="order-normal-text">Bannergata Road</p>
+                <p class="order-normal-text">Banglore</p>
             </div>
         </div>
     </div>
