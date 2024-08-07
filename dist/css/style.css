@@ -2451,6 +2451,12 @@ legend {
   color: #FF4500;
 }
 
+.pro-wishlist-head {
+  font-size: 25px;
+  font-weight: 500;
+  color: #FF4500;
+}
+
 .nav-pills .nav-link.active {
   background-color: white;
   color: black;
