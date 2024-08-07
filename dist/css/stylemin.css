@@ -1255,8 +1255,8 @@ i {
   padding: 10px 0px;
   border-radius: 10px;
   font-size: 18px;
-  text-align: center;
   font-weight: 500;
+  text-align: center;
 }
 .signupform-container .signup-form-button .signup-button-changes,
 .signupform-container .signup-form-button .signin-button-login,
@@ -1956,159 +1956,6 @@ i {
   background-color: white;
 }
 
-.profile-headings {
-  font-size: 22px;
-  font-weight: 400;
-}
-
-.profile-okka-tab {
-  width: 30%;
-}
-.profile-okka-tab button {
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 10px 15px;
-  line-height: 20px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 17px;
-}
-.profile-okka-tab button a {
-  color: rgb(36, 36, 36);
-  font-size: 14px;
-  font-weight: 600;
-}
-.profile-okka-tab button:hover {
-  background-color: white;
-}
-.profile-okka-tab button.active {
-  background-color: rgb(241, 241, 241);
-}
-
-.profile-form-label {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.reset-password-profile {
-  font-size: 22px;
-  font-family: 600;
-  color: rgb(36, 36, 36);
-}
-
-fieldset {
-  border: 2px solid rgb(228, 222, 222) !important;
-}
-
-fieldset,
-legend {
-  all: revert;
-}
-
-.profiles-menus-head p {
-  font-size: 18px;
-  font-weight: 400;
-}
-.profiles-menus-head p i {
-  font-size: 20px;
-  color: rgb(39, 38, 38);
-}
-.profiles-menus-head p i:hover {
-  color: #FF4500;
-}
-.profiles-menus-head p:hover {
-  color: #FF4500;
-}
-
-.profile-field-icon {
-  float: right;
-  margin-left: -25px;
-  margin-top: -25px;
-  position: relative;
-  z-index: 2;
-  font-size: 14px;
-  font-weight: 400;
-  color: #666666;
-}
-.profile-field-icon:hover {
-  color: rgb(165, 165, 165);
-}
-
-.profile-acont-sabe-btn {
-  padding: 10px 15px;
-  cursor: pointer;
-  background-color: #FF4500;
-  text-align: center;
-  color: white;
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.checkout-form-input::placeholder {
-  font-size: 17px;
-  color: grey;
-}
-
-.checkout-radio-label {
-  font-size: 17px;
-  color: grey;
-  padding: 0px 10px;
-}
-
-.profile-user-detail {
-  box-shadow: 0px 0px 3px 0px grey;
-}
-.profile-user-detail .profile-greeting {
-  font-size: 16px;
-  font-weight: 400;
-  color: grey;
-}
-.profile-user-detail .profile-user {
-  font-size: 18px;
-  font-weight: 500;
-  color: black;
-}
-
-.profile-menus-detail {
-  box-shadow: 0px 0px 2px 0px rgb(173, 171, 171);
-  height: 63vh;
-}
-
-.logout-profile-menu {
-  box-shadow: 0px 0px 2px 0px rgb(199, 196, 196);
-}
-
-.profile-tab-content {
-  padding: 10px 22px;
-  width: 70%;
-  border: 1px solid grey;
-}
-
-@media screen and (max-width: 1120px) {
-  .profile-page-row {
-    display: flex;
-    flex-direction: column;
-  }
-  .profile-form-label {
-    font-size: 14px;
-    font-weight: 400;
-  }
-  .tab.profile-okka-tab {
-    width: 100%;
-    border: none;
-  }
-  fieldset.reset.px-5.py-4.profile-form-label {
-    padding: 20px !important;
-  }
-  .profile-tab-content {
-    width: 100%;
-  }
-}
 .orderpage-success {
   background-color: #FF4500;
   color: white;
@@ -2152,12 +1999,16 @@ legend {
   margin-top: 60px;
 }
 
-.order-tracking {
+.order-tracking, .cancelled {
   text-align: center;
   /* width: 33.33%; */
   width: 25%;
   position: relative;
   display: block;
+}
+
+.order-track-cross {
+  line-height: 30px;
 }
 
 .order-tracking .is-complete {
@@ -2167,7 +2018,21 @@ legend {
   height: 30px;
   width: 30px;
   border: 0px solid #AFAFAF;
-  background-color: rgb(206, 202, 202);
+  background-color: grey;
+  margin: 0 auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+  z-index: 2;
+}
+
+.cancelled .is-complete {
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: 0px solid #AFAFAF;
+  background-color: red;
   margin: 0 auto;
   transition: background 0.25s linear;
   -webkit-transition: background 0.25s linear;
@@ -2220,6 +2085,17 @@ legend {
   color: #000;
 }
 
+.cancelled::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: calc(100% + 198px);
+  background-color: red;
+  top: 13px;
+  position: absolute;
+  left: -230%;
+}
+
 .order-tracking::before {
   content: "";
   display: block;
@@ -2246,8 +2122,8 @@ legend {
 
 .order-place-head {
   font-size: 18px;
-  color: grey;
   font-weight: 500;
+  color: grey;
 }
 
 .order-normal-text {
@@ -2259,6 +2135,21 @@ legend {
 
 .orderpage-row {
   box-shadow: 0px 0px 3px 0px grey;
+}
+
+.Payment-Method {
+  text-align: center;
+  align-items: center;
+}
+
+.Payment-Method-head {
+  display: flex;
+  justify-content: center;
+}
+
+.product-dis-order th {
+  font-size: 20px;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1120px) {
@@ -2274,9 +2165,20 @@ legend {
     font-size: 20px;
     font-weight: 500;
   }
+  .orderpage-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .Payment-Method-head {
+    display: flex;
+    justify-content: left;
+  }
+  .order-sectionpage {
+    width: 100%;
+  }
   .hh-grayBox {
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 50px;
   }
   .order-sub-heading {
     font-size: 20px;
@@ -2287,9 +2189,269 @@ legend {
   }
   .Payment-Method {
     justify-content: start;
+    padding: 20px 10px;
     text-align: left;
   }
   .Payment-Method .order-sub-heading {
     text-align: left;
   }
+}
+.profile-headings {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.profile-okka-tab {
+  padding-right: 30px;
+}
+.profile-okka-tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 10px 15px;
+  line-height: 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.profile-okka-tab button a {
+  color: rgb(36, 36, 36);
+  font-size: 14px;
+  font-weight: 600;
+}
+.profile-okka-tab button:hover {
+  background-color: white;
+}
+.profile-okka-tab button.active {
+  background-color: rgb(241, 241, 241);
+}
+
+.profile-form-label {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.profile-form-input {
+  line-height: 35px;
+}
+.profile-form-input::placeholder {
+  font-size: 17px;
+  color: grey;
+}
+
+.reset-password-profile {
+  font-size: 22px;
+  font-family: 600;
+  color: rgb(36, 36, 36);
+}
+
+fieldset {
+  border: 2px solid rgb(228, 222, 222) !important;
+}
+
+fieldset,
+legend {
+  all: revert;
+}
+
+.profiles-menus-head p {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+.profiles-menus-head p i {
+  font-size: 20px;
+  color: rgb(39, 38, 38);
+}
+.profiles-menus-head p i:hover {
+  color: #FF4500;
+}
+.profiles-menus-head p:hover {
+  color: #FF4500;
+}
+
+.profile-field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  font-weight: 400;
+  color: #666666;
+}
+.profile-field-icon:hover {
+  color: rgb(165, 165, 165);
+}
+
+.profile-acont-sabe-btn {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #FF4500;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+.profile-acont-sabe-btn:hover {
+  color: white;
+}
+
+.checkout-form-input::placeholder {
+  font-size: 17px;
+  color: grey;
+}
+
+.checkout-radio-label {
+  font-size: 17px;
+  color: grey;
+  padding: 0px 10px;
+}
+
+.profile-user-detail {
+  box-shadow: 0px 0px 3px 0px grey;
+}
+.profile-user-detail .profile-greeting {
+  font-size: 16px;
+  font-weight: 400;
+  color: grey;
+}
+.profile-user-detail .profile-user {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+
+.profile-menus-detail {
+  box-shadow: 0px 0px 2px 0px rgb(173, 171, 171);
+  height: 68vh;
+}
+
+.logout-profile-sec {
+  box-shadow: 0px 0px 4px 0px rgb(199, 196, 196);
+}
+
+.profile-tab-content {
+  padding: 10px 22px;
+  box-shadow: 0px 0px 2px 0px grey;
+}
+
+@media screen and (max-width: 1120px) {
+  .profile-okka-tab {
+    padding-right: 10px;
+  }
+  .profile-page-row {
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-form-label {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .tab.profile-okka-tab {
+    width: 100%;
+    border: none;
+  }
+  fieldset.reset.px-5.py-4.profile-form-label {
+    padding: 20px !important;
+  }
+  .profile-tab-content {
+    width: 100%;
+  }
+  .profile-menus-detail {
+    height: auto;
+  }
+}
+.profile-acont-save {
+  background-color: #FF4500;
+  color: white;
+}
+.profile-acont-save:hover {
+  color: white;
+}
+
+.profile-acont-cancel {
+  background-color: white;
+  color: grey;
+  border: 2px solid rgb(209, 199, 199);
+  margin-left: 20px;
+}
+.profile-acont-cancel:hover {
+  color: black;
+}
+
+.profile-acont-save,
+.profile-acont-cancel {
+  padding: 10px 35px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 1px;
+}
+
+.orderpage-container {
+  box-shadow: 0px 0px 2px 0px grey;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+.orderpage-container .order-delivered-success {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: -15px;
+}
+.orderpage-container .order-delivered-success::marker {
+  color: green;
+  font-size: 30px;
+}
+.orderpage-container .order-delivered-fail {
+  list-style-type: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: grey;
+}
+.orderpage-container .order-text-deliver {
+  font-size: 18px;
+  line-height: 30px;
+  color: grey;
+}
+.orderpage-container .order-delivered-canceled {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: -15px;
+}
+.orderpage-container .order-delivered-canceled::marker {
+  color: red;
+  font-size: 30px;
+}
+
+.order-search-button {
+  background-color: #FF4500;
+  color: white;
+}
+
+.service-order-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.roadside-page-head {
+  font-size: 32px;
+  font-weight: 500;
+  color: black;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #FF4500;
+}
+.roadside-page-head a {
+  color: #FF4500;
+}
+
+.nav-pills .nav-link.active {
+  background-color: white;
+  color: black;
 }/*# sourceMappingURL=stylemin.css.map */
