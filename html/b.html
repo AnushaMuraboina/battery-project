@@ -20,227 +20,15 @@
         crossorigin="anonymous">
 <link rel="stylesheet" href="../dist/css/style.css">
     <style>
-        /* .profile-tab-link {
-            border-radius: 0.25rem;
-            padding: 1rem;
-            margin-bottom: -1px;
-            font-weight: 600;
-        }
-        
-        .profile-tab-content {
-            padding: 1.5rem;
-            border-top: 1px solid #dee2e6;
-        }
 
-        .profile-tab-link.active {
-            color: #0d6efd;
-            background-color: #f8f9fa;
-            border-color: #dee2e6 #dee2e6 #fff;
-        }
-
-        .profile-card {
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 0.375rem;
-        }
-
-        .profile-card .card-body {
-            padding: 1.5rem;
-        }
-
-        .profile-card .card-title {
-            font-size: 1.125rem;
-            font-weight: 500;
-        }
-
-        .wishlist-profiles {
-            font-size: 2rem;
-        } */
     </style>
 </head>
 
 <body>
 
 
-<!-- 
-
-
-    <div class="container pt-5 ">
-        <div class="row gx-5 ">
-            <div class="tab profile-okka-tab  pe-5">
-                <div class=" profile-user-detail d-flex align-items-center border pe-5 p-2">
-                    <img src="../images/profile-image.png" alt="">
-                    <div class="ps-4">
-                        <h6 class="profile-greeting">Hello,</h6>
-                        <h6 class="profile-user">Prem Kumar</h6>
-                    </div>
-                </div>
-
-                <div class=" profile-menus-detail mt-3">
-                    <button class="tablinks profile-tab-link profile-form-label mt-3">
-                        <a href="../html/pro_order.html" class="d-flex profiles-menus-head pt-3">
-                            <p>
-                                <i class="fa-solid fa-list"></i>
-                            </p>
-                            <p class="ps-3">ORDER LIST</p>
-                        </a>
-                    </button>
-
-                    <button class="tablinks profile-tab-link profile-form-label">
-                        <a href="../html/pro_address.html" class="d-flex profiles-menus-head">
-                            <p> <i class="fa-solid fa-location-pin"></i></p>
-                            <p class="ps-3">ADDRESS</p>
-                        </a>
-                    </button>
-                    <button class="tablinks profile-tab-link profile-form-label">
-                        <a href="#" id="tab-2" class="d-flex profiles-menus-head">
-                            <p> <i class="fa-solid fa-cart-shopping"></i></p>
-                            <p class="ps-3">CART LIST</p>
-                        </a>
-                    </button>
-                    <button class="tablinks profile-tab-link profile-form-label">
-                        <a href="../html/pro_wishlist.html" class="d-flex profiles-menus-head">
-                            <p> <i class="fa-regular fa-heart"></i></p>
-                            <p class="ps-3">WISHLIST</p>
-                        </a>
-                    </button>
-                    <button class="tablinks profile-tab-link profile-form-label">
-                        <a href="" id="tab-7" class="d-flex profiles-menus-head active" id="defaultOpen">
-                            <p> <i class="fa-regular fa-user"></i></p>
-                            <p class="ps-3">ACCOUNT DETAILS</p>
-                        </a>
-                    </button>
-
-                </div>
-                <button class="tablinks profile-tab-link profile-form-label logout-profile-menu  ">
-                    <a href="../html/pro_logout.html" class="d-flex profiles-menus-head mt-3">
-                        <p> <i class="fa-solid fa-right-from-bracket"></i></p>
-                        <p class="ps-3">Logout</p>
-                    </a>
-                </button>
-            </div>
-            <div id="tab-2" class="tabcontent profile-tab-content border px-5 py-3">
-                <div class="row">
-                    <form action="">
-                        <div class="row">
-                            <h4 class="profile-headings mb-4">Profile Information</h4>
-                            <div class="col-md-6 ">
-
-
-                            </div>
-
-                            <fieldset class="reset px-5 py-4 profile-form-label">
-                                <legend class="reset-password-profile "><strong>Password Change</strong></legend>
-                                <div class="form-group mb-3">
-                                    <label for="current-password" class="form-label profile-form-label">Current
-                                        password (leave
-                                        blank to leave unchanged)<span class="text-danger">*</span></label>
-                                    <input id="current-password" type="password" class="form-control profile-form-input"
-                                        name="current-password" placeholder="Current Password">
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="new-password" class="form-label profile-form-label">New password (leave
-                                        blank
-                                        to leave unchanged)<span class="text-danger">*</span></label>
-                                    <input id="new-password" type="password" class="form-control profile-form-input"
-                                        name="new-password" placeholder="New Password">
-
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="confirm-password" class="form-label profile-form-label">Confirm new
-                                        password<span class="text-danger">*</span></label>
-                                    <input id="confirm-password" type="password" class="form-control profile-form-input"
-                                        name="confirm-password" placeholder="Confirm Password">
-
-                                </div>
-                                <button type="button" class="btn  profile-acont-sabe-btn mt-3">Save Changes</button>
-                            </fieldset>
-
-                    </form>
-                </div>
-            </div>
-            <div id="tab-7" class="tabcontent profile-tab-content border px-5 py-3">
-                <div class="row">
-                    <form action="">
-                        <div class="row">
-                            <h4 class="profile-headings mb-4">Profile Information</h4>
-                            <div class="col-md-6 ">
-                                <div class="mb-3">
-                                    <input type="text" class="form-control profile-form-input" id="first-name"
-                                        placeholder="First Name" placeholder="zinavo" required>
-                                </div>
-                                <div class="mb-3">
-                                    <p class="profile-form-label">Your Gender</p>
-                                    <input type="radio" id="male" name="gender" value="male">
-                                    <label for="male" class="checkout-radio-label">Male</label>
-                                    <input type="radio" id="female" name="gender" value="female">
-                                    <label for="female" class="checkout-radio-label">Female</label>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="mobile_address" class="form-label profile-form-label">Mobile Number
-                                    </label>
-                                    <input type="tel" class="form-control profile-form-input" id="mobile_address"
-                                        required placeholder="Mobile Number">
-                                </div>
-                            </div>
-                            <div class="col-md-6 ">
-                                <div class="mb-3">
-                                    <input type="text" class="form-control profile-form-input" id="last-name"
-                                        placeholder="Last Name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email_address" class="form-label profile-form-label">Email
-                                        Address</label>
-                                    <input type="email" class="form-control profile-form-input" id="email_address"
-                                        required placeholder="Email Address">
-                                </div>
-                            </div>
-                        </div>
-
-                        <fieldset class="reset px-5 py-4 profile-form-label">
-                            <legend class="reset-password-profile "><strong>Password Change</strong></legend>
-                            <div class="form-group mb-3">
-                                <label for="current-password" class="form-label profile-form-label">Current
-                                    password (leave
-                                    blank to leave unchanged)<span class="text-danger">*</span></label>
-                                <input id="current-password" type="password" class="form-control profile-form-input"
-                                    name="current-password" placeholder="Current Password">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="new-password" class="form-label profile-form-label">New password (leave
-                                    blank
-                                    to leave unchanged)<span class="text-danger">*</span></label>
-                                <input id="new-password" type="password" class="form-control profile-form-input"
-                                    name="new-password" placeholder="New Password">
-
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="confirm-password" class="form-label profile-form-label">Confirm new
-                                    password<span class="text-danger">*</span></label>
-                                <input id="confirm-password" type="password" class="form-control profile-form-input"
-                                    name="confirm-password" placeholder="Confirm Password">
-
-                            </div>
-                            <button type="button" class="btn  profile-acont-sabe-btn mt-3">Save Changes</button>
-                        </fieldset>
-
-                    </form>
-                </div>
-            </div>
-            </div> -->
-        <!-- </div>
-    </div>
- -->
-
-
-
-
-
-
-
-
     <div class="container pt-5 pb-5">
-        <div class="row  d-flex justify-content-between profile-page-row"">
+        <div class="row  d-flex justify-content-between profile-page-row">
             <div class="col-md-4">
                 <div class="nav flex-column nav-pills profile-okka-tab" id="v-pills-tab" role="tablist"
                     aria-orientation="vertical">
@@ -252,34 +40,22 @@
                         </div>
                     </div>
                     <div class="profile-menus-detail border  mt-3">
-                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3 " id="v-pills-home-tab" data-bs-toggle="pill"
+                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3 active" id="v-pills-home-tab" data-bs-toggle="pill"
                         href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                    
-                            <p>
-                                <i class="fa-solid fa-list"></i>
-                            </p>
-                            <p class="ps-3">ORDER LIST</p>
+                       <p> <i class="fa-solid fa-list"></i></p>
+                        <p class="ps-3">ORDER LIST</p>
                   
                     </a>
-                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3" id="v-pills-orders-tab" data-bs-toggle="pill"
+                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3 " id="v-pills-orders-tab" data-bs-toggle="pill"
                         href="#v-pills-orders" role="tab" aria-controls="v-pills-orders"
                         aria-selected="false">
                         <p> <i class="fa-solid fa-cart-shopping "></i></p>
                         <p class="ps-3">CART LIST</p></a>
-                    <!-- <a class="nav-link profile-tab-link profiles-menus-head" id="v-pills-gift-tab" data-bs-toggle="pill"
-                        href="#v-pills-gift" role="tab" aria-controls="v-pills-gift" aria-selected="false">Gift Card
-                        Balance</a> -->
-                    <!-- <a class="nav-link profile-tab-link profiles-menus-head" id="v-pills-downloads-tab" data-bs-toggle="pill"
-                        href="#v-pills-downloads" role="tab" aria-controls="v-pills-downloads"
-                        aria-selected="false">Downloads</a> -->
                     <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3 " id="v-pills-addresses-tab" data-bs-toggle="pill"
                         href="#v-pills-addresses" role="tab" aria-controls="v-pills-addresses"
                         aria-selected="false">
                         <p> <i class="fa-solid fa-location-pin"></i></p>
                         <p class="ps-3">ADDRESS</p></a>
-                    <!-- <a class="nav-link profile-tab-link profiles-menus-head" id="v-pills-return-tab" data-bs-toggle="pill"
-                        href="#v-pills-return" role="tab" aria-controls="v-pills-return" aria-selected="false">Request
-                        Return</a> -->
                     <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3" id="v-pills-account-tab" data-bs-toggle="pill"
                         href="#v-pills-account" role="tab" aria-controls="v-pills-account" aria-selected="false">
                         <p> <i class="fa-regular fa-user"></i></p>
@@ -291,6 +67,7 @@
                         <p class="ps-3">WISHLIST</p>
                     </a>
                     </div>
+                    
                     <a class="nav-link profile-tab-link profiles-menus-head logout-profile-sec d-flex pt-3"  id="v-pills-logout-tab" data-bs-toggle="pill"
                         href="#v-pills-logout" role="tab" aria-controls="v-pills-logout"
                         aria-selected="false">
@@ -300,10 +77,140 @@
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="tab-content profile-tab-content   px-5 py-3" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                <div class="tab-content  " id="v-pills-tabContent">
+
+                    <!-- orderlist -->
+                    <div class="tab-pane fade show active " id="v-pills-home" role="tabpanel"
                         aria-labelledby="v-pills-home-tab">
 
+                        <form class="d-flex">
+                            <input class="form-control mx-0 " type="search" placeholder="Search your order here"
+                                aria-label="Search">
+                            <button class="d-flex align-items-center order-search-button px-4 py-2" type="submit">
+                                <i class="fa-solid fa-magnifying-glass text-white pe-2"></i>
+                                <p class="my-auto">Search</p>
+                            </button>
+                        </form>
+                        <div class="orderpage-container mt-4">
+                            <div class="row d-flex py-4">
+                                <div class="col-md-2">
+                                    <img src="../images/image 35.png" alt="" width="100px" height="100px">
+                                </div>
+                                <div class="col-md-4">
+                                    <h2 class="delivary-text-header">BOSCH</h2>
+                                    <p class="order-text-deliver">Lorem ipsum dolor .</p>
+                                </div>
+                                <div class="col-md-2">
+                                    <p class="battery-list-amount">$40.78</p>
+                                </div>
+                                <div class="col-md-4  ">
+                                    <ul>
+                                        <li class="order-delivered-success">
+                                            Delivered on Feb 19
+                                        </li>
+                                        <li class="order-delivered-fail">
+                                           Your items has been Delivered
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row d-flex align-items-center py-4" >
+                                <div class="col-md-2 ">
+                                    <img src="../images/image 35.png" alt="" width="50px" height="50px">
+                                </div>
+                                <div class="col-md-4 ">
+                                    <h2 class="delivary-text-header">Installation</h2>
+                                </div>
+                                <div class="col-md-2">
+                                    <p class="battery-list-amount">$20.78</p>
+                                </div>
+                                <div class="col-md-4  ">
+                                    <ul>
+                                        <li class="order-delivered-canceled">
+                                            Cancelled on Feb 21
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ============================== -->
+
+                    <!-- cart  -->
+
+                    <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
+                      cartlist
+                    </div>
+         
+                    <!-- adddress -->
+                    <div class="tab-pane fade profile-tab-content  " id="v-pills-addresses" role="tabpanel"
+                        aria-labelledby="v-pills-addresses-tab">
+                        <form action="">
+                            <div class="row">
+                                <h4 class="profile-headings mb-4">Billing Address</h4>
+                                <div class="col-md-6 ">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control profile-form-input" id="first-names"
+                                            placeholder="First Name" placeholder="zinavo" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="number" class="form-control profile-form-input" id="mobile_address"
+                                            required placeholder="Pincode">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="mb-3">
+                                        <input type="tel" class="form-control profile-form-input" id="mobile_address"
+                                            required placeholder="10 digits Mobile Number">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control profile-form-input" id="mobile_address"
+                                            required placeholder="Locality">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mx-1">
+                                    <textarea class="form-control" placeholder="Address (Area and Street)" id="floatingTextarea2" style="height: 150px"></textarea>        
+                            </div>
+              
+                            <div class="row mt-4">
+    
+                                <div class="col-md-6 ">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control profile-form-input" id="city-district"
+                                            placeholder="City/District/TOwn" placeholder="zinavo" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control profile-form-input" id="landmark"
+                                            required placeholder="Landmark(Optional)">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control profile-form-input" id="profile_state"
+                                            required placeholder="State">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="tel" class="form-control profile-form-input" id="alternative_phone"
+                                            required placeholder="Alternate Phone(OPtional)">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <button type="button" class="btn  profile-acont-save mt-3">Save </button>
+                                    <button type="button" class="btn  profile-acont-cancel mt-3">Cancel</button>
+                                </div>
+               
+                            </div>
+    
+                        </form>
+                    </div>
+                   <!-- ===================== -->
+
+                   <!-- account -->
+                    <div class="tab-pane fade profile-tab-content  " id="v-pills-account" role="tabpanel"
+                        aria-labelledby="v-pills-account-tab">
                         <form action="">
                             <div class="row">
                                 <h4 class="profile-headings mb-4">Profile Information</h4>
@@ -368,36 +275,20 @@
                             </fieldset>
 
                         </form>
-
                     </div>
-                    <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
+<!-- ========================== -->
 
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-gift" role="tabpanel" aria-labelledby="v-pills-gift-tab">
-
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-downloads" role="tabpanel"
-                        aria-labelledby="v-pills-downloads-tab">
-
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-addresses" role="tabpanel"
-                        aria-labelledby="v-pills-addresses-tab">
-
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-return" role="tabpanel" aria-labelledby="v-pills-return-tab">
-
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-account" role="tabpanel"
-                        aria-labelledby="v-pills-account-tab">
-
-                    </div>
+<!-- wishlist -->
                     <div class="tab-pane fade" id="v-pills-wishlist" role="tabpanel"
                         aria-labelledby="v-pills-wishlist-tab">
-
+                          <h1>wishlist</h1>
                     </div>
+
+                    <!-- logout -->
                     <div class="tab-pane fade" id="v-pills-logout" role="tabpanel" aria-labelledby="v-pills-logout-tab">
-
+                    logout
                     </div>
+                    <!-- ========= -->
                 </div>
             </div>
         </div>
