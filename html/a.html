@@ -1,146 +1,372 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Searchable Dropdown</title>
+    <title>Horizontal Tabs Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css'><link rel="stylesheet" href="./style.css"> 
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" /> 
- 
- 
+<!-- font awesom -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-        /* styles.css */
-.dropdown-container {
-    margin: 20px;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-    </style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/css/style.css">
 </head>
 <body>
-    <div class="dropdown-container">
-   
-        <select id="countryDropdown">
-            <option value="">Select a country</option>
-         
 
-
-        </select> 
-
-        <div data-toggle-group="location">
-            
-            <div class="form-group">
-                <label>Country</label>
-                <input type="text" id="countrySearch" placeholder="Search for a country...">
-                <select class="form-control" id="countryDropdown"  name="country" data-toggle="country" data-country=""></select>
-            </div>
-            <div class="form-group">
-                <label>State</label>
-                <input type="text" id="stateSearch" placeholder="Search for a state...">
-                <select class="form-control" name="country" data-toggle="state" data-state=""  
-                    placeholder="Select State"></select>
+    
+<div class="container mt-5 ">
+    <ul class="nav nav-tabs d-flex justify-content-between mb-3" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="orderlist-tab" data-bs-toggle="tab" href="#orderlist" role="tab" aria-controls="orderlist" aria-selected="true">  
+                <i class="fa-solid fa-bag-shopping text-dark"></i></a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="cartlist-tab" data-bs-toggle="tab" href="#cartlist" role="tab" aria-controls="cartlist" aria-selected="false">
+                <i class="fa-solid fa-cart-shopping text-dark"></i></a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="address-tab" data-bs-toggle="tab" href="#address" role="tab" aria-controls="address" aria-selected="false">
+                <i class="fa-solid fa-location-pin text-dark"></i></a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                <i class="fa-regular fa-user text-dark"></i></a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="wishlist-tab" data-bs-toggle="tab" href="#wishlist" role="tab" aria-controls="wishlist" aria-selected="false">
+                <i class="fa-regular fa-heart text-dark"></i></a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="logout-tab" data-bs-toggle="tab" href="#logout" role="tab" aria-controls="logout" aria-selected="false">
+                <i class="fa-solid fa-right-from-bracket text-dark"></i>
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="orderlist" role="tabpanel" aria-labelledby="orderlist-tab">
+            <form class="d-flex mt-2">
+                <input class="form-control mx-0 " type="search" placeholder="Search your order here"
+                    aria-label="Search">
+                <button class="d-flex align-items-center order-search-button px-4 py-2" type="submit">
+                    <i class="fa-solid fa-magnifying-glass text-white pe-2"></i>
+                    <p class="my-auto">Search</p>
+                </button>
+            </form>
+            <div class="orderpage-container mt-4">
+                <div class="row d-flex py-4">
+                    <div class="col-md-2">
+                        <img src="../images/image 35.png" alt="" width="100px" height="100px">
+                    </div>
+                    <div class="col-md-4">
+                        <h2 class="delivary-text-header">BOSCH</h2>
+                        <p class="order-text-deliver">Lorem ipsum dolor .</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="battery-list-amount">$40.78</p>
+                    </div>
+                    <div class="col-md-4  ">
+                        <ul>
+                            <li class="order-delivered-success">
+                                Delivered on Feb 19
+                            </li>
+                            <li class="order-delivered-fail">
+                                Your items has been Delivered
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center py-4">
+                    <div class="col-md-2 ">
+                        <img src="../images/image 35.png" alt="" width="50px" height="50px">
+                    </div>
+                    <div class="col-md-4 ">
+                        <h2 class="delivary-text-header">Installation</h2>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="battery-list-amount">$20.78</p>
+                    </div>
+                    <div class="col-md-4  ">
+                        <ul>
+                            <li class="order-delivered-canceled">
+                                Cancelled on Feb 21
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="tab-pane fade" id="cartlist" role="tabpanel" aria-labelledby="cartlist-tab">
+            <h5>cartlist Tab</h5>
+            <p>Content for the cartlist tab.</p>
+        </div>
+        <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
+            <form action="">
+                <div class="row">
+                    <h4 class="profile-headings mb-4">Billing Address</h4>
+                    <div class="col-md-6 ">
+                        <div class="mb-3">
+                            <label for="first-name" class="form-label profile-form-label">First Name</label>
+                            <input type="text" class="form-control profile-form-input" id="first-name"
+                                placeholder="First Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="strretaddress1" class="form-label profile-form-label">Street
+                                Address</label>
+                            <input type="text" class="form-control profile-form-input" id="strretaddress1"
+                                placeholder="Street Address" required>
+                            <input type="text" class="form-control profile-form-input mt-3" id="strretaddress2"
+                                placeholder="Street Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label profile-form-label">Country</label>
+                            <input type="text" class="form-control profile-form-input" id="Country"
+                                placeholder="Country" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="zipcode" class="form-label profile-form-label">Zipcode</label>
+                            <input type="num" class="form-control profile-form-input" id="zipcode"
+                                placeholder="Zipcode" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone-number" class="form-label profile-form-label">Phone
+                                Number</label>
+                            <input type="tel" class="form-control profile-form-input" id="phone-number"
+                                placeholder="Phone-number" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="mb-3">
+                            <label for="last-name" class="form-label profile-form-label">Last Name</label>
+                            <input type="text" class="form-control profile-form-input" id="last-name"
+                                placeholder="Last Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="companyname" class="form-label profile-form-label">Company Name
+                                (Optional)</label>
+                            <input type="text" class="form-control profile-form-input" id="companyname"
+                                placeholder="Company Name (Optional)" required>
+                        </div>
+                        <div class="mb-3">
+                            <!-- <label for="" class="form-label profile-form-label">Town\City</label> -->
+                            <input type="text" class="form-control profile-form-input" id="companyname"
+                                placeholder="Town\city" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="state" class="form-label profile-form-label">State</label>
+                            <input type="text" class="form-control profile-form-input" id="state"
+                                placeholder="State" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Email" class="form-label profile-form-label">Email Address</label>
+                            <input type="email" class="form-control profile-form-input" id="email"
+                                placeholder="Email Address" required>
+                        </div>
+                        <!-- <div class="mb-3">
+                            <input type="tel" class="form-control profile-form-input" id="mobile_address"
+                                required placeholder="10 digits Mobile Number">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control profile-form-input" id="mobile_address"
+                                required placeholder="Locality">
+                        </div> -->
+                    </div>
+                </div>
+                <div class="row mb-4 border-bottom pb-3" >
+                    <div class="">
+                        <button type="button" class="btn  profile-acont-save mt-3">Save </button>
+                        <button type="button" class="btn  profile-acont-cancel mt-3">Cancel</button>
+                    </div>
+
+                </div>
+
+            </form>
+            <form action="" >
+                <div class="row">
+                    <h4 class="profile-headings mb-4">Shipping Address</h4>
+                    <div class="col-md-6 ">
+                        <div class="mb-3">
+                            <label for="shippingfirst-name" class="form-label profile-form-label">First Name</label>
+                            <input type="text" class="form-control profile-form-input" id="shippingfirst-name"
+                                placeholder="First Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="shippingstrretaddress1" class="form-label profile-form-label">Street
+                                Address</label>
+                            <input type="text" class="form-control profile-form-input" id="shippingstrretaddress1"
+                                placeholder="Street Address" required>
+                            <input type="text" class="form-control profile-form-input mt-3" id="shippingstrretaddress2"
+                                placeholder="Street Address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="shippingcountry" class="form-label profile-form-label">Country</label>
+                            <input type="text" class="form-control profile-form-input" id="shippingCountry"
+                                placeholder="Country" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="shippingzipcode" class="form-label profile-form-label">Zipcode</label>
+                            <input type="num" class="form-control profile-form-input" id="shippingzipcode"
+                                placeholder="Zipcode" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="shippingphone-number" class="form-label profile-form-label">Phone
+                                Number</label>
+                            <input type="tel" class="form-control profile-form-input" id="shippingphone-number"
+                                placeholder="Phone-number" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="mb-3">
+                            <label for="shippinglast-name" class="form-label profile-form-label">Last Name</label>
+                            <input type="text" class="form-control profile-form-input" id="shippinglast-name"
+                                placeholder="Last Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="shippingcompanyname" class="form-label profile-form-label">Company Name
+                                (Optional)</label>
+                            <input type="text" class="form-control profile-form-input" id="shippingcompanyname"
+                                placeholder="Company Name (Optional)" required>
+                        </div>
+                        <div class="mb-3">
+                            <!-- <label for="" class="form-label profile-form-label">Town\City</label> -->
+                            <input type="text" class="form-control profile-form-input" id="shippingtown-city"
+                                placeholder="Town\city" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="shippingstate" class="form-label profile-form-label">State</label>
+                            <input type="text" class="form-control profile-form-input" id="shippingstate"
+                                placeholder="State" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="shippingEmail" class="form-label profile-form-label">Email Address</label>
+                            <input type="email" class="form-control profile-form-input" id="shippingemail"
+                                placeholder="Email Address" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="">
+                        <button type="button" class="btn shipping-save  profile-acont-save mt-3">Save </button>
+                        <button type="button" class="btn shipping-cancel profile-acont-cancel mt-3">Cancel</button>
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <form action="">
+                <div class="row">
+                    <h4 class="profile-headings mb-4">Profile Information</h4>
+                    <div class="col-md-6 ">
+                        <div class="mb-3">
+                            <input type="text" class="form-control profile-form-input" id="first-name"
+                                placeholder="First Name" placeholder="zinavo" required>
+                        </div>
+                        <div class="mb-3">
+                            <p class="profile-form-label">Your Gender</p>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male" class="checkout-radio-label">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female" class="checkout-radio-label">Female</label>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mobile_address" class="form-label profile-form-label">Mobile Number
+                            </label>
+                            <input type="tel" class="form-control profile-form-input" id="mobile_address"
+                                required placeholder="Mobile Number">
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="mb-3">
+                            <input type="text" class="form-control profile-form-input" id="last-name"
+                                placeholder="Last Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email_address" class="form-label profile-form-label">Email
+                                Address</label>
+                            <input type="email" class="form-control profile-form-input" id="email_address"
+                                required placeholder="Email Address">
+                        </div>
+                    </div>
+                </div>
+
+                <fieldset class="reset px-5 py-4 profile-form-label">
+                    <legend class="reset-password-profile "><strong>Password Change</strong></legend>
+                    <div class="form-group mb-3">
+                        <label for="current-password" class="form-label profile-form-label">Current
+                            password (leave
+                            blank to leave unchanged)<span class="text-danger">*</span></label>
+                        <input id="current-password" type="password" class="form-control profile-form-input"
+                            name="current-password" placeholder="Current Password">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="new-password" class="form-label profile-form-label">New password (leave
+                            blank
+                            to leave unchanged)<span class="text-danger">*</span></label>
+                        <input id="new-password" type="password" class="form-control profile-form-input"
+                            name="new-password" placeholder="New Password">
+
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="confirm-password" class="form-label profile-form-label">Confirm new
+                            password<span class="text-danger">*</span></label>
+                        <input id="confirm-password" type="password" class="form-control profile-form-input"
+                            name="confirm-password" placeholder="Confirm Password">
+
+                    </div>
+                    <button type="button" class="btn  profile-acont-sabe-btn mt-3">Save Changes</button>
+                </fieldset>
+
+            </form>
+        </div>
+
+
+        <div class="tab-pane fade" id="wishlist" role="tabpanel" aria-labelledby="wishlist-tab">
+            <h5>wishlist Tab</h5>
+            <p>Content for the wishlist tab.</p>
+        </div>
+        <div class="tab-pane fade" id="logout" role="tabpanel" aria-labelledby="logout-tab">
+            <h5>logout Tab</h5>
+            <p>Content for the logout tab.</p>
+        </div>
     </div>
-    <div class="dropdown-container">
-        <input type="text" id="stateSearch" placeholder="Search for a state...">
-        <select id="stateDropdown">
-            <option value="">Select a state</option>
+</div>
 
-        </select>
-    </div> 
-
-    <script src="script.js"></script>
-
-
-    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script> 
-   <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script> 
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js'></script>
-   <script src="https://cdn.jsdelivr.net/gh/linuxguist/countries@main/script.js"></script>
-
-
-
-   <script type="text/javascript">
-       document.addEventListener("load", loadCountries());
-       document.getElementById('single').value = "";
-   </script>
-
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script> 
-   <script>
-       $("#single").select2({
-           // placeholder: "Select a programming language",
-           allowClear: true
-       });
-       $("#multiple").select2({
-           // placeholder: "Select a programming language",
-           allowClear: true
-       });
-   </script>
-    <script>
-        // script.js
-document.addEventListener("DOMContentLoaded", function () {
-    const countrySearch = document.getElementById("countrySearch");
-    const countryDropdown = document.getElementById("countryDropdown");
-    const stateSearch = document.getElementById("stateSearch");
-    const stateDropdown = document.getElementById("stateDropdown");
-
-    countrySearch.addEventListener("keyup", function () {
-        const filter = countrySearch.value.toUpperCase();
-        const options = countryDropdown.options;
-
-        for (let i = 1; i < options.length; i++) {
-            const option = options[i];
-            const text = option.textContent || option.innerText;
-
-            if (text.toUpperCase().indexOf(filter) > -1) {
-                option.style.display = "";
-            } else {
-                option.style.display = "none";
-            }
-        }
-    });
-
-    stateSearch.addEventListener("keyup", function () {
-        const filter = stateSearch.value.toUpperCase();
-        const options = stateDropdown.options;
-
-        for (let i = 1; i < options.length; i++) {
-            const option = options[i];
-            const text = option.textContent || option.innerText;
-
-            if (text.toUpperCase().indexOf(filter) > -1) {
-                option.style.display = "";
-            } else {
-                option.style.display = "none";
-            }
-        }
-    });
-});
-
-    </script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> -->
+</html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -179,7 +405,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
     </div> 
 
-    <!-- 1339|nWYmcz1cRe0Zj8an1IcgACNuAz3Lg51VGeKtVZ2X -->
+
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
@@ -238,6 +464,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+ -->
 
 
 
@@ -278,99 +505,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-
-
-
-
-
-<!-- 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Country and State Selector</title>
-</head>
-<body>
-    <form>
-        <label for="country">Country:</label>
-        <select id="country" name="country">
-            <option value="">Select Country</option>
-        </select>
-
-        <label for="state">State:</label>
-        <select id="state" name="state">
-            <option value="">Select State</option>
-        </select>
-    </form>
-
-    <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    const countrySelect = document.getElementById('country');
-    const stateSelect = document.getElementById('state');
-    const openCageApiKey = 'df5c4b25f49347ab87fc0f4ff6d44cda'; 
-
-    // Function to fetch countries
-    const fetchCountries = async () => {
-        try {
-            const response = await fetch('https://api.opencagedata.com/geocode/v1/json?q=&key=${openCageApiKey}');
-            const data = await response.json();
-            const countries = data.results[0].components.country;
-            populateCountrySelect(countries);
-        } catch (error) {
-            console.error('Error fetching countries:', error);
-        }
-    };
-
-    // Function to populate country select
-    const populateCountrySelect = (countries) => {
-        countries.forEach(country => {
-            const option = document.createElement('option');
-            option.value = country;
-            option.textContent = country;
-            countrySelect.appendChild(option);
-        });
-    };
-
-    // Function to fetch states
-    const fetchStates = async (country) => {
-        try {
-            const response = await fetch('https://api.opencagedata.com/geocode/v1/json?q=${country}&key=${openCageApiKey}');
-            const data = await response.json();
-            const states = data.results[0].components.state;
-            populateStateSelect(states);
-        } catch (error) {
-            console.error('Error fetching states:', error);
-        }
-    };
-
-    // Function to populate state select
-    const populateStateSelect = (states) => {
-        stateSelect.innerHTML = '<option value="">Select State</option>'; // Clear previous options
-        states.forEach(state => {
-            const option = document.createElement('option');
-            option.value = state;
-            option.textContent = state;
-            stateSelect.appendChild(option);
-        });
-    };
-
-    // Event listener for country select change
-    countrySelect.addEventListener('change', () => {
-        const selectedCountry = countrySelect.value;
-        if (selectedCountry) {
-            fetchStates(selectedCountry);
-        } else {
-            stateSelect.innerHTML = '<option value="">Select State</option>';
-        }
-    });
-
-    // Fetch countries on page load
-    fetchCountries();
-});
-
-    </script>
-</body>
-</html> -->
