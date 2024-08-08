@@ -2619,7 +2619,8 @@ i {
 
 .profile-okka-tab {
   // float: left;
-  padding-right: 30px;
+  margin-right: 25px;
+  box-shadow: 0px 0px 4px 0px rgb(199, 196, 196);
   // border-right: 1px solid #f1f1f1;
   // margin-bottom: 30px;
 
@@ -2656,7 +2657,7 @@ i {
 }
 
 .profile-form-label {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -2767,6 +2768,7 @@ color: black;
 
 .logout-profile-sec{
   box-shadow: 0px 0px 4px 0px rgb(199, 196, 196);
+  margin-top: 250px;
 }
 
 .profile-tab-content {
@@ -2777,9 +2779,11 @@ color: black;
 
 @media screen and (max-width: 1120px) {
   .profile-okka-tab {
-    padding-right: 10px;
+  margin-right: 0px !important;
   }
-
+.profile-user-detail {
+  margin-right: 0px !important;
+}
   .profile-page-row {
     display: flex;
     flex-direction: column;
@@ -2803,8 +2807,8 @@ color: black;
     width: 100%;
   }
 
-  .profile-menus-detail {
-    height: auto;
+  .logout-profile-sec{
+    margin-top: 0px !important;
   }
 }
 

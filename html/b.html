@@ -18,7 +18,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         crossorigin="anonymous">
-<link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../dist/css/style.css">
     <style>
 
     </style>
@@ -30,47 +30,53 @@
     <div class="container pt-5 pb-5">
         <div class="row  d-flex justify-content-between profile-page-row">
             <div class="col-md-4">
-                <div class="nav flex-column nav-pills profile-okka-tab" id="v-pills-tab" role="tablist"
-                    aria-orientation="vertical">
-                    <div class=" profile-user-detail d-flex align-items-center border pe-5 p-2">
-                        <img src="../images/profile-image.png" alt="">
-                        <div class="ps-4">
-                            <h6 class="profile-greeting">Hello,</h6>
-                            <h6 class="profile-user">Prem Kumar</h6>
-                        </div>
+                <div class=" profile-user-detail d-flex align-items-center border me-4 p-2">
+                    <img src="../images/profile-image.png" alt="">
+                    <div class="ps-4">
+                        <h6 class="profile-greeting">Hello,</h6>
+                        <h6 class="profile-user">Prem Kumar</h6>
                     </div>
-                    <div class="profile-menus-detail border  mt-3">
-                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3 active" id="v-pills-home-tab" data-bs-toggle="pill"
-                        href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                       <p> <i class="fa-solid fa-list"></i></p>
+                </div>
+                <div class="nav flex-column nav-pills profile-okka-tab  mt-3" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <!-- <div class="profile-menus-detail border  mt-3"> -->
+                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3 active" id="v-pills-home-tab"
+                        data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                        aria-selected="true">
+                        <p> <i class="fa-solid fa-list"></i></p>
                         <p class="ps-3">ORDER LIST</p>
-                  
+
                     </a>
-                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3 " id="v-pills-orders-tab" data-bs-toggle="pill"
-                        href="#v-pills-orders" role="tab" aria-controls="v-pills-orders"
+                    
+                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3 " id="v-pills-orders-tab"
+                        data-bs-toggle="pill" href="#v-pills-orders" role="tab" aria-controls="v-pills-orders"
                         aria-selected="false">
                         <p> <i class="fa-solid fa-cart-shopping "></i></p>
-                        <p class="ps-3">CART LIST</p></a>
-                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3 " id="v-pills-addresses-tab" data-bs-toggle="pill"
-                        href="#v-pills-addresses" role="tab" aria-controls="v-pills-addresses"
+                        <p class="ps-3">CART LIST</p>
+                    </a>
+                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3 " id="v-pills-addresses-tab"
+                        data-bs-toggle="pill" href="#v-pills-addresses" role="tab" aria-controls="v-pills-addresses"
                         aria-selected="false">
                         <p> <i class="fa-solid fa-location-pin"></i></p>
-                        <p class="ps-3">ADDRESS</p></a>
-                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3" id="v-pills-account-tab" data-bs-toggle="pill"
-                        href="#v-pills-account" role="tab" aria-controls="v-pills-account" aria-selected="false">
+                        <p class="ps-3">ADDRESS</p>
+                    </a>
+                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3" id="v-pills-account-tab"
+                        data-bs-toggle="pill" href="#v-pills-account" role="tab" aria-controls="v-pills-account"
+                        aria-selected="false">
                         <p> <i class="fa-regular fa-user"></i></p>
-                        <p class="ps-3">ACCOUNT DETAILS</p></a>
-                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3" id="v-pills-wishlist-tab" data-bs-toggle="pill"
-                        href="#v-pills-wishlist" role="tab" aria-controls="v-pills-wishlist"
+                        <p class="ps-3">ACCOUNT DETAILS</p>
+                    </a>
+                    <a class="nav-link profile-tab-link profiles-menus-head d-flex pt-3" id="v-pills-wishlist-tab"
+                        data-bs-toggle="pill" href="#v-pills-wishlist" role="tab" aria-controls="v-pills-wishlist"
                         aria-selected="false">
                         <p> <i class="fa-regular fa-heart"></i></p>
                         <p class="ps-3">WISHLIST</p>
                     </a>
-                    </div>
+                    <!-- </div> -->
 
-                    <a class="nav-link profile-tab-link profiles-menus-head logout-profile-sec d-flex pt-3"  id="v-pills-logout-tab" data-bs-toggle="pill"
-                        href="#v-pills-logout" role="tab" aria-controls="v-pills-logout"
-                        aria-selected="false">
+                    <a class="nav-link profile-tab-link profiles-menus-head logout-profile-sec d-flex pt-3"
+                        id="v-pills-logout-tab" data-bs-toggle="pill" href="#v-pills-logout" role="tab"
+                        aria-controls="v-pills-logout" aria-selected="false">
                         <p> <i class="fa-solid fa-right-from-bracket"></i></p>
                         <p class="ps-3">Logout</p>
                     </a>
@@ -109,12 +115,12 @@
                                             Delivered on Feb 19
                                         </li>
                                         <li class="order-delivered-fail">
-                                           Your items has been Delivered
+                                            Your items has been Delivered
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="row d-flex align-items-center py-4" >
+                            <div class="row d-flex align-items-center py-4">
                                 <div class="col-md-2 ">
                                     <img src="../images/image 35.png" alt="" width="50px" height="50px">
                                 </div>
@@ -141,9 +147,9 @@
                     <!-- cart  -->
 
                     <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
-                      cartlist
+                        cartlist
                     </div>
-         
+
                     <!-- adddress -->
                     <div class="tab-pane fade profile-tab-content  " id="v-pills-addresses" role="tabpanel"
                         aria-labelledby="v-pills-addresses-tab">
@@ -152,63 +158,181 @@
                                 <h4 class="profile-headings mb-4">Billing Address</h4>
                                 <div class="col-md-6 ">
                                     <div class="mb-3">
-                                        <input type="text" class="form-control profile-form-input" id="first-names"
-                                            placeholder="First Name" placeholder="zinavo" required>
+                                        <label for="first-name" class="form-label profile-form-label">First Name</label>
+                                        <input type="text" class="form-control profile-form-input" id="first-name"
+                                            placeholder="First Name" required>
                                     </div>
+
                                     <div class="mb-3">
-                                        <input type="number" class="form-control profile-form-input" id="mobile_address"
-                                            required placeholder="Pincode">
+                                        <label for="strretaddress1" class="form-label profile-form-label">Street
+                                            Address</label>
+                                        <input type="text" class="form-control profile-form-input" id="strretaddress1"
+                                            placeholder="Street Address" required>
+                                        <input type="text" class="form-control profile-form-input mt-3" id="strretaddress2"
+                                            placeholder="Street Address" required>
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label for="country" class="form-label profile-form-label">Country</label>
+                                        <input type="text" class="form-control profile-form-input" id="Country"
+                                            placeholder="Country" required>
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label for="zipcode" class="form-label profile-form-label">Zipcode</label>
+                                        <input type="num" class="form-control profile-form-input" id="zipcode"
+                                            placeholder="Zipcode" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="phone-number" class="form-label profile-form-label">Phone
+                                            Number</label>
+                                        <input type="tel" class="form-control profile-form-input" id="phone-number"
+                                            placeholder="Phone-number" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 ">
                                     <div class="mb-3">
+                                        <label for="last-name" class="form-label profile-form-label">Last Name</label>
+                                        <input type="text" class="form-control profile-form-input" id="last-name"
+                                            placeholder="Last Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="companyname" class="form-label profile-form-label">Company Name
+                                            (Optional)</label>
+                                        <input type="text" class="form-control profile-form-input" id="companyname"
+                                            placeholder="Company Name (Optional)" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- <label for="" class="form-label profile-form-label">Town\City</label> -->
+                                        <input type="text" class="form-control profile-form-input" id="companyname"
+                                            placeholder="Town\city" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="state" class="form-label profile-form-label">State</label>
+                                        <input type="text" class="form-control profile-form-input" id="state"
+                                            placeholder="State" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Email" class="form-label profile-form-label">Email Address</label>
+                                        <input type="email" class="form-control profile-form-input" id="email"
+                                            placeholder="Email Address" required>
+                                    </div>
+                                    <!-- <div class="mb-3">
                                         <input type="tel" class="form-control profile-form-input" id="mobile_address"
                                             required placeholder="10 digits Mobile Number">
                                     </div>
                                     <div class="mb-3">
                                         <input type="text" class="form-control profile-form-input" id="mobile_address"
                                             required placeholder="Locality">
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
-                            <div class="row mx-1">
-                                    <textarea class="form-control" placeholder="Address (Area and Street)" id="floatingTextarea2" style="height: 150px"></textarea>        
-                            </div>
-              
-                            <div class="row mt-4">
-    
-                                <div class="col-md-6 ">
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control profile-form-input" id="city-district"
-                                            placeholder="City/District/TOwn" placeholder="zinavo" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control profile-form-input" id="landmark"
-                                            required placeholder="Landmark(Optional)">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 ">
-                                    <div class="mb-3">
-                                        <input type="text" class="form-control profile-form-input" id="profile_state"
-                                            required placeholder="State">
-                                    </div>
-                                    <div class="mb-3">
-                                        <input type="tel" class="form-control profile-form-input" id="alternative_phone"
-                                            required placeholder="Alternate Phone(OPtional)">
-                                    </div>
-                                </div>
+                            <div class="row mb-4 border-bottom pb-3" >
                                 <div class="">
                                     <button type="button" class="btn  profile-acont-save mt-3">Save </button>
                                     <button type="button" class="btn  profile-acont-cancel mt-3">Cancel</button>
                                 </div>
-               
+
                             </div>
-    
+
+                        </form>
+                        <form action="" >
+                            <div class="row">
+                                <h4 class="profile-headings mb-4">Shipping Address</h4>
+                                <div class="col-md-6 ">
+                                    <div class="mb-3">
+                                        <label for="shippingfirst-name" class="form-label profile-form-label">First Name</label>
+                                        <input type="text" class="form-control profile-form-input" id="shippingfirst-name"
+                                            placeholder="First Name" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="shippingstrretaddress1" class="form-label profile-form-label">Street
+                                            Address</label>
+                                        <input type="text" class="form-control profile-form-input" id="shippingstrretaddress1"
+                                            placeholder="Street Address" required>
+                                        <input type="text" class="form-control profile-form-input mt-3" id="shippingstrretaddress2"
+                                            placeholder="Street Address" required>
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label for="shippingcountry" class="form-label profile-form-label">Country</label>
+                                        <input type="text" class="form-control profile-form-input" id="shippingCountry"
+                                            placeholder="Country" required>
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label for="shippingzipcode" class="form-label profile-form-label">Zipcode</label>
+                                        <input type="num" class="form-control profile-form-input" id="shippingzipcode"
+                                            placeholder="Zipcode" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="shippingphone-number" class="form-label profile-form-label">Phone
+                                            Number</label>
+                                        <input type="tel" class="form-control profile-form-input" id="shippingphone-number"
+                                            placeholder="Phone-number" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="mb-3">
+                                        <label for="shippinglast-name" class="form-label profile-form-label">Last Name</label>
+                                        <input type="text" class="form-control profile-form-input" id="shippinglast-name"
+                                            placeholder="Last Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="shippingcompanyname" class="form-label profile-form-label">Company Name
+                                            (Optional)</label>
+                                        <input type="text" class="form-control profile-form-input" id="shippingcompanyname"
+                                            placeholder="Company Name (Optional)" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- <label for="" class="form-label profile-form-label">Town\City</label> -->
+                                        <input type="text" class="form-control profile-form-input" id="shippingtown-city"
+                                            placeholder="Town\city" required>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="shippingstate" class="form-label profile-form-label">State</label>
+                                        <input type="text" class="form-control profile-form-input" id="shippingstate"
+                                            placeholder="State" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="shippingEmail" class="form-label profile-form-label">Email Address</label>
+                                        <input type="email" class="form-control profile-form-input" id="shippingemail"
+                                            placeholder="Email Address" required>
+                                    </div>
+                                    <!-- <div class="mb-3">
+                                        <input type="tel" class="form-control profile-form-input" id="mobile_address"
+                                            required placeholder="10 digits Mobile Number">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control profile-form-input" id="mobile_address"
+                                            required placeholder="Locality">
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="">
+                                    <button type="button" class="btn shipping-save  profile-acont-save mt-3">Save </button>
+                                    <button type="button" class="btn shipping-cancel profile-acont-cancel mt-3">Cancel</button>
+                                </div>
+
+                            </div>
+
                         </form>
                     </div>
-                   <!-- ===================== -->
 
-                   <!-- account -->
+                    
+                    <!-- ===================== -->
+
+                    <!-- account -->
                     <div class="tab-pane fade profile-tab-content  " id="v-pills-account" role="tabpanel"
                         aria-labelledby="v-pills-account-tab">
                         <form action="">
@@ -276,17 +400,17 @@
 
                         </form>
                     </div>
-<!-- ========================== -->
+                    <!-- ========================== -->
 
-<!-- wishlist -->
+                    <!-- wishlist -->
                     <div class="tab-pane fade" id="v-pills-wishlist" role="tabpanel"
                         aria-labelledby="v-pills-wishlist-tab">
-                          
+
                     </div>
 
                     <!-- logout -->
                     <div class="tab-pane fade" id="v-pills-logout" role="tabpanel" aria-labelledby="v-pills-logout-tab">
-                    logout
+                        logout
                     </div>
                     <!-- ========= -->
                 </div>
@@ -299,4 +423,5 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
