@@ -29,9 +29,10 @@ a {
 }
 
 // navbar\
-.navbar-container-main{
+.navbar-container-main {
   background-color: $bg-medium-orange;
 }
+
 .navbar-back-header {
   background-color: $bg-medium-orange;
 
@@ -72,9 +73,9 @@ a {
 //   max-width: 35%;
 // }
 
-.main-navbar-okka
-// .main-banner-section
- {
+.main-navbar-okka // .main-banner-section
+
+  {
   display: none;
 }
 
@@ -655,10 +656,11 @@ a {
 }
 
 @media (max-width: 900px) {
-  .copyrights-sec1{
+  .copyrights-sec1 {
     @include flex-columns;
   }
 }
+
 .battery-conditions1 {
   border-right: 1px solid white;
   color: white !important;
@@ -1623,6 +1625,7 @@ i {
     max-width: 100%;
     left: 10px;
   }
+
   .banner-image-text1 {
     font-size: 14px;
     font-weight: 500;
@@ -1650,14 +1653,17 @@ i {
   .aboutus-section {
     padding-left: 5px !important;
   }
+
   .aboutus-sec-1,
-  .aboutme-sec4{
+  .aboutme-sec4 {
     width: 100%;
   }
+
   .aboutus-sections-row {
     @include flex-columns;
   }
-  .about-me-section3{
+
+  .about-me-section3 {
     @include flex-columns;
   }
 }
@@ -1842,59 +1848,61 @@ i {
 
 // contact form
 
-  .contact-submit-buttons {
-    text-align: center;
-    background-color: $bg-medium-orange;
-    padding: 15px 0px;
-  
-    .contact-sub-button {
-      @include ft-sie-bat-500;
-      color: white;
-    }
+.contact-submit-buttons {
+  text-align: center;
+  background-color: $bg-medium-orange;
+  padding: 15px 0px;
+
+  .contact-sub-button {
+    @include ft-sie-bat-500;
+    color: white;
   }
-  
-  .contact-address-info {
-    line-height: 15px;
-    font-size: 18px;
-    font-weight: 400;
+}
+
+.contact-address-info {
+  line-height: 15px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.contact-quick-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.contact-form-input {
+  border: 2px solid rgb(214, 210, 210);
+  padding: 15px;
+
+  &::placeholder {
+    @include ft-sie-bat-500;
+    color: rgb(168, 163, 163);
   }
-  
-  .contact-quick-text {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: justify;
+}
+
+.contact-headings {
+  font-size: 25px;
+  font-weight: 500;
+
+  a {
+    color: black;
   }
-  
-  .contact-form-input {
-    border: 2px solid rgb(214, 210, 210);
-    padding: 15px;
-  
-    &::placeholder {
-      @include ft-sie-bat-500;
-      color: rgb(168, 163, 163);
-    }
-  }
-  
-  .contact-headings {
-    font-size: 25px;
-    font-weight: 500;
-  
-    a {
-      color: black;
-    }
-  }
+}
 
 
 
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
+
   .contact-us-row,
-  .contact-sectiopns{
-  @include flex-columns;
+  .contact-sectiopns {
+    @include flex-columns;
 
   }
-  .contact-us-sect2, 
-  .contact-us-sect1{
+
+  .contact-us-sect2,
+  .contact-us-sect1 {
     padding-top: 10px;
     width: 100%;
   }
@@ -2084,9 +2092,10 @@ i {
   border: none;
 }
 
-@media (max-width: 1100px){
-  .news-section2, 
-  .news-section1{
+@media (max-width: 1100px) {
+
+  .news-section2,
+  .news-section1 {
     width: 100%;
   }
 }
@@ -2568,12 +2577,14 @@ i {
   font-size: 20px;
   font-weight: 500;
 }
-@media screen and (max-width: 624px){
+
+@media screen and (max-width: 624px) {
   .Payment-Method-head {
     display: flex;
     justify-content: left;
 
   }
+
   .Payment-Method {
     // display: flex;
     justify-content: start;
@@ -2585,19 +2596,22 @@ i {
     }
   }
 }
+
 @media screen and (max-width: 1120px) {
   .orderpage-success-head {
     display: flex;
     justify-content: center;
     align-items: center;
   }
- 
- .ui-state-default{
-  margin: 0px !important;
- }
- .form-check{
-  padding-left: 0px !important;
- }
+
+  .ui-state-default {
+    margin: 0px !important;
+  }
+
+  .form-check {
+    padding-left: 0px !important;
+  }
+
   .orderpage-success {
     margin: 10px !important;
     width: 100%;
@@ -2950,22 +2964,27 @@ legend {
     h4 {
       @include ft-sie-bat-500;
     }
+
     p {
       font-size: 16px;
       font-weight: 400;
       padding-left: 10px;
       color: grey;
+      margin-bottom: 0px !important
     }
   }
+
   .pro-wish-amount {
     .amount {
       @include ft-sie-bat-500;
       padding: 5px 10px;
     }
+
     .strike-amount {
       @include ft-sie-bat-500;
       padding: 5px 10px;
     }
+
     .discount {
       @include ft-sie-bat-500;
       color: green;
@@ -2995,11 +3014,12 @@ legend {
   }
 
 }
+
 // wishlist hide nad block
-.main-navbar-okka-wish
- {
+.main-navbar-okka-wish {
   display: none;
 }
+
 .navbar-dropdown-full-wish {
   display: block;
 }
@@ -3008,22 +3028,86 @@ legend {
   .main-navbar-okka-wish {
     display: block;
   }
+
   .navbar-dropdown-full-wish {
     display: none;
   }
 }
 
 @media (max-width: 1100px) {
-  .main-navbar-okka-wish{
+  .main-navbar-okka-wish {
     display: none;
   }
-  .navbar-dropdown-full-wish{
+
+  .navbar-dropdown-full-wish {
     display: block;
+  }
+}
+.nav-pills .nav-link.active {
+  background-color: white;
+  color: black;
+}
+// order 
+.orderpage-sections{
+  .profile-order-table {
+    border: 1px solid rgb(202, 193, 193);
+    border-radius: 10px;
+  }
+  .order-table-btn {
+    .prof-order-view {
+      @include ft-size-16;
+      background-color: $bg-medium-orange;
+      color: white;
+    }
+  
+    .prof-order-cancel {
+      @include ft-size-16;
+      background-color: $bg-thin-red;
+      color: white;
+    }
+  }
+  .prof-order-button-prev{
+    border: 1px solid grey;
+  }
+  .prof-order-button-next{
+    padding: 0px 25px;
+    border: 1px solid grey
+  }
+  .prof-order-track {
+    @include ft-size-16;
+    background-color: $bg-dark-violet;
+    color: white;
+  }
+  // .profile-order-body{
+  //   display: block;
+  // }
+  .profile-order-body tr th{
+    color: $bg-medium-orange;
+    padding: 15px 0px;
+  }
+  .profile-order-body td{
+    font-size: 14px;
+    font-weight: 400;
+    color: grey;
+    margin-bottom: 20px;
+    padding: 0px 20px;
   }
 }
 
 
-.nav-pills .nav-link.active {
-  background-color: white;
-  color: black;
+
+.profile-order-body {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.profile-order-body tr td {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  text-decoration: none;
+}
+.profile-order-body a:hover {
+  background-color: #777;
 }

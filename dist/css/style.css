@@ -2507,6 +2507,7 @@ legend {
   font-weight: 400;
   padding-left: 10px;
   color: grey;
+  margin-bottom: 0px !important;
 }
 .profile-wishlist .pro-wish-amount .amount {
   font-size: 18px;
@@ -2567,4 +2568,62 @@ legend {
 .nav-pills .nav-link.active {
   background-color: white;
   color: black;
+}
+
+.orderpage-sections .profile-order-table {
+  border: 1px solid rgb(202, 193, 193);
+  border-radius: 10px;
+}
+.orderpage-sections .order-table-btn .prof-order-view {
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #FF4500;
+  color: white;
+}
+.orderpage-sections .order-table-btn .prof-order-cancel {
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+.orderpage-sections .prof-order-button-prev {
+  border: 1px solid grey;
+}
+.orderpage-sections .prof-order-button-next {
+  padding: 0px 25px;
+  border: 1px solid grey;
+}
+.orderpage-sections .prof-order-track {
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgb(25, 25, 50);
+  color: white;
+}
+.orderpage-sections .profile-order-body tr th {
+  color: #FF4500;
+  padding: 15px 0px;
+}
+.orderpage-sections .profile-order-body td {
+  font-size: 14px;
+  font-weight: 400;
+  color: grey;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+}
+
+.profile-order-body {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.profile-order-body tr td {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  text-decoration: none;
+}
+
+.profile-order-body a:hover {
+  background-color: #777;
 }/*# sourceMappingURL=style.css.map */
