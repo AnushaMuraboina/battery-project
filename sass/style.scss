@@ -639,6 +639,8 @@ a {
   color: white;
 }
 
+
+
 .footer-copyrights {
   background-color: rgb(25, 25, 50);
   color: white;
@@ -647,6 +649,12 @@ a {
   font-weight: 400;
 }
 
+@media (max-width: 900px) {
+  .copyrights-sec1{
+    display: flex;
+    flex-direction: column;
+  }
+}
 .battery-conditions1 {
   border-right: 1px solid white;
   color: white !important;
@@ -2379,16 +2387,19 @@ i {
   margin-top: 60px;
 }
 
-.order-tracking,.cancelled {
+.order-tracking,
+.cancelled {
   text-align: center;
   /* width: 33.33%; */
   width: 25%;
   position: relative;
   display: block;
 }
-.order-track-cross{
+
+.order-track-cross {
   line-height: 30px;
 }
+
 .order-tracking .is-complete {
   display: block;
   position: relative;
@@ -2402,6 +2413,7 @@ i {
   -webkit-transition: background 0.25s linear;
   z-index: 2;
 }
+
 .cancelled .is-complete {
   display: block;
   position: relative;
@@ -2415,6 +2427,7 @@ i {
   -webkit-transition: background 0.25s linear;
   z-index: 2;
 }
+
 .order-tracking .is-complete:after {
   display: block;
   position: absolute;
@@ -2690,7 +2703,8 @@ legend {
 .profiles-menus-head p {
   font-size: 18px;
   font-weight: 500;
-color: black;
+  color: black;
+
   i {
     font-size: 20px;
     color: rgb(39, 38, 38);
@@ -2767,7 +2781,7 @@ color: black;
   height: 68vh;
 }
 
-.logout-profile-sec{
+.logout-profile-sec {
   box-shadow: 0px 0px 4px 0px rgb(199, 196, 196);
   margin-top: 250px;
 }
@@ -2780,11 +2794,13 @@ color: black;
 
 @media screen and (max-width: 1120px) {
   .profile-okka-tab {
-  margin-right: 0px !important;
+    margin-right: 0px !important;
   }
-.profile-user-detail {
-  margin-right: 0px !important;
-}
+
+  .profile-user-detail {
+    margin-right: 0px !important;
+  }
+
   .profile-page-row {
     display: flex;
     flex-direction: column;
@@ -2808,7 +2824,7 @@ color: black;
     width: 100%;
   }
 
-  .logout-profile-sec{
+  .logout-profile-sec {
     margin-top: 0px !important;
   }
 }
@@ -2912,47 +2928,55 @@ color: black;
 
 // wishlist
 
-.profile-wishlist{
-  .pro-wish-bocsh{
-    h4{
+.profile-wishlist {
+  .pro-wish-bocsh {
+    h4 {
       @include ft-sie-bat-500;
     }
-    p{
+    p {
       font-size: 16px;
       font-weight: 400;
       padding-left: 10px;
       color: grey;
     }
   }
-  .pro-wish-amount{
-    .amount{
+  .pro-wish-amount {
+    .amount {
       @include ft-sie-bat-500;
       padding: 5px 10px;
     }
-    .strike-amount{
-    @include ft-sie-bat-500;
+    .strike-amount {
+      @include ft-sie-bat-500;
       padding: 5px 10px;
     }
-    .discount{
+    .discount {
       @include ft-sie-bat-500;
       color: green;
       padding: 5px 0px;
     }
   }
-  .pro-wish-rating{
+
+  .pro-wish-rating {
     background-color: $bg-medium-orange;
     color: white;
   }
-  .pro-wishlist-head{
+
+  .pro-wishlist-head {
     font-size: 25px;
     font-weight: 500;
     color: $bg-medium-orange;
   }
-  .wishlist-sections{
+
+  .wishlist-sections {
     border: 1px solid rgb(231, 226, 226);
   }
-  
-  
+
+  .trash-icon-wish {
+    &:hover {
+      color: $bg-medium-orange;
+    }
+  }
+
 }
 
 
@@ -2963,46 +2987,7 @@ color: black;
 
 
 
-.nav-pills .nav-link.active{
+.nav-pills .nav-link.active {
   background-color: white;
   color: black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
