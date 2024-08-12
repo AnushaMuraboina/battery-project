@@ -27,7 +27,10 @@ a {
   box-shadow: 0 0 0 0rem grey;
 }
 
-// navbar
+// navbar\
+.navbar-container-main{
+  background-color: $bg-medium-orange;
+}
 .navbar-back-header {
   background-color: $bg-medium-orange;
 

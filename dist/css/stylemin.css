@@ -22,6 +22,10 @@ a {
   box-shadow: 0 0 0 0rem grey;
 }
 
+.navbar-container-main {
+  background-color: #FF4500;
+}
+
 .navbar-back-header {
   background-color: #FF4500;
 }
