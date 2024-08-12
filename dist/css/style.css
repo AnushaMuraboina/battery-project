@@ -48,12 +48,7 @@ a {
   margin-left: 10px;
 }
 
-.main-banner-section {
-  max-width: 35%;
-}
-
-.main-navbar-okka,
-.main-banner-section {
+.main-navbar-okka {
   display: none;
 }
 
@@ -63,9 +58,6 @@ a {
 }
 
 @media (max-width: 1150px) {
-  .main-banner-section {
-    display: none;
-  }
   .main-banner-section-full {
     display: block;
   }
@@ -1197,7 +1189,7 @@ i {
   padding: 10px 30px;
 }
 .cartpage-container .cartpage-counting-input {
-  max-width: 50px;
+  max-width: 40px;
   max-height: 40px;
   background-color: #FF4500;
   color: white;
@@ -1600,6 +1592,18 @@ i {
   color: black;
 }
 
+@media (max-width: 1100px) {
+  .contact-us-row,
+  .contact-sectiopns {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-us-sect2,
+  .contact-us-sect1 {
+    padding-top: 10px;
+    width: 100%;
+  }
+}
 .main-headings {
   font-size: 32px;
   font-weight: 500;
@@ -1755,6 +1759,12 @@ i {
   border: none;
 }
 
+@media (max-width: 1100px) {
+  .news-section2,
+  .news-section1 {
+    width: 100%;
+  }
+}
 .datepicker {
   width: 100%;
   height: auto;
@@ -2164,11 +2174,31 @@ i {
   font-weight: 500;
 }
 
+@media screen and (max-width: 624px) {
+  .Payment-Method-head {
+    display: flex;
+    justify-content: left;
+  }
+  .Payment-Method {
+    justify-content: start;
+    padding: 20px 10px;
+    text-align: left;
+  }
+  .Payment-Method .order-sub-heading {
+    text-align: left;
+  }
+}
 @media screen and (max-width: 1120px) {
   .orderpage-success-head {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .ui-state-default {
+    margin: 0px !important;
+  }
+  .form-check {
+    padding-left: 0px !important;
   }
   .orderpage-success {
     margin: 10px !important;
@@ -2180,10 +2210,6 @@ i {
   .orderpage-row {
     display: flex;
     flex-direction: column;
-  }
-  .Payment-Method-head {
-    display: flex;
-    justify-content: left;
   }
   .order-sectionpage {
     width: 100%;
@@ -2198,14 +2224,6 @@ i {
   }
   .order-product-display {
     padding-left: 0px !important;
-  }
-  .Payment-Method {
-    justify-content: start;
-    padding: 20px 10px;
-    text-align: left;
-  }
-  .Payment-Method .order-sub-heading {
-    text-align: left;
   }
 }
 .profile-headings {
@@ -2510,6 +2528,30 @@ legend {
   color: #FF4500;
 }
 
+.main-navbar-okka-wish {
+  display: none;
+}
+
+.navbar-dropdown-full-wish {
+  display: block;
+}
+
+@media (min-width: 1100px) {
+  .main-navbar-okka-wish {
+    display: block;
+  }
+  .navbar-dropdown-full-wish {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .main-navbar-okka-wish {
+    display: none;
+  }
+  .navbar-dropdown-full-wish {
+    display: block;
+  }
+}
 .nav-pills .nav-link.active {
   background-color: white;
   color: black;

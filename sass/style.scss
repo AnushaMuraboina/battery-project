@@ -19,6 +19,7 @@ a {
 
 }
 
+
 .form-control:focus {
   color: #212529;
   background-color: #fff;
@@ -67,12 +68,13 @@ a {
   }
 }
 
-.main-banner-section {
-  max-width: 35%;
-}
+// .main-banner-section {
+//   max-width: 35%;
+// }
 
-.main-navbar-okka,
-.main-banner-section {
+.main-navbar-okka
+// .main-banner-section
+ {
   display: none;
 }
 
@@ -83,9 +85,9 @@ a {
 }
 
 @media (max-width: 1150px) {
-  .main-banner-section {
-    display: none;
-  }
+  // .main-banner-section {
+  //   display: none;
+  // }
 
   .main-banner-section-full {
     display: block;
@@ -1382,7 +1384,7 @@ i {
   // }
 
   .cartpage-counting-input {
-    max-width: 50px;
+    max-width: 40px;
     max-height: 40px;
     background-color: $bg-medium-orange ;
     color: white;
@@ -1840,50 +1842,64 @@ i {
 
 // contact form
 
-.contact-submit-buttons {
-  text-align: center;
-  background-color: $bg-medium-orange;
-  padding: 15px 0px;
+  .contact-submit-buttons {
+    text-align: center;
+    background-color: $bg-medium-orange;
+    padding: 15px 0px;
+  
+    .contact-sub-button {
+      @include ft-sie-bat-500;
+      color: white;
+    }
+  }
+  
+  .contact-address-info {
+    line-height: 15px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .contact-quick-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: justify;
+  }
+  
+  .contact-form-input {
+    border: 2px solid rgb(214, 210, 210);
+    padding: 15px;
+  
+    &::placeholder {
+      @include ft-sie-bat-500;
+      color: rgb(168, 163, 163);
+    }
+  }
+  
+  .contact-headings {
+    font-size: 25px;
+    font-weight: 500;
+  
+    a {
+      color: black;
+    }
+  }
 
-  .contact-sub-button {
-    @include ft-sie-bat-500;
-    color: white;
+
+
+@media (max-width: 1100px){
+  .contact-us-row,
+  .contact-sectiopns{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .contact-us-sect2, 
+  .contact-us-sect1{
+    padding-top: 10px;
+    width: 100%;
   }
 }
-
-.contact-address-info {
-  line-height: 15px;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.contact-quick-text {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 30px;
-  text-align: justify;
-}
-
-.contact-form-input {
-  border: 2px solid rgb(214, 210, 210);
-  padding: 15px;
-
-  &::placeholder {
-    @include ft-sie-bat-500;
-    color: rgb(168, 163, 163);
-  }
-}
-
-.contact-headings {
-  font-size: 25px;
-  font-weight: 500;
-
-  a {
-    color: black;
-  }
-}
-
-
 
 
 
@@ -1893,15 +1909,6 @@ i {
   font-size: 32px;
   font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1942,8 +1949,6 @@ i {
   transform: translateY(-10px);
   visibility: hidden;
   transition: 300ms;
-
-
 }
 
 .battery-login-menu::before {
@@ -2080,6 +2085,12 @@ i {
   border: none;
 }
 
+@media (max-width: 1100px){
+  .news-section2, 
+  .news-section1{
+    width: 100%;
+  }
+}
 
 
 
@@ -2531,7 +2542,6 @@ i {
 .order-place-head {
   @include ft-sie-bat-500;
   color: grey;
-
 }
 
 .order-normal-text {
@@ -2559,14 +2569,36 @@ i {
   font-size: 20px;
   font-weight: 500;
 }
+@media screen and (max-width: 624px){
+  .Payment-Method-head {
+    display: flex;
+    justify-content: left;
 
+  }
+  .Payment-Method {
+    // display: flex;
+    justify-content: start;
+    padding: 20px 10px;
+    text-align: left;
+
+    .order-sub-heading {
+      text-align: left;
+    }
+  }
+}
 @media screen and (max-width: 1120px) {
   .orderpage-success-head {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
+ 
+ .ui-state-default{
+  margin: 0px !important;
+ }
+ .form-check{
+  padding-left: 0px !important;
+ }
   .orderpage-success {
     margin: 10px !important;
     width: 100%;
@@ -2580,11 +2612,6 @@ i {
     flex-direction: column;
   }
 
-  .Payment-Method-head {
-    display: flex;
-    justify-content: left;
-
-  }
 
   .order-sectionpage {
     width: 100%;
@@ -2604,16 +2631,6 @@ i {
     padding-left: 0px !important;
   }
 
-  .Payment-Method {
-    // display: flex;
-    justify-content: start;
-    padding: 20px 10px;
-    text-align: left;
-
-    .order-sub-heading {
-      text-align: left;
-    }
-  }
 }
 
 // @media screen and (max-width: 800px) {
@@ -2981,13 +2998,32 @@ legend {
   }
 
 }
+// wishlist hide nad block
+.main-navbar-okka-wish
+ {
+  display: none;
+}
+.navbar-dropdown-full-wish {
+  display: block;
+}
 
+@media (min-width: 1100px) {
+  .main-navbar-okka-wish {
+    display: block;
+  }
+  .navbar-dropdown-full-wish {
+    display: none;
+  }
+}
 
-
-
-
-
-
+@media (max-width: 1100px) {
+  .main-navbar-okka-wish{
+    display: none;
+  }
+  .navbar-dropdown-full-wish{
+    display: block;
+  }
+}
 
 
 .nav-pills .nav-link.active {
