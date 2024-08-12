@@ -656,8 +656,7 @@ a {
 
 @media (max-width: 900px) {
   .copyrights-sec1{
-    display: flex;
-    flex-direction: column;
+    @include flex-columns;
   }
 }
 .battery-conditions1 {
@@ -1542,8 +1541,7 @@ i {
 
 @media (max-width: 1000px) {
   .signupform-rows {
-    display: flex;
-    flex-direction: column;
+    @include flex-columns;
   }
 
   .vehi-signup-form {
@@ -1625,13 +1623,6 @@ i {
     max-width: 100%;
     left: 10px;
   }
-
-  // .banner-image-text{
-  //   position: absolute;
-  //   top: 30px;
-  //   max-width: 100%;
-  //   left: 10px;
-  // }
   .banner-image-text1 {
     font-size: 14px;
     font-weight: 500;
@@ -1659,7 +1650,16 @@ i {
   .aboutus-section {
     padding-left: 5px !important;
   }
-
+  .aboutus-sec-1,
+  .aboutme-sec4{
+    width: 100%;
+  }
+  .aboutus-sections-row {
+    @include flex-columns;
+  }
+  .about-me-section3{
+    @include flex-columns;
+  }
 }
 
 // checkout page
@@ -1890,8 +1890,7 @@ i {
 @media (max-width: 1100px){
   .contact-us-row,
   .contact-sectiopns{
-    display: flex;
-    flex-direction: column;
+  @include flex-columns;
 
   }
   .contact-us-sect2, 
@@ -2608,8 +2607,7 @@ i {
   }
 
   .orderpage-row {
-    display: flex;
-    flex-direction: column;
+    @include flex-columns;
   }
 
 
@@ -2822,8 +2820,7 @@ legend {
   }
 
   .profile-page-row {
-    display: flex;
-    flex-direction: column;
+    @include flex-columns;
   }
 
   .profile-form-label {
