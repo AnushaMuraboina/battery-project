@@ -1213,6 +1213,7 @@ i {
 
 .checkout-button-main {
   text-align: end;
+  margin-bottom: 20px;
 }
 .checkout-button-main .checkout-button-changes {
   background-color: #FF4500;
@@ -2456,10 +2457,43 @@ legend {
   color: #FF4500;
 }
 
-.pro-wishlist-head {
+.profile-wishlist .pro-wish-bocsh h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.profile-wishlist .pro-wish-bocsh p {
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 10px;
+  color: grey;
+}
+.profile-wishlist .pro-wish-amount .amount {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+.profile-wishlist .pro-wish-amount .strike-amount {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+.profile-wishlist .pro-wish-amount .discount {
+  font-size: 18px;
+  font-weight: 500;
+  color: green;
+  padding: 5px 0px;
+}
+.profile-wishlist .pro-wish-rating {
+  background-color: #FF4500;
+  color: white;
+}
+.profile-wishlist .pro-wishlist-head {
   font-size: 25px;
   font-weight: 500;
   color: #FF4500;
+}
+.profile-wishlist .wishlist-sections {
+  border: 1px solid rgb(231, 226, 226);
 }
 
 .nav-pills .nav-link.active {
