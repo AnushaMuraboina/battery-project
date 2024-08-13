@@ -162,7 +162,7 @@
                                             <button class="btn prof-order-cancel my-2">Cancel</button>
                                         </td>
                                     </tr>
-                                    
+
                                     <tr class="profile-order-body profile-page-pagination text-center">
                                         <td data-label="order" class="">#202024</td>
                                         <td data-label="DATE" class="">15/05/2024</td>
@@ -984,7 +984,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-     
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var currentPage = 1;
@@ -994,6 +994,20 @@
             var prevButton = document.getElementById("prev");
             var nextButton = document.getElementById("next");
 
+
+            function updateButtons() {
+                if (currentPage === 1) {
+                    prevButton.disabled = true;
+                } else {
+                    prevButton.disabled = false;
+                }
+
+                if (currentPage === numPages) {
+                    nextButton.disabled = true;
+                } else {
+                    nextButton.disabled = false;
+                }
+            }
             function showPage(page) {
                 var start = (page - 1) * itemsPerPage;
                 var end = start + itemsPerPage;
@@ -1009,7 +1023,7 @@
                 // Toggle visibility of previous button based on current page
                 // if (currentPage === 1) {
                 //     prevButton.style.display = "block";
-                    
+
                 // } else {
                 //     prevButton.style.display = "inline-block";
                 // }
@@ -1020,6 +1034,7 @@
                 // } else {
                 //     nextButton.style.display = "inline-block";
                 // }
+                updateButtons()
             }
 
             showPage(currentPage);
@@ -1028,7 +1043,7 @@
                 if (currentPage > 1) {
                     currentPage--;
                     showPage(currentPage);
-                    
+
                 }
             });
 
@@ -1036,9 +1051,10 @@
                 if (currentPage < numPages) {
                     currentPage++;
                     showPage(currentPage);
-                    
+
                 }
             });
+            updateButtons()
         });
 
     </script>
