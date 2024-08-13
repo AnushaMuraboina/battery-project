@@ -149,6 +149,20 @@
                                             <button class="btn prof-order-cancel my-2">Cancel</button>
                                         </td>
                                     </tr>
+                                    <tr class="profile-order-body profile-page-pagination text-center my-4">
+                                        <td data-label="order" class="">#202024</td>
+                                        <td data-label="DATE" class="">15/05/2024</td>
+                                        <td data-label="STATUS" class="">Confirmed</td>
+                                        <td data-label="TOTAL" class="">70.7EH&nbsp;for 6 item</td>
+                                        <td data-label="TRACKING" class="" colspan="3">
+                                            <button class="btn prof-order-track my-2">Track</button>
+                                        </td>
+                                        <td data-label="ACTIONS" class="order-table-btn ">
+                                            <button class="btn prof-order-view my-2">View</button>
+                                            <button class="btn prof-order-cancel my-2">Cancel</button>
+                                        </td>
+                                    </tr>
+                                    
                                     <tr class="profile-order-body profile-page-pagination text-center">
                                         <td data-label="order" class="">#202024</td>
                                         <td data-label="DATE" class="">15/05/2024</td>
@@ -166,7 +180,7 @@
                             </table>
 
 
-                            <div class="pagination d-flex justify-content-between mt-3">
+                            <div class="pagination d-flex justify-content-end mt-3">
                                 <button class="btn pagination-btn prof-order-button-prev my-2 ms-2 "
                                     id="prev">Previous</button>
                                 <button class="btn pagination-btn prof-order-button-next my-2 ms-2 py-2 "
@@ -822,9 +836,7 @@
                             <button type="button" class="btn shipping-save  profile-acont-save mt-3">Save </button>
                             <button type="button" class="btn shipping-cancel profile-acont-cancel mt-3">Cancel</button>
                         </div>
-
                     </div>
-
                 </form>
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -995,18 +1007,19 @@
                 });
 
                 // Toggle visibility of previous button based on current page
-                if (currentPage === 1) {
-                    prevButton.style.display = "none";
-                } else {
-                    prevButton.style.display = "inline-block";
-                }
+                // if (currentPage === 1) {
+                //     prevButton.style.display = "block";
+                    
+                // } else {
+                //     prevButton.style.display = "inline-block";
+                // }
 
-                // Toggle visibility of next button based on current page
-                if (currentPage === numPages) {
-                    nextButton.style.display = "none";
-                } else {
-                    nextButton.style.display = "inline-block";
-                }
+                // // Toggle visibility of next button based on current page
+                // if (currentPage === numPages) {
+                //     nextButton.style.display = "block";
+                // } else {
+                //     nextButton.style.display = "inline-block";
+                // }
             }
 
             showPage(currentPage);
@@ -1015,6 +1028,7 @@
                 if (currentPage > 1) {
                     currentPage--;
                     showPage(currentPage);
+                    
                 }
             });
 
@@ -1022,6 +1036,7 @@
                 if (currentPage < numPages) {
                     currentPage++;
                     showPage(currentPage);
+                    
                 }
             });
         });
