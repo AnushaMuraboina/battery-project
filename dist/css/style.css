@@ -2624,4 +2624,49 @@ legend {
 
 .profile-order-body a:hover {
   background-color: #777;
+}
+
+.search-batetry-header {
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  border-bottom: 2px solid #FF4500;
+}
+
+.enter-numberplate-section .search-alpha-columns {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.enter-numberplate-section .search-alpha-columns .search-alpha-bikes {
+  border: 1px solid rgb(214, 207, 207);
+  padding: 15px 20px;
+  margin: 15px 18px;
+  border-radius: 5px;
+}
+.enter-numberplate-section .alpha-secrch-section {
+  background-color: rgb(243, 243, 243);
+  padding: 10px 30px;
+}
+.enter-numberplate-section .alpha-secrch-section .series-alphabets {
+  font-size: 40px;
+  font-weight: 500;
+  border-bottom: 2px solid #FF4500;
+}
+.enter-numberplate-section .alpha-secrch-section .search-bike-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.enter-numberplate-section .alpha-secrch-section .search-bike-section .search-bike-page {
+  border: 1px solid rgb(214, 207, 207);
+  color: #FF4500;
+  padding: 5px 10px;
+}
+.enter-numberplate-section .alpha-secrch-section .search-bike-section .search-bike-names {
+  font-size: 25px;
+  font-weight: 500;
+  padding: 10px 0px;
+  color: rgb(80, 80, 80);
 }/*# sourceMappingURL=style.css.map */

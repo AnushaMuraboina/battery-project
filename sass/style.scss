@@ -3113,3 +3113,56 @@ legend {
 .profile-order-body a:hover {
   background-color: #777;
 }
+
+
+
+// search number plate
+.search-batetry-header {
+  @include ft-size-25;
+  color: black;
+  text-align: center;
+  border-bottom: 2px solid $bg-medium-orange;
+}
+.enter-numberplate-section{
+  .search-alpha-columns{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .search-alpha-bikes{
+      border: 1px solid rgb(214, 207, 207);
+      padding: 15px 20px;
+      margin:15px 18px;
+      border-radius: 5px;
+    }
+  }
+  
+  .alpha-secrch-section{
+    background-color: rgb(243,243,243);
+    padding: 10px 30px;
+  
+    .series-alphabets{
+      font-size: 40px;
+      font-weight: 500;
+      border-bottom: 2px solid $bg-medium-orange;
+    }
+    .search-bike-section{
+      @include justify-space-between;
+      .search-bike-page{
+        border: 1px solid rgb(214, 207, 207);
+        color: $bg-medium-orange;
+        padding: 5px 10px;
+      }
+      .search-bike-names{
+        font-size: 25px;
+        font-weight: 500;
+        padding: 10px 0px;
+        color: rgb(80,80,80);
+      }
+      
+    }
+    
+  }
+
+}
+
+
