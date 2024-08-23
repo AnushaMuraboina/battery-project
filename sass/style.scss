@@ -3166,3 +3166,32 @@ legend {
 }
 
 
+
+.payment_box {
+  position: relative;
+  margin-top: 15px;
+  // padding: 15px;
+  // background-color: white;
+  // box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  // border-radius: grey;
+  // color: rgb(119, 119, 119);
+  font-size: 14px;
+  font-weight: 400;
+  &::before{
+  content: "";
+  position: absolute;
+  top: -4px;
+  inset-inline-start: 25px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  background-color: inherit; 
+  }
+  
+}
+.payment_box {
+  display: none;
+}
+.form-check-input:checked~.payment_box {
+  display: block;
+}
