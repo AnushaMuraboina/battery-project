@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing and Shipping Address</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+
+
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+         -->
+    <!-- country -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+<body>
+
+    {% extends 'base/base.html' %} {% load static %}{% block title %}my webpage{% endblock %} {% block body %} {% load
+    static %}
+    {% get_media_prefix as MEDIA_PREFIX %}
+
+    <style>
+        .hidden-checkout {
+            display: none;
+        }
+
+        .form-section {
+            display: none;
+            margin-bottom: 20px;
+        }
+
+        .visible {
+            display: block;
+        }
+    </style>
+
+    {% include 'base/header.html' %}
+
+
+    <div class="container mt-3">
+        <div class="row">
+            <h4 class="Billing-Address">Check out</h4>
+            <div class=" checkout-customer">
+                <p>Returning Customer? <a href="#"> Click here to Login</a></p>
+            </div>
+            <div class=" checkout-customer">
+                <p>Have a Coupon? <a href="#"> Click here to enter your code</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-3 checkoutpage-container">
+        <div class="row">
+            <!-- Billing Address -->
+            <div class="col-md-6">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Billing Address
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show " aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <form id="billingForm">
+                                    <input type="hidden" name="billingAddressId" id="billingAddressId"
+                                        value="{{billing_address.id}}">
+                                    <div class="mb-3">
+                                        <label for="billingfirstName" class="form-label checkout-form-lable">FIrst
+                                            Name</label>
+                                        <input type="text" class="form-control checkout-form-input"
+                                            name="billingfirstName" id="billingfirstName"
+                                            value="{{billing_address.first_name}}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="billinglastName" class="form-label checkout-form-lable">Last
+                                            Name</label>
+                                        <input type="text" class="form-control checkout-form-input"
+                                            name="billinglastName" id="billinglastName"
+                                            value="{{billing_address.last_name}}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="billingcompanyname" class="form-label checkout-form-lable">Company
+                                            Name(Optional)</label>
+                                        <input type="text" class="form-control checkout-form-input"
+                                            name="billingcompanyname" id="billingcompanyname"
+                                            value="{{billing_address.company}}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="billingstreetAddress" class="form-label checkout-form-lable">Street
+                                            Address</label>
+                                        <input type="text" class="form-control checkout-form-input mb-4"
+                                            name="billingstreetAddress1" id="billingstreetAddress1"
+                                            value="{{billing_address.address_1}}">
+                                        <input type="text" class="form-control checkout-form-input"
+                                            name="billingstreetAddress2" id="billingstreetAddress2"
+                                            value="{{billing_address.address_2}}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="billingCity"
+                                            class="form-label checkout-form-lable">Town\City</label>
+                                        <input type="text" class="form-control checkout-form-input" id="billingCity"
+                                            name="billingCity" value="{{billing_address.city}}">
+                                    </div>
+
+
+
+                                    <!-- 
+                                    <div data-toggle-group="location">
+                                        <div class="form-group  mb-3">
+                                            <label class="checkout-form-lable">Country</label>
+                                            <select class="form-control checkout-form-input" name="billingCountry" data-toggle="country" data-country=""></select>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label class="checkout-form-lable">State</label>
+                                            <select class="form-control checkout-form-input" name="billingState" data-toggle="state" data-state=""
+                                                placeholder="Select State"></select>
+                                        </div>
+                                    </div> -->
+
+
+                                    <div class="mb-3">
+                                        <label for="countryInput1" class="form-label checkout-form-label">Country /
+                                            Region <span class="text-danger">*</span></label>
+                                        <input type="text" id="countryInput1" class="county-input"
+                                            placeholder="Type a country name..." name="billingCountry">
+                                        <ul id="dropdown-country1" class="dropdown country-dropdown"></ul>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="state1" class="form-label checkout-form-label ">State/Country<span
+                                                class="text-danger">*</span></label>
+                                        <select id="state1" name="state" class="county-input " name="billingState">
+                                            <option value="">Select State/Province</option>
+                                        </select>
+                                    </div>
+
+
+
+                                    <div class="mb-3">
+                                        <label for="billingZip" class="form-label checkout-form-lable">Zip Code</label>
+                                        <input type="text" class="form-control checkout-form-input" name="billingZip"
+                                            id="billingZip" value="{{billing_address.postcode}}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="billingPhone" class="form-label checkout-form-lable">Phone
+                                            Number</label>
+                                        <input type="text" class="form-control checkout-form-input" name="billingPhone"
+                                            id="billingPhone" value="{{billing_address.phone}}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="billingEmail" class="form-label checkout-form-lable">Email
+                                            address</label>
+                                        <input type="text" class="form-control checkout-form-input" name="billingEmail"
+                                            id="billingEmail" value="{{billing_address.email}}">
+                                    </div>
+                                </form>
+
+                                <!-- form toggles -->
+                                <form id="shippingForm">
+                                    <input type="hidden" name="shippingAddressId" id="shippingAddressId"
+                                        value="{{shipping_address.id}}">
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input " id="shipping_info"
+                                            onclick="toggleForm_check()" value="{{shipping_address.id}}">
+                                        <label class="form-check-label check-shipping-radio"
+                                            for="shipping_info">Shipping
+                                            address</label>
+                                    </div>
+                                    <div id="formElements_check">
+                                        <div class="mb-3">
+                                            <label for="shippingfirstName" class="form-label checkout-form-lable">FIrst
+                                                Name</label>
+                                            <input type="text" class="form-control checkout-form-input"
+                                                name="shippingfirstName" id="shippingfirstName"
+                                                value="{{shipping_address.first_name}}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="shippinglastName" class="form-label checkout-form-lable">Last
+                                                Name</label>
+                                            <input type="text" class="form-control checkout-form-input"
+                                                name="shippinglastName" id="shippinglastName"
+                                                value="{{shipping_address.last_name}}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="shippingcompanyname"
+                                                class="form-label checkout-form-lable">Company
+                                                Name(Optional)</label>
+                                            <input type="text" class="form-control checkout-form-input"
+                                                name="shippingcompanyname" id="shippingcompanyname"
+                                                value="{{shipping_address.company}}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="shippingstreetAddress"
+                                                class="form-label checkout-form-lable">Street
+                                                Address</label>
+                                            <input type="text" class="form-control checkout-form-input mb-4"
+                                                name="shippingstreetAddress1" id="shippingstreetAddress1"
+                                                value="{{shipping_address.address_1}}">
+                                            <input type="text" class="form-control checkout-form-input"
+                                                name="shippingstreetAddress2" id="shippingstreetAddress2"
+                                                value="{{shipping_address.address_2}}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="shippingCity"
+                                                class="form-label checkout-form-lable">Town\City</label>
+                                            <input type="text" class="form-control checkout-form-input"
+                                                name="shippingCity" id="shippingCity" value="{{shipping_address.city}}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="shippingZip" class="form-label checkout-form-lable">Zip
+                                                Code</label>
+                                            <input type="text" class="form-control checkout-form-input" id="shippingZip"
+                                                name="shippingZip" value="{{shipping_address.postcode}}">
+                                        </div>
+                                        <!-- <div data-toggle-group="location">
+                                            <div class="form-group  mb-3">
+                                                <label class="checkout-form-lable">Country</label>
+                                                <select class="form-control checkout-form-input" name="shippingCountry" data-toggle="country" data-country=""></select>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label class="checkout-form-lable">State</label>
+                                                <select class="form-control checkout-form-input" name="shippingState" data-toggle="state" data-state=""
+                                                    placeholder="Select State"></select>
+                                            </div>
+                                        </div> -->
+
+
+                                        <div class="mb-3">
+                                            <label for="countryInput2" class="form-label checkout-form-label">Country /
+                                                Region <span class="text-danger">*</span></label>
+                                            <input type="text" id="countryInput2" class="county-input"
+                                                name="shippingCountry" placeholder="Type a country name...">
+                                            <ul id="dropdown-country2" class="dropdown country-dropdown"></ul>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="state2"
+                                                class="form-label checkout-form-label ">State/Country<span
+                                                    class="text-danger">*</span></label>
+                                            <select id="state2" name="state" class="county-input " name="shippingState">
+                                                <option value="">Select State/Province</option>
+                                            </select>
+                                        </div>
+
+
+
+                                        <div class="mb-3">
+                                            <label for="shippingPhone" class="form-label checkout-form-lable">Phone
+                                                Number</label>
+                                            <input type="text" class="form-control checkout-form-input"
+                                                name="shippingPhone" id="shippingPhone"
+                                                value="{{shipping_address.phone}}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="shippingEmail" class="form-label checkout-form-lable">Email
+                                                address</label>
+                                            <input type="text" class="form-control checkout-form-input"
+                                                name="shippingEmail" id="shippingEmail"
+                                                value="{{shipping_address.email}}">
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" class="btn bill-ship-buttton py-2 px-4 "
+                                        onclick="submitForm() ">Next</button>
+                                    <!-- <button type="button" class="btn bill-ship-button py-2 px-4" onclick="submitForm()">Save</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button  collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                                Installation
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo1"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body dateandtime-sec">
+                                <p class=" install-card-dispaly1">
+                                    <label class="">
+                                        <input type="radio" name="toggleGroup"
+                                            onclick="toggleCollapse('multiCollapseExample2')">
+                                        &nbsp;DIY installation <br>
+                                        1. Customer opts to install the battery themselves. <br>
+                                        2. System provides guidance or instructional videos for installation.
+                                    </label>
+                                </p>
+                                <p class=" install-card-dispaly1">
+                                    <label class="">
+                                        <input type="radio" name="toggleGroup"
+                                            onclick="toggleCollapse('multiCollapseExample1')">
+                                        &nbsp;Professional installation. <br>
+                                        1. Customer opts to install the battery themselves. <br>
+                                        2. System provides guidance or instructional videos for installation.
+                                    </label>
+                                </p>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                            <div class="input-checkout">
+                                                <div class="result">Select Date :<span></span></div>
+                                            </div>
+                                            <div class="calendar py-2 "></div>
+                                            <div class=" bg-white  mb-5 mx-1 mt-3">
+                                                <label for="" class="mb-3">Select Time:</label>
+                                                <!-- <input type="text" class="form-control bg-white" id="timePicker"
+                                                        placeholder="Select time"> -->
+                                                <input type="text" class="form-control bg-white"
+                                                    placeholder="Select time">
+                                                <div class="form-check my-3">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadiotime1">
+                                                    <label class="form-check-label" for="flexRadiotime1">
+                                                        6.00-6.30AM
+                                                    </label>
+                                                </div>
+                                                <div class="form-check my-3">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadiotime2">
+                                                    <label class="form-check-label" for="flexRadiotime2">
+                                                        6.30-7.00AM
+                                                    </label>
+                                                </div>
+                                                <div class="form-check my-3">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadiotime3">
+                                                    <label class="form-check-label" for="flexRadiotime3">
+                                                        7.00-7.30AM
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        <form>
+                                            <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input "
+                                                    id="saveInfo-re-install" onclick="toggleForm_check1()">
+                                                <label class="form-check-label check-shipping-radio"
+                                                    for="saveInfo-re-install">Address Form</label>
+                                            </div>
+                                            <div id="formElements_check-install">
+                                                <div class="mb-3">
+                                                    <label for="billingfirstName"
+                                                        class="form-label checkout-form-lable">FIrst
+                                                        Name</label>
+                                                    <input type="text" class="form-control checkout-form-input"
+                                                        id="installfirstName">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="billinglastName"
+                                                        class="form-label checkout-form-lable">Last
+                                                        Name</label>
+                                                    <input type="text" class="form-control checkout-form-input"
+                                                        id="installlastName">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="billingcompanyname"
+                                                        class="form-label checkout-form-lable">Company
+                                                        Name(Optional)</label>
+                                                    <input type="text" class="form-control checkout-form-input"
+                                                        id="installcompanyname">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="billingstreetAddress"
+                                                        class="form-label checkout-form-lable">Street
+                                                        Address</label>
+                                                    <input type="text" class="form-control checkout-form-input mb-4"
+                                                        id="installstreetAddress">
+                                                    <input type="text" class="form-control checkout-form-input"
+                                                        id="installstreetAddress1">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="billingCity"
+                                                        class="form-label checkout-form-lable">Town\City</label>
+                                                    <input type="text" class="form-control checkout-form-input"
+                                                        id="installCity">
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="billingZip" class="form-label checkout-form-lable">Zip
+                                                        Code</label>
+                                                    <input type="text" class="form-control checkout-form-input"
+                                                        id="installZip">
+                                                </div>
+
+                                                <!-- <div class="mb-3">
+                                                    <label for="countryInput3"
+                                                        class="form-label checkout-form-label">Country / Region <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" id="countryInput3" class="county-input"
+                                                        placeholder="Type a country name...">
+                                                    <ul id="dropdown-country3" class="dropdown country-dropdown"></ul>
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="state3"
+                                                        class="form-label checkout-form-label ">State/Country<span
+                                                            class="text-danger">*</span></label>
+                                                    <select id="state3" name="state" class="county-input ">
+                                                        <option value="">Select State/Province</option>
+                                                    </select>
+                                                </div> -->
+
+                                                <div class="mb-3">
+                                                    <label for="countryInput3"
+                                                        class="form-label checkout-form-label">Country / Region <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" id="countryInput3" class="county-input"
+                                                        name="installcountry" placeholder="Type a country name...">
+                                                    <ul id="dropdown-country3" class="dropdown country-dropdown"></ul>
+                                                </div>
+
+                                                <div class="mb-3">
+                                                    <label for="state3"
+                                                        class="form-label checkout-form-label ">State/Country<span
+                                                            class="text-danger">*</span></label>
+                                                    <select id="state3" name="state" class="county-input "
+                                                        name="installstate">
+                                                        <option value="">Select State/Province</option>
+                                                    </select>
+                                                </div>
+
+
+                                                <div class="mb-3">
+                                                    <label for="billingphonenumber"
+                                                        class="form-label checkout-form-lable">Phone
+                                                        Number</label>
+                                                    <input type="text" class="form-control checkout-form-input"
+                                                        id="installphoneno">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="billinglastName"
+                                                        class="form-label checkout-form-lable">Email
+                                                        address</label>
+                                                    <input type="text" class="form-control checkout-form-input"
+                                                        id="installemailaddress">
+                                                </div>
+                                            </div>
+                                        </form>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button onclick="prevStep()"
+                                    class="btn installation-continue my-2 mx-3">Previous</button>
+                                <button onclick="nextStep()" class="btn bill-ship-buttton1 my-2 mx-3">Next</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="accordion-item">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Installation
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+    
+                                <div class="accordion-body dateandtime-sec">
+    
+                                    <div class="form-check">
+                                        <div class="input-checkout">
+                                            <div class="result">Select Date and Time: <span id="selected-datetime"></span></div>
+                                        </div>
+                                        <div class="calendar py-5"></div>
+                                        <div class="bg-white mb-5 mx-1 mt-3">
+                                            <input type="text" class="form-control bg-white" id="timePicker" placeholder="Select time">
+                                        </div>
+                                        <div id="error-message" class="text-danger mt-3"></div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <button onclick="prevStep()"
+                                        class="btn installation-continue my-2 mx-3">Previous</button>
+                                    <button onclick="nextStep()" class="btn bill-ship-buttton1 my-2 mx-3">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                                Payment Method
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree1"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="PaymentRazorpay"
+                                        id="PaymentRazorpay1">
+                                    <label class="form-check-label" for="PaymentRazorpay1">
+                                        Razorpay
+                                    </label>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <button onclick="prevStep()"
+                                        class="btn payment-continue my-2 mx-3">Previous</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Shipping Address -->
+            <div class="col-md-6">
+                <div class="address-section">
+                    <form>
+
+                        <div class="mb-3 p-3 your-orders-section">
+                            <div class="your-order-sec1">
+                                <h2 class="checkoutpage-head-text">YOUR ORDER</h2>
+                            </div>
+                            <!-- {{items}} -->
+                            {% if items %}
+                            {% for items in items %}
+                            <div class="d-flex your-order-sec1 pb-4 justify-content-between  align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="../images/60-ah-low-maintenance-exide-car-battery-12v-with-48-months-warranty-730 1.png"
+                                        alt="">
+                                    <p class="checkoutpage-head-text ps-3">{{items.product_name}} X {{items.quantity}}
+                                    </p>
+                                </div>
+                                <p class="checkoutpage-head-text">${{items.price}}</p>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            <div class="d-flex your-order-sec1 pb-4 justify-content-between  align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <img src="../images/60-ah-low-maintenance-exide-car-battery-12v-with-48-months-warranty-730 1.png"
+                                        alt="">
+                                    <p class="checkoutpage-head-text ps-3">{{product.part_number}} X {{quantity}}</p>
+                                </div>
+                                <p class="checkoutpage-head-text">${{item_totals}}</p>
+                            </div>
+                            {% endif %}
+                            <div class="sub-total-amount your-order-sec1">
+                                <div class="d-flex justify-content-between">
+                                    <p class="checkoutpage-head-text">Subtotal</p>
+                                    <p class="checkoutpage-head-text">$ <span id="sub_total">{{sub_total}}</span></p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="shipping-add-text">Shipping</p>
+                                    <p class="shipping-add-text">Free Shipping</p>
+                                </div>
+                            </div>
+                            <div class="battery-total-amount d-flex justify-content-between">
+                                <p class="checkoutpage-head-text">Total</p>
+                                <p class="checkoutpage-head-text">$ <span id="total-amount">{{total_amount}}</span></p>
+                            </div>
+
+                        </div>
+                        <!-- <div class="place-order-buttons"> -->
+                        {% if product_id %}
+                        <button id="buy_confirm"
+                            class="place-order-buttons place-order-button w-100 text-light fw-bold">Place Order</button>
+                        <button id="confirm"
+                            class="place-order-buttons place-order-button w-100 text-light fw-bold d-none">Place
+                            Order</button>
+                        {% else %}
+                        <button id="buy_confirm"
+                            class="place-order-buttons place-order-button w-100 text-light fw-bold d-none">Place
+                            Order</button>
+                        <button id="confirm"
+                            class="place-order-buttons place-order-button w-100 text-light fw-bold">Place Order</button>
+                        {% endif %}
+                        <button class="btn w-100 spinner-loading-button p-2 place-order-buttons" id="spin"
+                            style="display: none;">
+                            <span class="spinner-border spinner-border-sm text-secondary "></span>
+                        </button>
+                        <!-- <button class="btn " type="button">Button</button> -->
+                        <!-- </div> -->
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    {% include 'base/footer.html' %}
+
+    <script>
+        function submitForm() {
+            const billingForm = document.getElementById('billingForm');
+            const shippingForm = document.getElementById('shippingForm');
+
+            const billingData = new FormData(billingForm);
+            const shippingData = new FormData(shippingForm);
+
+            const billingAddress = {
+                id: billingData.get('billingAddressId'),
+                first_name: billingData.get('billingfirstName'),
+                last_name: billingData.get('billinglastName'),
+                company: billingData.get('billingcompanyname'),
+                address_1: billingData.get('billingstreetAddress1'),
+                address_2: billingData.get('billingstreetAddress2'),
+                city: billingData.get('billingCity'),
+                postcode: billingData.get('billingZip'),
+                Country_Region: billingData.get('billingCountry'),
+                state_country: billingData.get('billingState'),
+                email: billingData.get('billingEmail'),
+                phone: billingData.get('billingPhone'),
+                address_type: 'Billing'
+            };
+
+            let shippingAddress = null;
+            if (document.getElementById('shipping_info').checked) {
+                shippingAddress = {
+                    id: shippingData.get('shippingAddressId'),
+                    first_name: shippingData.get('shippingfirstName'),
+                    last_name: shippingData.get('shippinglastName'),
+                    company: shippingData.get('shippingcompanyname'),
+                    address_1: shippingData.get('shippingstreetAddress1'),
+                    address_2: shippingData.get('shippingstreetAddress2'),
+                    city: shippingData.get('shippingCity'),
+                    postcode: shippingData.get('shippingZip'),
+                    Country_Region: shippingData.get('shippingCountry'),
+                    state_country: shippingData.get('shippingState'),
+                    email: shippingData.get('shippingEmail'),
+                    phone: shippingData.get('shippingPhone'),
+                    address_type: 'Shipping'
+                };
+            }
+
+            axios.post('/checkout/save-address/', { billingAddress, shippingAddress })
+                .then(response => {
+                    console.log('Addresses saved successfully:', response.data);
+                    // Update the hidden input fields with the returned address IDs
+                    if (response.data.billingAddressId) {
+                        document.getElementById('billingAddressId').value = response.data.billingAddressId;
+                    }
+                    if (response.data.shippingAddressId) {
+                        document.getElementById('shippingAddressId').value = response.data.shippingAddressId;
+                    }
+                    nextStep(); // Proceed to the next step
+                })
+                .catch(error => {
+                    console.error('Error saving addresses:', error);
+                });
+        }
+
+    </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.css">
+
+
+    <!-- for state and country -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+    <!-- <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script> -->
+    <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/gh/linuxguist/countries@main/script.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener("load", loadCountries());
+        document.getElementById('single').value = "";
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+        $("#single").select2({
+            // placeholder: "Select a programming language",
+            allowClear: true
+        });
+        $("#multiple").select2({
+            // placeholder: "Select a programming language",
+            allowClear: true
+        });
+    </script>
+    <script>
+        // timepicker
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr("#timePicker", {
+                enableTime: true,
+                noCalendar: true,
+                // dateFormat: "H:i ",
+                dateFormat: "h:i K",
+                time_24hr: false,
+                // time_24hr: true,
+                disableMobile: true
+            });
+        });
+    </script>
+    <script>
+
+        // function toggleForm_check() {
+        //     const formElementsCheck = document.getElementById('formElements_check');
+        //     // const shippingCostDetails = document.getElementById('shippingCostDetails');
+        //     const isChecked = document.getElementById('shipping_info').checked;
+
+        //     if (isChecked) {
+        //         formElementsCheck.classList.remove('hidden-checkout');
+        //         // shippingCostDetails.classList.add('hidden-checkout');
+        //     } else {
+        //         formElementsCheck.classList.add('hidden-checkout');
+        //         // shippingCostDetails.classList.remove('hidden-checkout');
+        //     }
+        // }
+
+        // window.onload = function () {
+        //     toggleForm_check();
+        // }
+
+        function toggleForm_check() {
+            const formElementsCheck = document.getElementById('formElements_check');
+            const isChecked = document.getElementById('saveInfo-re').checked;
+            if (isChecked) {
+                formElementsCheck.classList.remove('hidden-checkout');
+
+            } else {
+                formElementsCheck.classList.add('hidden-checkout');
+            }
+        }
+        window.onload = function () {
+            toggleForm_check();
+        
+        }
+
+        function toggleForm_check1() {
+            const formElementsCheckinstall = document.getElementById('formElements_check-install');
+            const isChecked = document.getElementById('saveInfo-re-install').checked;
+
+            if (isChecked) {
+                formElementsCheckinstall.classList.remove('hidden-checkout');
+            } else {
+                formElementsCheckinstall.classList.add('hidden-checkout');
+
+            }
+        }
+        window.onload = function () {
+            toggleForm_check1();
+        }
+
+        function checkFunction() {
+            var x = document.getElementById("checkout-installtion");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        // $(function () {
+        //     $(".calendar").datepicker({
+        //         dateFormat: 'dd/mm/yy',
+        //         firstDay: 1
+        //     });
+
+        //     $(document).on('click', '.date-picker .input', function (e) {
+        //         var $me = $(this),
+        //             $parent = $me.parents('.date-picker');
+        //         $parent.toggleClass('open');
+        //     });
+
+
+        //     $(".calendar").on("change", function () {
+        //         var $me = $(this),
+        //             $selected = $me.val(),
+        //             $parent = $me.parents('.date-picker');
+        //         $parent.find('.result').children('span').html($selected);
+        //     });
+        // });
+
+        var $j = jQuery.noConflict();
+
+        $j(function () {
+            // Initialize the date picker
+            $j(".calendar").datepicker({
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                onSelect: function (dateText) {
+                    $j("#selected-datetime").text("Date: " + dateText);
+                    checkAvailability(); // Call the function to check availability
+                }
+            });
+
+            // Time selection
+            $j("#timePicker").on("blur", function () {
+                checkAvailability(); // Check availability when the user leaves the time input
+            });
+
+            // Function to check date and time availability
+            function checkAvailability() {
+                var selectedDate = $j(".calendar").datepicker("getDate");
+                var selectedTime = $j("#timePicker").val();
+                console.log(selectedTime)
+
+                if (!selectedDate || !selectedTime) {
+                    return; // Don't proceed if date or time is not selected
+                }
+
+                var formattedDate = $j.datepicker.formatDate('yy-mm-dd', selectedDate); // Format date for Django
+                console.log(formattedDate)
+                // Retrieve the CSRF token from the meta tag
+                const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+                // Send selected date and time to the server via Axios
+                axios.post('/checkout/check-availability/', {
+                    date: formattedDate,
+                    time: selectedTime
+                }, {
+                    headers: {
+                        'X-CSRFToken': csrfToken // Include the CSRF token in the request headers
+                    }
+                }).then(function (response) {
+                    if (response.data.is_available) {
+                        $j("#error-message").text(""); // Clear any previous error message
+                    } else {
+                        $j("#error-message").text("The selected time slot is already scheduled. Please choose a different time.");
+                    }
+                }).catch(function (error) {
+                    console.log("Error:", error);
+                    $j("#error-message").text("There was an error checking the availability. Please try again.");
+                });
+            }
+        });
+
+
+
+        function nextStep() {
+            var billingAddressCollapse = document.getElementById('collapseOne');
+            var installationCollapse = document.getElementById('collapseTwo');
+            var paymentMethodCollapse = document.getElementById('collapseThree');
+
+            if (billingAddressCollapse.classList.contains('show')) {
+                var bsCollapse = new bootstrap.Collapse(billingAddressCollapse, { toggle: false });
+                bsCollapse.hide();
+                var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: true });
+                bsCollapseInstallation.show();
+            } else if (installationCollapse.classList.contains('show')) {
+                var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: false });
+                bsCollapseInstallation.hide();
+                var bsCollapsePayment = new bootstrap.Collapse(paymentMethodCollapse, { toggle: true });
+                bsCollapsePayment.show();
+            }
+        }
+
+        function prevStep() {
+            var billingAddressCollapse = document.getElementById('collapseOne');
+            var installationCollapse = document.getElementById('collapseTwo');
+            var paymentMethodCollapse = document.getElementById('collapseThree');
+
+            if (installationCollapse.classList.contains('show')) {
+                var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: false });
+                bsCollapseInstallation.hide();
+                var bsCollapseBilling = new bootstrap.Collapse(billingAddressCollapse, { toggle: true });
+                bsCollapseBilling.show();
+            } else if (paymentMethodCollapse.classList.contains('show')) {
+                var bsCollapsePayment = new bootstrap.Collapse(paymentMethodCollapse, { toggle: false });
+                bsCollapsePayment.hide();
+                var bsCollapseInstallation = new bootstrap.Collapse(installationCollapse, { toggle: true });
+                bsCollapseInstallation.show();
+            }
+        }
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr("#timePicker", {
+                enableTime: true,
+                noCalendar: true,
+                // dateFormat: "H:i ",
+                dateFormat: "h:i K",
+                time_24hr: false,
+                // time_24hr: true,
+                disableMobile: true
+            });
+        });
+
+    </script>
+
+
+    <script>
+        //     const confirmBtn = document.getElementById('confirm');
+        //     if (confirmBtn) {
+        //     document.getElementById('confirm').addEventListener('click', function(event) {
+        //       event.preventDefault();  // Prevent default form submission behavior
+
+        //     //   if (!privacyCheckbox.checked) {
+        //     //     // alert('Please agree to the privacy policy before proceeding.');
+        //     //     showErrorAlert();
+        //     //     return;
+        //     //   }
+
+        //       const confirmButton = document.getElementById('confirm');
+        //       const spin = document.getElementById('spin');
+
+        //       confirmButton.style.display = 'none';
+        //       spin.style.display = 'block';
+
+        //       const billingForm = document.getElementById('billingForm');
+        //       console.log(billingForm)
+        //       const shippingForm = document.getElementById('shippingForm');
+        //       console.log(shippingForm)
+
+        //       const billingData = new FormData(billingForm);
+        //       const shippingData = new FormData(shippingForm);
+
+        //       const shippingCheckbox = document.getElementById('shipping_info');
+        //       const isChecked = shippingCheckbox.checked;
+        //       let billingInfo, shippingInfo;
+
+        //       // Gather billing information
+        //       billingInfo = billingData.get('billingAddressId');
+
+        //       // If checked, use billing information for shipping
+        //       if (isChecked) {
+        //         // Gather shipping information
+        //         shippingInfo = shippingData.get('shippingAddressId');
+        //       } else {      
+        //         shippingInfo = billingInfo;
+        //       }
+
+        //       const cartItems = [];
+        //       {% for item in items %}
+        //       cartItems.push({
+        //         id: "{{ item.id }}",
+        //         name: "{{ item.product_name }}",
+        //         quantity: '{{ item.quantity }}',
+        //         total_amount: '{{ item.price }}',
+        //       });
+        //       {% endfor %}
+
+        //       const total_amount = document.getElementById('total-amount').textContent;
+        //       const amount = document.getElementById('sub_total').textContent;
+        //     //   const tax_amount = '{{ tax }}';
+
+        //       // Retrieve the CSRF token from the meta tag
+        //       const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+        //       // Send POST request using Axios
+        //       axios.post('/checkout/order/', {
+        //         cartItems: cartItems,
+        //         shipping_info: shippingInfo,
+        //         billing_info: billingInfo,
+        //         total_amount: total_amount,
+        //         // tax_amount: tax_amount,
+        //         amount: amount,
+        //       }, {
+        //         headers: {
+        //           'X-CSRFToken': csrfToken // Include the CSRF token in the request headers
+        //         }
+        //       })
+        //       .then(response => {
+        //         if (response.data.success) {
+        //           const order_id = response.data.order_id;
+        //           console.log(order_id);
+        //           window.location.href = `/checkout/order_success/${order_id}`;
+        //         } else {
+        //           alert('Order failed');
+        //           window.location.reload();
+        //         }
+        //       })
+        //       .catch(error => {
+        //         console.error(error);
+        //         alert('An error occurred while processing your order.');
+        //         window.location.reload();
+        //       });
+        //     });
+        //   }
+
+
+        const confirmBtn = document.getElementById('confirm');
+        const buyConfirmBtn = document.getElementById('buy_confirm');
+        const spin = document.getElementById('spin');
+
+        function placeOrder(event, isProductBased) {
+            event.preventDefault();  // Prevent default form submission behavior
+
+            confirmBtn.style.display = 'none';
+            buyConfirmBtn.style.display = 'none';
+            spin.style.display = 'block';
+
+            const billingForm = document.getElementById('billingForm');
+            const shippingForm = document.getElementById('shippingForm');
+            const billingData = new FormData(billingForm);
+            const shippingData = new FormData(shippingForm);
+
+            const shippingCheckbox = document.getElementById('shipping_info');
+            const isChecked = shippingCheckbox.checked;
+            let billingInfo, shippingInfo;
+
+            // Gather billing information
+            billingInfo = billingData.get('billingAddressId');
+
+            // If checked, use billing information for shipping
+            if (isChecked) {
+                // Gather shipping information
+                shippingInfo = shippingData.get('shippingAddressId');
+            } else {
+                shippingInfo = billingInfo;
+            }
+
+            const cartItems = [];
+
+            if (isProductBased) {
+                // Push product details if product ID is available
+                cartItems.push({
+                    id: "{{ product.id }}",
+                    name: "{{ product.part_number }}",
+                    quantity: '{{ quantity }}',
+                    total_amount: '{{ item_totals }}',
+                });
+            } else {
+                // Push cart items
+                // {% for item in items %}
+                cartItems.push({
+                    id: "{{ item.id }}",
+                    name: "{{ item.product_name }}",
+                    quantity: '{{ item.quantity }}',
+                    total_amount: '{{ item.price }}',
+                });
+                // {% endfor %}
+            }
+
+            const total_amount = document.getElementById('total-amount').textContent;
+            const amount = document.getElementById('sub_total').textContent;
+
+            // Retrieve the CSRF token from the meta tag
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+            // Get selected date and time
+            var selectedDate = $j(".calendar").datepicker("getDate");
+            var selectedTime = $j("#timePicker").val();
+            console.log(selectedTime)
+
+            if (!selectedDate || !selectedTime) {
+                return; // Don't proceed if date or time is not selected
+            }
+
+            var formattedDate = $j.datepicker.formatDate('yy-mm-dd', selectedDate); // Format date for Django
+            console.log(formattedDate)
+
+            // Send POST request using Axios
+            axios.post('/checkout/order/', {
+                cartItems: cartItems,
+                shipping_info: shippingInfo,
+                billing_info: billingInfo,
+                total_amount: total_amount,
+                amount: amount,
+                selected_date: formattedDate,
+                selected_time: selectedTime
+            }, {
+                headers: {
+                    'X-CSRFToken': csrfToken // Include the CSRF token in the request headers
+                }
+            })
+                .then(response => {
+                    if (response.data.success) {
+                        const order_id = response.data.order_id;
+                        console.log(order_id);
+                        window.location.href = `/checkout/order_success/${order_id}`;
+                    } else {
+                        alert('Order failed');
+                        window.location.reload();
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert('An error occurred while processing your order.');
+                    window.location.reload();
+                });
+        }
+
+        if (confirmBtn) {
+            confirmBtn.addEventListener('click', function (event) {
+                placeOrder(event, false); // Regular cart order
+            });
+        }
+
+        if (buyConfirmBtn) {
+            buyConfirmBtn.addEventListener('click', function (event) {
+                placeOrder(event, true); // Product-based order
+            });
+        }
+
+
+
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const countryInput1 = document.getElementById('countryInput1');
+            const dropdown1 = document.getElementById('dropdown-country1');
+            const stateSelect1 = document.getElementById('state1');
+
+            const countryInput2 = document.getElementById('countryInput2');
+            const dropdown2 = document.getElementById('dropdown-country2');
+            const stateSelect2 = document.getElementById('state2');
+
+            const countryInput3 = document.getElementById('countryInput3');
+            const dropdown3 = document.getElementById('dropdown-country3');
+            const stateSelect3 = document.getElementById('state3');
+            let countriesData = [];
+
+            // Event listener for clicking on country input 1
+            countryInput1.addEventListener('click', () => {
+                const query = countryInput1.value.trim();
+                const filteredCountries = filterCountries(query);
+                renderDropdown(dropdown1, countryInput1, stateSelect1, filteredCountries);
+            });
+
+            // Event listener for input changes in country input 1
+            countryInput1.addEventListener('input', debounce((event) => {
+                const query = event.target.value.trim();
+                const filteredCountries = filterCountries(query);
+                renderDropdown(dropdown1, countryInput1, stateSelect1, filteredCountries);
+            }, 300));
+
+            // Event listener for clicking on country input 2
+            countryInput2.addEventListener('click', () => {
+                const query = countryInput2.value.trim();
+                const filteredCountries = filterCountries(query);
+                renderDropdown(dropdown2, countryInput2, stateSelect2, filteredCountries);
+            });
+
+            // Event listener for input changes in country input 2
+            countryInput2.addEventListener('input', debounce((event) => {
+                const query = event.target.value.trim();
+                const filteredCountries = filterCountries(query);
+                renderDropdown(dropdown2, countryInput2, stateSelect2, filteredCountries);
+            }, 300));
+
+
+            // Event listener for clicking on country input 3
+            countryInput3.addEventListener('click', () => {
+                const query = countryInput3.value.trim();
+                const filteredCountries = filterCountries(query);
+                renderDropdown(dropdown3, countryInput3, stateSelect3, filteredCountries);
+            });
+
+            // Event listener for input changes in country input 3
+            countryInput3.addEventListener('input', debounce((event) => {
+                const query = event.target.value.trim();
+                const filteredCountries = filterCountries(query);
+                renderDropdown(dropdown3, countryInput3, stateSelect3, filteredCountries);
+            }, 300));
+            async function fetchLocationData() {
+                const url = 'https://countriesnow.space/api/v0.1/countries/states';
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    countriesData = data.data;
+                } catch (error) {
+                    console.error('Error fetching location data:', error);
+                }
+            }
+
+            function debounce(func, wait) {
+                let timeout;
+                return function (...args) {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => func.apply(this, args), wait);
+                };
+            }
+
+            function filterCountries(query) {
+                return countriesData.filter(country =>
+                    country.name.toLowerCase().includes(query.toLowerCase()) ||
+                    country.states.some(state =>
+                        state.name.toLowerCase().includes(query.toLowerCase())
+                    )
+                );
+            }
+
+            function renderDropdown(dropdown, countryInput, stateSelect, filteredCountries) {
+                dropdown.innerHTML = '';
+                if (filteredCountries.length > 0) {
+                    filteredCountries.forEach(country => {
+                        const li = document.createElement('li');
+                        li.textContent = country.name;
+                        li.addEventListener('click', () => {
+                            countryInput.value = country.name;
+                            dropdown.style.display = 'none';
+                            populateStates(stateSelect, country.states);
+                        });
+                        dropdown.appendChild(li);
+                    });
+                    dropdown.style.display = 'block';
+                } else {
+                    dropdown.style.display = 'none';
+                }
+            }
+
+            function populateStates(stateSelect, states) {
+                stateSelect.innerHTML = '<option value="">Select State/Province</option>';
+                states.forEach(state => {
+                    const option = document.createElement('option');
+                    option.value = state.name;
+                    option.textContent = state.name;
+                    stateSelect.appendChild(option);
+                });
+            }
+
+            fetchLocationData();
+        });
+    </script>
+
+
+
+
+    {% endblock %}
+
+</body>
+
+</html>

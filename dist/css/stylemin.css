@@ -87,12 +87,8 @@ a {
     width: 100%;
   }
 }
-.dropdown-text-nav {
-  color: #FF4500;
-}
-
 .dropdown-text-nav:hover {
-  color: #FF4500;
+  color: #FF4500 !important;
 }
 
 @media (max-width: 1200px) {
@@ -962,8 +958,7 @@ i {
   font-size: 16px;
 }
 
-.vehicle-dropdown-menu,
-.dropdown-menu {
+.vehicle-dropdown-menu {
   width: 225px;
   position: absolute;
   inset: 0px auto auto 0px;
@@ -2697,6 +2692,7 @@ legend {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: rgb(241, 241, 241);
 }
 
 .country-dropdown {
@@ -2718,4 +2714,19 @@ legend {
 }
 .country-dropdown li:hover {
   background-color: #f0f0f0;
+}
+
+.car-battries-sec {
+  border: 1px solid grey;
+  margin: 10px 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(25, 25, 50);
+  outline: none;
+}
+.car-battries-sec:hover {
+  background-color: rgb(25, 25, 50);
+  color: white;
 }/*# sourceMappingURL=stylemin.css.map */

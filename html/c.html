@@ -1,0 +1,223 @@
+from django.db import models
+from ckeditor.fields import RichTextField
+from django.urls import reverse
+from mptt.models import MPTTModel, TreeForeignKey
+# Create your models here.
+
+class Brand(models.Model):
+	title = models.CharField(max_length=300)
+	slug = models.SlugField(max_length=300)
+	brand_logo = models.ImageField(upload_to='media/PRODUCTS/BRANDS/LOGOS/')
+
+	def get_absolute_url(self):
+		return reverse('catalog:brand', args=[self.slug])
+
+	def __str__(self):
+		return self.title
+
+class Category(MPTTModel):
+	title = models.CharField(max_length=300)
+	slug = models.SlugField(max_length=300)
+	parent = TreeForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='children')
+
+	class MPTTMeta:
+		order_insertion_by = ['title']
+
+	def __str__(self):
+		return self.title
+
+	def get_absolute_url(self):
+		return reverse('catalog:category', args=[self.slug])
+
+class Keywords(models.Model):
+	product = models.CharField(max_length=300)
+	
+
+	def __str__(self):
+		return self.product
+
+class MetaKeywords(models.Model):
+	product = models.CharField(max_length=300)
+	Keywords = models.ManyToManyField(Keywords)
+
+	def __str__(self):
+		return self.product
+
+class ProductMetas(models.Model):
+	product = models.CharField(max_length=300)
+	meta_title = models.CharField(max_length=300)
+	meta_description = RichTextField(max_length=300)
+	meta_keywords = models.ForeignKey(MetaKeywords, related_name='meta_keywords', on_delete=models.CASCADE)
+
+	def __str__(self):
+		return self.product
+
+class ProductImages(models.Model):
+	product_image = models.ImageField(upload_to='media/PRODUCTS/FEATURED_IMAGES/')
+
+	def __str__(self):
+		return str(self.product_image)
+
+class ProductImageGallery(models.Model):
+	product = models.CharField(max_length=300)
+	images = models.ManyToManyField(ProductImages)
+
+	def __str__(self):
+		return self.product
+
+
+class ProductAttribute(models.Model):
+	attribute = models.CharField(max_length=300)
+
+	def __str__(self):
+			return self.attribute
+class ProductAttributesSet(models.Model):
+	product = models.CharField(max_length=300)
+	attributes = models.ManyToManyField(ProductAttribute)
+
+	def __str__(self):
+			return self.product
+
+class ProductDetail(models.Model):
+	detail = models.CharField(max_length=300)
+
+	def __str__(self):
+			return self.detail
+
+class ProductDetailsList(models.Model):
+	product = models.CharField(max_length=300)
+	details = models.ManyToManyField(ProductDetail, related_name='product_detail')
+
+	def __str__(self):
+			return self.product
+
+
+class ProductSpecification(models.Model):
+	specification = models.CharField(max_length=300)
+
+	def __str__(self):
+			return self.specification
+
+class ProductSpecificationsSet(models.Model):
+	product = models.CharField(max_length=300)
+	specifications = models.ManyToManyField(ProductSpecification, related_name='product_specification')
+
+	def __str__(self):
+				return self.product
+
+
+class ProductVariableProductImages(models.Model):
+	product_image = models.ImageField(upload_to='media/PRODUCTS/VARIATIONS/')
+
+
+	def __str__(self):
+		return str(self.product_image)
+
+class ProductVariableProductImageGallery(models.Model):
+	product = models.CharField(max_length=300)
+	images = models.ManyToManyField(ProductImages)
+
+	def __str__(self):
+		return self.product
+
+class ProductVariable(models.Model):
+	variation = models.CharField(max_length=300)
+	featured_image = models.ImageField(upload_to='media/PRODUCTS/VARIATIONS/VARIABLE_IMAGES/', 
+		blank=True, null=True)
+	product_variable_image_gallery = models.ForeignKey(ProductVariableProductImageGallery, on_delete=models.CASCADE)
+
+	price_regular = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
+	price_sale = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
+	product_UPC = models.CharField(max_length=300, blank=True, null=True)
+	product_SKU = models.CharField(max_length=300, blank=True, null=True)
+	product_MODEL_ID = models.CharField(max_length=300, blank=True, null=True)
+
+	stock_quantity = models.CharField(max_length=300,blank=True,null=True)
+	bestseller = models.BooleanField()
+	featured = models.BooleanField()
+
+
+
+class ProductVariations(models.Model):
+	variations_name = models.CharField(max_length=300)
+	variations = models.ManyToManyField(ProductVariable)
+
+class Product(models.Model):
+
+	PRODUCT_TYPE = (
+
+			('single_product','Single product'),
+			('variable_product','Variable product'),
+			('groupped_product','Groupped product'),
+		)
+
+	product_type = models.CharField(max_length=300, choices=PRODUCT_TYPE)
+
+
+	title = models.CharField(max_length=300)
+	slug = models.SlugField(max_length=300)
+
+	
+
+	category = models.ForeignKey(Category, on_delete=models.CASCADE)
+
+	date_created = models.DateTimeField(auto_now_add=True)
+	date_updated = models.DateTimeField()
+
+	description_short = RichTextField(blank=True, null=True)
+	description_long = RichTextField(blank=True, null=True)
+
+	description_details_list = models.ForeignKey(ProductDetailsList, on_delete=models.CASCADE,related_name='product_detail_list')
+
+	specifications_set = models.ForeignKey(ProductSpecificationsSet, on_delete=models.CASCADE, related_name='product_specifications_list')
+
+	featured_image = models.ImageField(upload_to='media/PRODUCTS/FEATURED_IMAGES/', 
+		blank=True, null=True)
+	image_gallery = models.ForeignKey(ProductImageGallery, 
+		related_name='product_image_gallery', 
+		on_delete=models.CASCADE, 
+		blank=True, 
+		null=True)
+
+	price_regular = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
+	price_sale = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
+
+	product_metas = models.ForeignKey(ProductMetas, 
+		related_name='product_metas', 
+		on_delete=models.CASCADE, 
+		blank=True, null=True)
+
+	product_attributes_set = models.ForeignKey(ProductAttributesSet, 
+		on_delete=models.CASCADE, 
+		related_name='product_attributes_set', 
+		blank=True, 
+		null=True)
+
+	product_variations = models.ManyToManyField(ProductVariations,blank=True, null=True)
+
+	brand = models.ForeignKey(Brand, on_delete=models.CASCADE, blank=True, null=True)
+
+	product_UPC = models.CharField(max_length=300, blank=True, null=True)
+	product_SKU = models.CharField(max_length=300, blank=True, null=True)
+	product_MODEL_ID = models.CharField(max_length=300, blank=True, null=True)
+
+
+	STOCK_STATUS_OPTIONS = (
+			('in_stock','In stock'),
+			('out_of_stock','Out of stock'),
+		
+		)
+	stock_status = models.CharField(max_length=300,choices=STOCK_STATUS_OPTIONS)
+
+	stock_quantity = models.CharField(max_length=300,blank=True,null=True)
+
+	vendor = models.ForeignKey('vendors.Vendor', on_delete=models.CASCADE, related_name='product_vendor')
+
+	bestseller = models.BooleanField()
+	featured = models.BooleanField()
+
+	def __str__(self):
+		return self.title
+
+	def get_absolute_url(self):
+		return reverse('catalog:product', args=[self.slug])

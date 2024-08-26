@@ -1,282 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Country and State Selector</title>
-    <style>
-        .county-input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        .country-dropdown {
-            position: absolute;
-            width: 100%;
-            max-height: 200px;
-            border: 1px solid #ccc;
-            border-top: none;
-            overflow-y: auto;
-            background-color: white;
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: none;
-        }
-        .country-dropdown li {
-            padding: 10px;
-            cursor: pointer;
-        }
-        .country-dropdown li:hover {
-            background-color: #f0f0f0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country and State Selector</title>
+  <style>
+    .county-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .country-dropdown {
+      position: absolute;
+      width: 100%;
+      max-height: 200px;
+      border: 1px solid #ccc;
+      border-top: none;
+      overflow-y: auto;
+      background-color: white;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
+
+    .country-dropdown li {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .country-dropdown li:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
+
 <body>
 
 
-    <div class="mb-3">
-        <label for="countryInput1" class="form-label checkout-form-label">Country / Region <span class="text-danger">*</span></label>
-        <input type="text" id="countryInput1" class="county-input" placeholder="Type a country name...">
-        <ul id="dropdown-country1" class="dropdown country-dropdown"></ul>
-      </div>
+  <div class="mb-3">
+    <label for="countryInput1" class="form-label checkout-form-label">Country / Region <span
+        class="text-danger">*</span></label>
+    <input type="text" id="countryInput1" class="county-input" placeholder="Type a country name...">
+    <ul id="dropdown-country1" class="dropdown country-dropdown"></ul>
+  </div>
 
-        <div class="mb-3">
-        <label for="state1" class="form-label checkout-form-label ">State/Country<span class="text-danger">*</span></label>
-        <select id="state1" name="state" class="county-input bg-white">
-          <option value="">Select State/Province</option>
-        </select>
-      </div>
+  <div class="mb-3">
+    <label for="state1" class="form-label checkout-form-label ">State/Country<span class="text-danger">*</span></label>
+    <select id="state1" name="state" class="county-input bg-white">
+      <option value="">Select State/Province</option>
+    </select>
+  </div>
 
-      <div class="mb-3">
-        <label for="countryInput2" class="form-label checkout-form-label">Country / Region <span class="text-danger">*</span></label>
-        <input type="text" id="countryInput2" class="county-input" placeholder="Type a country name...">
-        <ul id="dropdown-country2" class="dropdown country-dropdown"></ul>
-      </div>
+  <div class="mb-3">
+    <label for="countryInput2" class="form-label checkout-form-label">Country / Region <span
+        class="text-danger">*</span></label>
+    <input type="text" id="countryInput2" class="county-input" placeholder="Type a country name...">
+    <ul id="dropdown-country2" class="dropdown country-dropdown"></ul>
+  </div>
 
-        <div class="mb-3">
-        <label for="state2" class="form-label checkout-form-label ">State/Country<span class="text-danger">*</span></label>
-        <select id="state2" name="state" class="county-input bg-white">
-          <option value="">Select State/Province</option>
-        </select>
-      </div>
-
-
-
-
+  <div class="mb-3">
+    <label for="state2" class="form-label checkout-form-label ">State/Country<span class="text-danger">*</span></label>
+    <select id="state2" name="state" class="county-input bg-white">
+      <option value="">Select State/Province</option>
+    </select>
+  </div>
 
 
+  <div class="mb-3">
+    <label for="countryInput3" class="form-label checkout-form-label">Country / Region <span
+        class="text-danger">*</span></label>
+    <input type="text" id="countryInput3" class="county-input" placeholder="Type a country name...">
+    <ul id="dropdown-country3" class="dropdown country-dropdown"></ul>
+  </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const countryInput1 = document.getElementById('countryInput1');
-          const dropdown1 = document.getElementById('dropdown-country1');
-          const stateSelect1 = document.getElementById('state1');
-      
-          const countryInput2 = document.getElementById('countryInput2');
-          const dropdown2 = document.getElementById('dropdown-country2');
-          const stateSelect2 = document.getElementById('state2');
-      
-          let countriesData = [];
-      
-          // Event listener for clicking on country input 1
-          countryInput1.addEventListener('click', () => {
-            const query = countryInput1.value.trim();
-            const filteredCountries = filterCountries(query);
-            renderDropdown(dropdown1, countryInput1, stateSelect1, filteredCountries);
-          });
-      
-          // Event listener for input changes in country input 1
-          countryInput1.addEventListener('input', debounce((event) => {
-            const query = event.target.value.trim();
-            const filteredCountries = filterCountries(query);
-            renderDropdown(dropdown1, countryInput1, stateSelect1, filteredCountries);
-          }, 300));
-      
-          // Event listener for clicking on country input 2
-          countryInput2.addEventListener('click', () => {
-            const query = countryInput2.value.trim();
-            const filteredCountries = filterCountries(query);
-            renderDropdown(dropdown2, countryInput2, stateSelect2, filteredCountries);
-          });
-      
-          // Event listener for input changes in country input 2
-          countryInput2.addEventListener('input', debounce((event) => {
-            const query = event.target.value.trim();
-            const filteredCountries = filterCountries(query);
-            renderDropdown(dropdown2, countryInput2, stateSelect2, filteredCountries);
-          }, 300));
-      
-          async function fetchLocationData() {
-            const url = 'https://countriesnow.space/api/v0.1/countries/states';
-            try {
-              const response = await fetch(url);
-              if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-              }
-              const data = await response.json();
-              countriesData = data.data;
-            } catch (error) {
-              console.error('Error fetching location data:', error);
-            }
-          }
-      
-          function debounce(func, wait) {
-            let timeout;
-            return function (...args) {
-              clearTimeout(timeout);
-              timeout = setTimeout(() => func.apply(this, args), wait);
-            };
-          }
-      
-          function filterCountries(query) {
-            return countriesData.filter(country =>
-              country.name.toLowerCase().includes(query.toLowerCase()) ||
-              country.states.some(state =>
-                state.name.toLowerCase().includes(query.toLowerCase())
-              )
-            );
-          }
-      
-          function renderDropdown(dropdown, countryInput, stateSelect, filteredCountries) {
-            dropdown.innerHTML = '';
-            if (filteredCountries.length > 0) {
-              filteredCountries.forEach(country => {
-                const li = document.createElement('li');
-                li.textContent = country.name;
-                li.addEventListener('click', () => {
-                  countryInput.value = country.name;
-                  dropdown.style.display = 'none';
-                  populateStates(stateSelect, country.states);
-                });
-                dropdown.appendChild(li);
-              });
-              dropdown.style.display = 'block';
-            } else {
-              dropdown.style.display = 'none';
-            }
-          }
-      
-          function populateStates(stateSelect, states) {
-            stateSelect.innerHTML = '<option value="">Select State/Province</option>';
-            states.forEach(state => {
-              const option = document.createElement('option');
-              option.value = state.name;
-              option.textContent = state.name;
-              stateSelect.appendChild(option);
-            });
-          }
-      
-          fetchLocationData();
-        });
-      </script>
+  <div class="mb-3">
+    <label for="state3" class="form-label checkout-form-label ">State/Country<span class="text-danger">*</span></label>
+    <select id="state3" name="state" class="county-input bg-white">
+      <option value="">Select State/Province</option>
+    </select>
+  </div>
 
 
 
 
 
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const countryInput1 = document.getElementById('countryInput1');
+      const dropdown1 = document.getElementById('dropdown-country1');
+      const stateSelect1 = document.getElementById('state1');
 
-<!-- 
+      const countryInput2 = document.getElementById('countryInput2');
+      const dropdown2 = document.getElementById('dropdown-country2');
+      const stateSelect2 = document.getElementById('state2');
 
-    <form>
-        <label for="country">Country:</label>
-        <input type="text" id="countryInput" class="county-input" placeholder="Type a country or state name...">
-        <ul id="dropdown-country" class="dropdown country-dropdown"></ul>
+      const countryInput3 = document.getElementById('countryInput3');
+      const dropdown3 = document.getElementById('dropdown-country3');
+      const stateSelect3 = document.getElementById('state3');
+      let countriesData = [];
 
-        <label for="state">State:</label>
-        <select id="state" name="state" class="county-input">
-            <option value="">Select State</option>
-        </select>
-    </form>
-    <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-    const countryInput = document.getElementById('countryInput');
-    const dropdown = document.getElementById('dropdown-country');
-    const stateSelect = document.getElementById('state');
-    let countriesData = [];
-
-    // Event listener for clicking on country input
-    countryInput.addEventListener('click', function() {
-        const query = this.value.trim();
+      // Event listener for clicking on country input 1
+      countryInput1.addEventListener('click', () => {
+        const query = countryInput1.value.trim();
         const filteredCountries = filterCountries(query);
-        renderDropdown(filteredCountries);
-    });
+        renderDropdown(dropdown1, countryInput1, stateSelect1, filteredCountries);
+      });
 
-    // Event listener for input changes in country input
-    countryInput.addEventListener('input', debounce(handleInput, 300));
-
-    async function fetchLocationData() {
-        const url = 'https://countriesnow.space/api/v0.1/countries/states';
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
-            countriesData = data.data;
-        } catch (error) {
-            console.error('Error fetching location data:', error);
-        }
-    }
-
-    function debounce(func, wait) {
-        let timeout;
-        return function (...args) {
-            const context = this;
-            clearTimeout(timeout);
-            timeout = setTimeout(() => func.apply(context, args), wait);
-        };
-    }
-
-    function handleInput(event) {
+      // Event listener for input changes in country input 1
+      countryInput1.addEventListener('input', debounce((event) => {
         const query = event.target.value.trim();
         const filteredCountries = filterCountries(query);
-        renderDropdown(filteredCountries);
-    }
+        renderDropdown(dropdown1, countryInput1, stateSelect1, filteredCountries);
+      }, 300));
 
-    function filterCountries(query) {
+      // Event listener for clicking on country input 2
+      countryInput2.addEventListener('click', () => {
+        const query = countryInput2.value.trim();
+        const filteredCountries = filterCountries(query);
+        renderDropdown(dropdown2, countryInput2, stateSelect2, filteredCountries);
+      });
+
+      // Event listener for input changes in country input 2
+      countryInput2.addEventListener('input', debounce((event) => {
+        const query = event.target.value.trim();
+        const filteredCountries = filterCountries(query);
+        renderDropdown(dropdown2, countryInput2, stateSelect2, filteredCountries);
+      }, 300));
+
+
+      // Event listener for clicking on country input 3
+      countryInput3.addEventListener('click', () => {
+        const query = countryInput3.value.trim();
+        const filteredCountries = filterCountries(query);
+        renderDropdown(dropdown3, countryInput3, stateSelect3, filteredCountries);
+      });
+
+      // Event listener for input changes in country input 3
+      countryInput3.addEventListener('input', debounce((event) => {
+        const query = event.target.value.trim();
+        const filteredCountries = filterCountries(query);
+        renderDropdown(dropdown3, countryInput3, stateSelect3, filteredCountries);
+      }, 300));
+      async function fetchLocationData() {
+        const url = 'https://countriesnow.space/api/v0.1/countries/states';
+        try {
+          const response = await fetch(url);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data = await response.json();
+          countriesData = data.data;
+        } catch (error) {
+          console.error('Error fetching location data:', error);
+        }
+      }
+
+      function debounce(func, wait) {
+        let timeout;
+        return function (...args) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+      }
+
+      function filterCountries(query) {
         return countriesData.filter(country =>
-            country.name.toLowerCase().includes(query.toLowerCase()) ||
-            country.states.some(state =>
-                state.name.toLowerCase().includes(query.toLowerCase())
-            )
+          country.name.toLowerCase().includes(query.toLowerCase()) ||
+          country.states.some(state =>
+            state.name.toLowerCase().includes(query.toLowerCase())
+          )
         );
-    }
+      }
 
-    function renderDropdown(filteredCountries) {
+      function renderDropdown(dropdown, countryInput, stateSelect, filteredCountries) {
         dropdown.innerHTML = '';
         if (filteredCountries.length > 0) {
-            filteredCountries.forEach(country => {
-                const li = document.createElement('li');
-                li.textContent = country.name;
-                li.addEventListener('click', () => {
-                    countryInput.value = country.name;
-                    dropdown.style.display = 'none';
-                    populateStates(country.states);
-                });
-                dropdown.appendChild(li);
+          filteredCountries.forEach(country => {
+            const li = document.createElement('li');
+            li.textContent = country.name;
+            li.addEventListener('click', () => {
+              countryInput.value = country.name;
+              dropdown.style.display = 'none';
+              populateStates(stateSelect, country.states);
             });
-            dropdown.style.display = 'block';
+            dropdown.appendChild(li);
+          });
+          dropdown.style.display = 'block';
         } else {
-            dropdown.style.display = 'none';
+          dropdown.style.display = 'none';
         }
-    }
+      }
 
-    function populateStates(states) {
-        stateSelect.innerHTML = '<option value="">Select State</option>';
+      function populateStates(stateSelect, states) {
+        stateSelect.innerHTML = '<option value="">Select State/Province</option>';
         states.forEach(state => {
-            const option = document.createElement('option');
-            option.value = state.name;
-            option.textContent = state.name;
-            stateSelect.appendChild(option);
+          const option = document.createElement('option');
+          option.value = state.name;
+          option.textContent = state.name;
+          stateSelect.appendChild(option);
         });
-    }
-    fetchLocationData();
-});
+      }
 
-    </script> -->
+      fetchLocationData();
+    });
+  </script>
+
+
+
+
+
 </body>
+
 </html>

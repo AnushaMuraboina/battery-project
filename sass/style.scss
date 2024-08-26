@@ -139,12 +139,12 @@ a {
   }
 }
 
-.dropdown-text-nav {
-  color: $bg-medium-orange;
-}
+// .dropdown-text-nav {
+//   color: $bg-medium-orange ;
+// }
 
 .dropdown-text-nav:hover {
-  color: $bg-medium-orange;
+  color: $bg-medium-orange !important;
 }
 
 @media (max-width: 1200px) {
@@ -1126,8 +1126,7 @@ i {
   }
 }
 
-.vehicle-dropdown-menu,
-.dropdown-menu {
+.vehicle-dropdown-menu {
   width: 225px;
   position: absolute;
   inset: 0px auto auto 0px;
@@ -2515,8 +2514,6 @@ i {
   left: calc(-50% + -180%);
 }
 
-
-
 .order-tracking::before {
   content: '';
 
@@ -3167,6 +3164,7 @@ legend {
 
 
 
+
 // .payment_box {
 //   position: relative;
 //   margin-top: 15px;
@@ -3216,6 +3214,7 @@ legend {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: rgb(241,241,241);
 }
 .country-dropdown {
   position: absolute;
@@ -3240,3 +3239,17 @@ legend {
 
 
 
+.car-battries-sec {
+  border: 1px solid grey;
+  margin: 10px 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(25, 25, 50);
+  outline: none; 
+  &:hover{
+    background-color: rgb(25, 25, 50);
+    color: white;
+  }
+}
