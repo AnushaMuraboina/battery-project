@@ -124,7 +124,68 @@
             </div>
         </nav>
     </div>
-    <div class="container-fluid battery-banner">
+
+
+
+
+    <!-- <div class="container-fluid ">
+        <div class="row ">
+          <div class="my-slider-8">
+            <div class="carousel-image-container">
+              <img src="../images/Frame 83.png" alt="" class="carousel-image-container-link " width="100%"
+                height="auto" />
+            </div>
+            <div class="carousel-image-container">
+              <img src="../images/Frame 83.png" alt="" class="carousel-image-container-link " width="100%"
+                height="auto" />
+            </div>
+            <div class="carousel-image-container">
+              <img src="../images/Frame 83.png" alt="" class="carousel-image-container-link  " width="100%"
+                height="auto" />
+            </div>
+            <div class="carousel-image-container">
+              <img src="../images/Frame 83.png" alt="" class="carousel-image-container-link " width="100%"
+                height="auto" />
+            </div>
+            <div class="carousel-image-container">
+              <img src="../images/Frame 83.png" alt="" class="carousel-image-container-link " width="100%"
+                height="auto" />
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+
+      
+      <div id="bannercarouselcontrols" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../images/Frame 83.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../images/Frame 83.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../images/Frame 83.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannercarouselcontrols" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannercarouselcontrols" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+
+
+
+    <!-- <div class="container-fluid battery-banner">
         <div class="row">
             <div class="banner-image-section">
                 <img src="../images/Frame 83.png" alt="" class="" width="100%" height="auto">
@@ -141,7 +202,7 @@
                 <a href="#"><button type="button" class="btn banner-image-button">Search Plates</button></a>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- <div class="container">
     <div class="row">
         <div class="banner-image-text main-navbar-okka main-banner-section">
@@ -812,7 +873,35 @@
         //     });
         // });
     </script>
+ <script>
+    $(document).ready(function () {
+    $('.my-slider-8').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        speed: 300,
+        infinite: true,
+        autoplaySpeed: 5000,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+});
 
+</script>
 </body>
 
 </html>
