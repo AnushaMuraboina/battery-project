@@ -32,6 +32,12 @@ a {
 .navbar-back-header .nav-menus-links {
   margin: 0px 20px;
 }
+.navbar-back-header .nav-menus-links .active {
+  background-color: white;
+  color: #FF4500 !important;
+  font-weight: bold;
+  border-radius: 5px;
+}
 .navbar-back-header .nav-menus-links a {
   color: white;
   font-size: 18px;
@@ -46,6 +52,13 @@ a {
   font-weight: 400;
   color: black;
   margin-left: 10px;
+}
+.navbar-back-header .battery-item-dropdown:hover .bat-item-dropdownmenu {
+  display: block;
+  margin: 0;
+}
+.navbar-back-header .bat-item-dropdownmenu {
+  margin-top: 0;
 }
 
 .main-navbar-okka {
@@ -1403,7 +1416,8 @@ i {
 .checkout-customer .checkout-coupon::placeholder {
   color: #FF4500;
 }
-.checkout-customer .checkout-coupon, .checkout-customer p {
+.checkout-customer .checkout-coupon,
+.checkout-customer p {
   border: 1px solid rgb(170, 164, 164);
   padding: 10px 20px;
   font-size: 18px;
@@ -1412,7 +1426,8 @@ i {
   border-radius: 5px;
   background-color: rgb(241, 241, 241);
 }
-.checkout-customer .checkout-coupon a, .checkout-customer p a {
+.checkout-customer .checkout-coupon a,
+.checkout-customer p a {
   color: #FF4500;
   padding-left: 5px;
 }
@@ -2480,6 +2495,9 @@ legend {
   font-weight: 500;
   color: white;
 }
+.service-order-text:hover {
+  color: white;
+}
 
 .roadside-page-head {
   font-size: 32px;
@@ -2730,4 +2748,57 @@ legend {
 .car-battries-sec:hover {
   background-color: rgb(25, 25, 50);
   color: white;
+}
+
+.check-cup-acct {
+  font-size: 16px;
+  font-weight: 400px;
+}
+
+.check-cup-accou-link {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: solid;
+  color: #FF4500 !important;
+}
+.check-cup-accou-link p {
+  color: #FF4500;
+}
+
+.profile-tab-main-head {
+  color: #FF4500;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.profile-tab-para {
+  font-size: 15px;
+  font-weight: 400;
+  color: #FF4500;
+}
+
+.profile-card:hover {
+  background-color: rgb(240, 240, 240);
+}
+.profile-card .prifile-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(85, 85, 85);
+}
+
+.input-group-apply {
+  background-color: rgb(25, 25, 50);
+  color: white;
+}
+
+.empty-cart-button {
+  background-color: rgb(25, 25, 50);
+  color: white;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1020px) {
+  .service-main-col {
+    margin: 0px !important;
+  }
 }/*# sourceMappingURL=stylemin.css.map */

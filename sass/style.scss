@@ -41,9 +41,16 @@ a {
 
     // &:hover {
     //     background-color: $bg-white !important;
-    //     // color: $bg-medium-orange;
+    //     color: $bg-medium-orange;
     //     border-radius: 10px !important;
     // }
+    .active {
+      background-color: white;
+      color: $bg-medium-orange !important;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
     a {
       color: $bg-white;
       // @include ft-size-md;
@@ -67,7 +74,19 @@ a {
     margin-left: 10px;
 
   }
+  .battery-item-dropdown:hover .bat-item-dropdownmenu {
+    display: block;
+    margin: 0;
+  }
+  
+  .bat-item-dropdownmenu {
+    margin-top: 0;
+  }
 }
+
+// hover dropdown
+
+
 
 // .main-banner-section {
 //   max-width: 35%;
@@ -1668,27 +1687,30 @@ i {
 }
 
 // checkout page
-.checkout-customer{
-  .checkout-coupon{
+.checkout-customer {
+  .checkout-coupon {
     width: 35%;
-    &::placeholder{
+
+    &::placeholder {
       color: $bg-medium-orange ;
     }
   }
-  .checkout-coupon, p {
-  border: 1px solid rgb(170, 164, 164);
-  padding: 10px 20px;
-  font-size: 18px;
-  display: inline-block;
-  font-weight: 400;
-  border-radius: 5px;
-  background-color: rgb(241, 241, 241);
 
-  a {
-    color: $bg-medium-orange;
-    padding-left: 5px;
+  .checkout-coupon,
+  p {
+    border: 1px solid rgb(170, 164, 164);
+    padding: 10px 20px;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: 400;
+    border-radius: 5px;
+    background-color: rgb(241, 241, 241);
+
+    a {
+      color: $bg-medium-orange;
+      padding-left: 5px;
+    }
   }
-}
 }
 
 .Billing-Address {
@@ -2945,8 +2967,11 @@ legend {
   font-size: 16px;
   font-weight: 500;
   color: white;
-}
 
+  &:hover {
+    color: white;
+  }
+}
 .roadside-page-head {
   font-size: 32px;
   font-weight: 500;
@@ -3048,6 +3073,7 @@ legend {
     display: block;
   }
 }
+
 .nav-pills .nav-link.active {
   background-color: white;
   color: black;
@@ -3055,44 +3081,50 @@ legend {
 
 
 // order 
-.orderpage-sections{
+.orderpage-sections {
   .profile-order-table {
     border: 1px solid rgb(202, 193, 193);
     border-radius: 10px;
   }
+
   .order-table-btn {
     .prof-order-view {
       @include ft-size-16;
       background-color: $bg-medium-orange;
       color: white;
     }
-  
+
     .prof-order-cancel {
       @include ft-size-16;
       background-color: $bg-thin-red;
       color: white;
     }
   }
-  .prof-order-button-prev{
+
+  .prof-order-button-prev {
     border: 1px solid grey;
   }
-  .prof-order-button-next{
+
+  .prof-order-button-next {
     padding: 0px 25px;
     border: 1px solid grey
   }
+
   .prof-order-track {
     @include ft-size-16;
     background-color: $bg-dark-violet;
     color: white;
   }
+
   // .profile-order-body{
   //   display: block;
   // }
-  .profile-order-body tr th{
+  .profile-order-body tr th {
     color: $bg-medium-orange;
     padding: 15px 0px;
   }
-  .profile-order-body td{
+
+  .profile-order-body td {
     font-size: 14px;
     font-weight: 400;
     color: grey;
@@ -3115,6 +3147,7 @@ legend {
   padding: 50px;
   text-decoration: none;
 }
+
 .profile-order-body a:hover {
   background-color: #777;
 }
@@ -3128,44 +3161,49 @@ legend {
   text-align: center;
   border-bottom: 2px solid $bg-medium-orange;
 }
-.enter-numberplate-section{
-  .search-alpha-columns{
+
+.enter-numberplate-section {
+  .search-alpha-columns {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    .search-alpha-bikes{
+
+    .search-alpha-bikes {
       border: 1px solid rgb(214, 207, 207);
       padding: 15px 20px;
-      margin:15px 18px;
+      margin: 15px 18px;
       border-radius: 5px;
     }
   }
-  
-  .alpha-secrch-section{
-    background-color: rgb(243,243,243);
+
+  .alpha-secrch-section {
+    background-color: rgb(243, 243, 243);
     padding: 10px 30px;
-  
-    .series-alphabets{
+
+    .series-alphabets {
       font-size: 40px;
       font-weight: 500;
       border-bottom: 2px solid $bg-medium-orange;
     }
-    .search-bike-section{
+
+    .search-bike-section {
       @include justify-space-between;
-      .search-bike-page{
+
+      .search-bike-page {
         border: 1px solid rgb(214, 207, 207);
         color: $bg-medium-orange;
         padding: 5px 10px;
       }
-      .search-bike-names{
+
+      .search-bike-names {
         font-size: 25px;
         font-weight: 500;
         padding: 10px 0px;
-        color: rgb(80,80,80);
+        color: rgb(80, 80, 80);
       }
-      
+
     }
-    
+
   }
 
 }
@@ -3197,18 +3235,21 @@ legend {
 // }
 
 .install-card-dispaly,
-.install-card-dispaly1{
+.install-card-dispaly1 {
   border: 1px solid rgb(180, 175, 175);
   border-radius: 5px;
   box-shadow: 0px 0px 5px 0px rgb(196, 193, 193);
 }
-.install-card-dispaly{
+
+.install-card-dispaly {
   padding: 10px 30px;
 }
-.install-card-dispaly1{
-  padding:20px 20px;
+
+.install-card-dispaly1 {
+  padding: 20px 20px;
 }
-.payment_method_ngenius ul li::marker{
+
+.payment_method_ngenius ul li::marker {
   color: $bg-medium-orange;
   font-size: 20px;
 }
@@ -3222,8 +3263,9 @@ legend {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  background-color: rgb(241,241,241);
+  background-color: rgb(241, 241, 241);
 }
+
 .country-dropdown {
   position: absolute;
   width: 594px;
@@ -3236,16 +3278,16 @@ legend {
   padding: 0;
   margin: 0;
   display: none;
-  li{
+
+  li {
     padding: 10px;
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       background-color: #f0f0f0;
     }
   }
 }
-
-
 
 .car-battries-sec {
   border: 1px solid grey;
@@ -3255,9 +3297,74 @@ legend {
   font-size: 20px;
   font-weight: 500;
   color: rgb(25, 25, 50);
-  outline: none; 
-  &:hover{
+  outline: none;
+
+  &:hover {
     background-color: rgb(25, 25, 50);
     color: white;
   }
+}
+
+.check-cup-acct {
+  font-size: 16px;
+  font-weight: 400px;
+}
+
+.check-cup-accou-link {
+  @include ft-size-md-wt;
+  text-decoration: solid;
+  color: $bg-medium-orange !important;
+
+  // a:hover{
+  //   color: #EEE4E3;
+  // }
+  p {
+    color: $bg-medium-orange;
+  }
+}
+
+.profile-tab-main-head {
+  color: $bg-medium-orange;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.profile-tab-para {
+  font-size: 15px;
+  font-weight: 400;
+  color: $bg-medium-orange;
+}
+
+.profile-card {
+  // border: 1px solid transparent;
+  // box-shadow: 0px 0px 3px 0px grey;
+
+  &:hover {
+    background-color: rgb(240, 240, 240);
+  }
+
+  .prifile-title {
+    @include ft-size-md-wt;
+    color: rgb(85, 85, 85);
+  }
+}
+
+.input-group-apply {
+  background-color: rgb(25, 25, 50);
+  color: white;
+
+}
+
+// empty cart page
+.empty-cart-button {
+  background-color: rgb(25, 25, 50);
+  color: white;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1020px) {
+  .service-main-col {
+    margin: 0px !important;
+  }
+
 }
