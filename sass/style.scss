@@ -3368,3 +3368,15 @@ legend {
   }
 
 }
+
+
+
+
+
+
+// for the header footter top and bottom
+.main-page-head-footer{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
