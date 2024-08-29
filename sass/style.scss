@@ -1668,7 +1668,14 @@ i {
 }
 
 // checkout page
-.checkout-customer p {
+.checkout-customer{
+  .checkout-coupon{
+    width: 35%;
+    &::placeholder{
+      color: $bg-medium-orange ;
+    }
+  }
+  .checkout-coupon, p {
   border: 1px solid rgb(170, 164, 164);
   padding: 10px 20px;
   font-size: 18px;
@@ -1681,6 +1688,7 @@ i {
     color: $bg-medium-orange;
     padding-left: 5px;
   }
+}
 }
 
 .Billing-Address {
