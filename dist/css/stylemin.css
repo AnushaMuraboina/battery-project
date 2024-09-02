@@ -2801,4 +2801,9 @@ legend {
   .service-main-col {
     margin: 0px !important;
   }
+}
+.main-page-head-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }/*# sourceMappingURL=stylemin.css.map */
