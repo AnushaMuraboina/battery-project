@@ -6,71 +6,765 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-  <!-- bootstrap5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <!-- font awesom -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    crossorigin="anonymous"> -->
+    <!-- font awesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- product slider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
-  <!-- <link rel="stylesheet" href="../dist/css/style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
 
-  <link rel="stylesheet" href="../dist/css/style.css">
-
-</head>
-<body>
-   
-   <!-- carousel -->
-   <div class="container-fluid ">
-    <div class="row ">
-      <div class="my-slider-8">
-        <div class="carousel-image-container">
-          <img src="../images/Frame 83.png" alt="" class="carousel-image-container-link " width="100%"
-            height="auto" />
-        </div>
-        <div class="carousel-image-container">
-          <img src="../images/Frame 83.png" alt="" class="carousel-image-container-link " width="100%"
-            height="auto" />
-        </div>
-        <div class="carousel-image-container">
-          <img src="../images/Frame 83.png" alt="" class="carousel-image-container-link  " width="100%"
-            height="auto" />
-        </div>
-        <div class="carousel-image-container">
-          <img src="../images/Frame 83.png" alt="" class="carousel-image-container-link " width="100%"
-            height="auto" />
-        </div>
-        <div class="carousel-image-container">
-          <img src="../images/Frame 83.png" alt="" class="carousel-image-container-link " width="100%"
-            height="auto" />
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- slider  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
     <!-- product slider -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  
-  <script src="../js/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+    <link rel="stylesheet" href="../dist/css/style.css">
+    <style>
+    </style>
+</head>
 
-  <script>
-	        $(document).ready(function () {
-            $('.my-slider-8').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    <nav class="navbar navbar-dropdown-full " style="background-color: #FF4500;">
+        <div class="container">
+
+            <a class="navbar-brand text-light" href="#"><img src="../images/" alt="">LOGO HERE</a>
+            <button type="button " class="btn nav-search-mobile bg-light">Search Plates</button>
+            <button class="navbar-toggler text-light" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <i class="fa-solid fa-bars text-light">
+                </i>
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header text-end">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close text-reset text-end" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body okka-offcanva-body">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link active " aria-current="page" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown nav-menus-mobile">
+
+                            <a class="nav-link d-flex justify-content-between align-items-center " href="#"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Products &nbsp;<i class="fa-solid fa-chevron-down ms-auto pe-3"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Action</a></li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Another action</a>
+                                </li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Something else
+                                        here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- main menu -->
+
+    <div class="container-fluid navbar-back-header main-navbar-okka">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand text-light" href="#"><img src="../images/" alt="">LOGO HERE</a>
+
+                <div class="collapse navbar-collapse navbar-menus-sec d-flex justify-content-end "
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 ">
+                      <li class="nav-item  align-items-center search-container">
+                          <input class="form-control" type="search" placeholder="Enter search here"
+                              aria-label="Search">
+                          <i class="fa-solid fa-search search-icon"></i>
+                      </li>
+                      <li class="nav-item  align-items-center ps-5  vehicle-nav-text">
+                          <a class="nav-link ms-2  " href="#"> <i class="fa-solid fa-location-dot text-white"></i>
+                              &nbsp;Locations</a>
+                      </li>
+                      <div class="d-flex align-items-center justify-content-between ">
+                          <ul class="navbar-nav offcanvas-navbar-nav nav-log-wish">
+                              <li class="nav-item nav-log-sections">
+                                  <button type="button" style="background-color: orangered;"
+                                      class="nav-link navbar-log-text  text-white" data-bs-toggle="dropdown">
+                                      <i class="fa-regular fa-user text-white"></i> &nbsp;Signin
+                                  </button>
+                                  <ul class="dropdown-menu nav-dropdown-menu-1 bg-white text-dark battery-login-menu">
+                                      <li><a class="dropdown-item nav-dropdown-login"
+                                              href="{% url 'my-account' %}">Dashboard</a></li>
+                                      <li><a class="dropdown-item nav-dropdown-login" href="{% url 'user-order' %}"><i
+                                                  class="fa-solid fa-list text-dark me-3"></i>Orders</a></li>
+                                      <!-- <li><a class="dropdown-item nav-dropdown-login" href="{% url 'balance' %}">Gift card balance</a></li> -->
+                                      <!-- <li><a class="dropdown-item nav-dropdown-login" href="#">Downloads</a></li> -->
+                                      <li><a class="dropdown-item nav-dropdown-login" href="{% url 'address' %}"><i
+                                                  class="fa-solid fa-location-pin me-3 text-dark"></i>Addresses</a>
+                                      </li>
+                                      <!-- <li><a class="dropdown-item nav-dropdown-login" href="{% url 'warranty_requests' %}">Request Return</a></li> -->
+                                      <li><a class="dropdown-item nav-dropdown-login"
+                                              href="{% url 'edit_account' %}"><i
+                                                  class="fa-regular fa-user me-3 text-dark"></i>Account Details</a>
+                                      </li>
+                                      <li><a class="dropdown-item nav-dropdown-login" href="{% url 'wishlist' %}"><i
+                                                  class="fa-regular fa-heart me-3 text-dark"></i>Wishlist</a></li>
+                                      <li><a class="dropdown-item nav-dropdown-login d-flex "
+                                              href="{% url 'logout' %}">Logout<i
+                                                  class="fa-solid fa-right-from-bracket text-dark ms-5 ps-5"></i></a>
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </div>
+                      <li class="nav-item d-flex align-items-center cart-icon-container ps-3 ">
+                          <a class="nav-link" href="#">
+                              <i class="fa-solid fa-cart-shopping text-white fa-lg"></i>
+                              <span class="badge ">3</span>
+                              
+                          </a>
+                     
+                          <!-- <a class="nav-link ms-2 " href="#">  &nbsp;Signin </a> -->
+                      </li>
+                  </ul>
+                    <!-- <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link active " aria-current="page" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown nav-menus-links">
+                            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Products &nbsp;<i class="fa-solid fa-chevron-down text-light"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Action</a></li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Another action</a>
+                                </li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Something else
+                                        here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                        <button type="button" class="btn nav-search-button">Search Plates</button>
+                    </ul> -->
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="container-fluid vehicle-batter-fluid main-navbar-okka">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+
+                <div class="collapse navbar-collapse battery-navbar-collapse  d-flex  align-content-center"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                      <li class="nav-item nav-menus-links">
+                          <a class="nav-link active " aria-current="page" href="#">Home</a>
+                      </li>
+
+                      <li class="nav-item dropdown nav-menus-links">
+                          <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Products &nbsp;<i class="fa-solid fa-chevron-down text-light"></i>
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Action</a></li>
+                              <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Another action</a>
+                              </li>
+                              <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Something else
+                                      here</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item nav-menus-links">
+                          <a class="nav-link" href="#">Pages</a>
+                      </li>
+                      <li class="nav-item nav-menus-links">
+                          <a class="nav-link" href="#">News</a>
+                      </li>
+                      <li class="nav-item nav-menus-links">
+                          <a class="nav-link" href="#">Contact Us</a>
+                      </li>
+                      <button type="button" class="btn nav-search-button">Search Plates</button>
+                  </ul>
+                </div>
+                <nav aria-label="breadcrumb mt-3 ">
+                  <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item number-breadcrup-text"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item number-breadcrup-text"><a href="#">Vehicle Batteries</a></li>
+                      <li class="breadcrumb-item number-breadcrup-text" aria-current="page"><a href="#">Car and
+                              Truck</a></li>
+                  </ol>
+              </nav>
+              <!-- <div class="">
+                <img src="" alt="">
+              </div> -->
+            </div>
+        </nav>
+    </div>
+
+<!-- 
+    <div class="container-fluid vehicle-batter-fluid navbar-dropdown-full ">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <nav aria-label="breadcrumb mt-3 ">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item number-breadcrup-text"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item number-breadcrup-text"><a href="#">Vehicle Batteries</a></li>
+                        <li class="breadcrumb-item number-breadcrup-text" aria-current="page"><a href="#">Car and
+                                Truck</a></li>
+                    </ol>
+                </nav>
+                <div class="collapse navbar-collapse battery-navbar-collapse  d-flex w-100" id="navbarSupportedContent">
+                    <ul class="navbar-nav battery-navbar-nav mb-2">
+                        <li class="nav-item d-flex align-items-center search-container w-100 mt-3">
+                            <input class="form-control" type="search" placeholder="Enter search here"
+                                aria-label="Search">
+                            <i class="fa-solid fa-search search-icon"></i>
+                        </li>
+                        <ul class="d-flex justify-content-between my-3" style="padding-left: 0px;">
+                            
+                            <li class="nav-item d-flex align-items-center   vehicle-nav-text">
+                                <a class="nav-link  " href="#"> <i class="fa-solid fa-location-dot"></i>
+                                    &nbsp;Locations</a>
+                            </li>
+                            <li class="nav-item  align-items-center vehicle-nav-text ">
+                                <a class="nav-link " href="#"> <i class="fa-regular fa-user"></i> &nbsp;Signin </a>
+                            </li>
+                            <li class="nav-item  align-items-center cart-icon-container ">
+                                <a class="nav-link" href="#">
+                                    <i class="fa-solid fa-cart-shopping text-dark fa-lg"></i>
+                                    <span class="badge ">3</span>
+                                </a>
+
+                        </ul>
+                    
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div> -->
+
+
+    <div class="container my-3">
+        <div class="row">
+            <div class="d-flex align-content-center justify-content-center flex-md-row flex-column ">
+                <p class="car-battries-sec">Car Batteries</p>
+                <p class="car-battries-sec">Truck Batteries</p>
+                <p class="car-battries-sec">Motorcycle Batteries</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <h1>VEHICLE BATTERIES</h1> -->
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <h5 class="vehicle-batetry-header py-3">Vehicle Batteries for Car and Truck</h5>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row vehicle-battery-row">
+            <div class="batteries-selection col">
+                <div class=" w-100">
+                    <div class=" vehicle-models-design d-flex align-items-center w-100 " data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="../images/vehicle-1.png" alt="" class="px-3">
+                        <h6 class="batteries-sec-text pt-2">Make</h6>
+                        <span class="icon-container-search ms-auto">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-menu vehicle-dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Link 1</a></li>
+                        <li><a class="dropdown-item" href="#">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        <li><a class="dropdown-item" href="#">Another link</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="batteries-selection col">
+                <div class=" w-100">
+                    <div class=" vehicle-models-design d-flex align-items-center w-100 " data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="../images/vehicle-2.png" alt="" class="px-3">
+                        <h6 class="batteries-sec-text pt-2">Modal</h6>
+                        <span class="icon-container-search ms-auto">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-menu vehicle-dropdown-menu">
+
+                        <li><a class="dropdown-item" href="#">Link 1</a></li>
+                        <li><a class="dropdown-item" href="#">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        <li><a class="dropdown-item" href="#">Another link</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="batteries-selection col">
+                <div class=" w-100">
+                    <div class=" vehicle-models-design d-flex align-items-center w-100 " data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="../images/vehicle-3.png" alt="" class="px-3">
+                        <h6 class="batteries-sec-text pt-2">Year</h6>
+                        <span class="icon-container-search ms-auto">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-menu vehicle-dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Link 1</a></li>
+                        <li><a class="dropdown-item" href="#">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        <li><a class="dropdown-item" href="#">Another link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class=" w-100">
+                    <div class=" vehicle-models-design d-flex align-items-center w-100 " data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="../images/vehicle-4.png" alt="" class="px-3">
+                        <h6 class="batteries-sec-text pt-2">Engine</h6>
+                        <span class="icon-container-search ms-auto">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-menu vehicle-dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Link 1</a></li>
+                        <li><a class="dropdown-item" href="#">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#">Link 3</a></li>
+                        <li><a class="dropdown-item" href="#">Another link</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <!-- <div class=" w-100"> -->
+                <div class=" vehicle-models-design d-flex align-items-center w-100 " data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="../images/vehicle-5.png" alt="" class="px-3">
+                    <h6 class="batteries-sec-text pt-2">Chassis</h6>
+                    <span class="icon-container-search ms-auto">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <ul class="dropdown-menu vehicle-dropdown-menu col ">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                    <li><a class="dropdown-item" href="#">Another link</a></li>
+                </ul>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <h5 class=" pt-4 Featured-Make">Featured Make</h5>
+        <div class="row featured-battery-row py-2">
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="batteries-selection col">
+                <div class="btn-group w-100 ">
+                    <div class="featured-bat-card d-flex align-items-center w-100 col ">
+                        <img src="../images/image 9.png" alt="" width="50px" height="20px">
+                        <h6 class="feature-batery-text pt-2">suzzi</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <h5 class="search-batetry-header py-3">A-Z of Items</h5>
+        </div>
+    </div>
+
+    <div class="container enter-numberplate-section">
+        <div class="row py-2">
+            <div class="d-flex search-alpha-columns">
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+                <h5 class="search-alpha-bikes">A</h5>
+
+                <h5 class="search-alpha-bikes">A</h5>
+            </div>
+        </div>
+        <div class="row my-3 alpha-secrch-section">
+            <h2 class="series-alphabets">A</h2>
+            <div class="search-bike-section">
+                <h6 class="search-bike-names">Aerosols</h6>
+                <i class="fa-solid fa-chevron-right search-bike-page"></i>
+            </div>
+            <div class="search-bike-section">
+                <h6 class="search-bike-names">Aerosols</h6>
+                <i class="fa-solid fa-chevron-right search-bike-page"></i>
+            </div>
+            <div class="search-bike-section">
+                <h6 class="search-bike-names">Aerosols</h6>
+                <i class="fa-solid fa-chevron-right search-bike-page"></i>
+            </div>
+            <div class="search-bike-section">
+                <h6 class="search-bike-names">Aerosols</h6>
+                <i class="fa-solid fa-chevron-right search-bike-page"></i>
+            </div>
+        </div>
+        <div class="row my-3 alpha-secrch-section">
+            <h2 class="series-alphabets">B</h2>
+            <div class="search-bike-section">
+                <h6 class="search-bike-names">Aerosols</h6>
+                <i class="fa-solid fa-chevron-right search-bike-page"></i>
+            </div>
+            <div class="search-bike-section">
+                <h6 class="search-bike-names">Aerosols</h6>
+                <i class="fa-solid fa-chevron-right search-bike-page"></i>
+            </div>
+            <div class="search-bike-section">
+                <h6 class="search-bike-names">Aerosols</h6>
+                <i class="fa-solid fa-chevron-right search-bike-page"></i>
+            </div>
+            <div class="search-bike-section">
+                <h6 class="search-bike-names">Aerosols</h6>
+                <i class="fa-solid fa-chevron-right search-bike-page"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container pt-3  pb-4  pt-2 ">
+        <!-- <h5 class="bat-services-header">What Our Customer Says</h5> -->
+        <div class="row ">
+            <div class="my-slider-3 d-flex justify-content-between ">
+                <div class="col-md-3  review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+                <div class="col-md-3  review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+
+                <div class="col-md-3  review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+                <div class="col-md-3  review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+                <div class="col-md-3 review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+                <div class="col-md-3  review-says-card">
+                    <div class="d-flex review-heders-section">
+                        <div class="">
+                            <img src="../images/profile-image.png" alt="" class="p-0 m-0">
+                        </div>
+                        <div class="">
+                            <h6>Lorem ipsum dolor sit amet.</h6>
+                            <div class="d-flex review-stars  pt-1 ">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-says-comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Iste sunt ad voluptate illo, adipisci amet, laudantium! Atque inventore ipsa
+                        perspiciatis amet totam autem, maxime praesentium labore.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.my-slider-3').slick({
+                slidesToShow: 3,
+                slidesToScroll: 3,
                 arrows: true,
-                dots: true,
+                dots: false,
                 speed: 300,
                 infinite: true,
                 autoplaySpeed: 5000,
@@ -91,8 +785,8 @@
                 ]
             });
         });
+    </script>
 
-  </script>
 </body>
 
 </html>

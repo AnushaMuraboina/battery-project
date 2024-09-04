@@ -29,20 +29,6 @@ a {
 .navbar-back-header {
   background-color: #FF4500;
 }
-.navbar-back-header .nav-menus-links {
-  margin: 0px 20px;
-}
-.navbar-back-header .nav-menus-links .active {
-  background-color: white;
-  color: #FF4500 !important;
-  font-weight: bold;
-  border-radius: 5px;
-}
-.navbar-back-header .nav-menus-links a {
-  color: white;
-  font-size: 18px;
-  font-weight: 400;
-}
 .navbar-back-header .nav-search-button {
   background-color: white;
   color: black;
@@ -841,21 +827,35 @@ i {
 .vehicle-batter-fluid {
   border-bottom: 1px solid #cea99c;
 }
+.vehicle-batter-fluid .nav-menus-links {
+  margin: 0px 20px;
+}
+.vehicle-batter-fluid .nav-menus-links a {
+  color: black !important;
+  font-size: 18px;
+  font-weight: 400;
+}
+.vehicle-batter-fluid .nav-menus-links a:hover {
+  background-color: #FF4500;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 5px;
+}
 
 .vehicle-nav-text {
   font-size: 16px;
   font-weight: 400;
-  color: black !important;
+  color: white;
   list-style-type: none;
 }
 
 .vehicle-nav-text a {
-  color: rgb(27, 27, 27);
+  color: white;
   text-decoration: none;
 }
 
 .vehicle-nav-text a:hover {
-  color: #FF4500;
+  color: white;
 }
 
 .vehicle-nav-text i {
@@ -2806,4 +2806,43 @@ legend {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.invoice-subtotal-amt {
+  border: 0 !important;
+}
+
+.invoice-tables th,
+.invoice-tables td {
+  border: 2px solid grey;
+}
+
+.invoice-sections .invoice-rows {
+  border-bottom: 4px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+.invoice-sections .invoice-num-detail {
+  display: flex;
+  justify-content: space-between;
+}
+.invoice-sections .invoice-num-detail h6 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.invoice-sections .invoice-num-detail p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.invoice-sections .invoice-text-bat {
+  font-size: 16px;
+  font-weight: 400;
+}
+.invoice-sections .invoice-text-bathead {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.table > :not(:last-child) > :last-child > * {
+  border-bottom-color: grey;
 }/*# sourceMappingURL=style.css.map */
