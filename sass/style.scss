@@ -20,6 +20,17 @@ a {
 }
 
 
+
+.nav-search-button {
+  font-size: 18px;
+  font-weight: 400;
+  background-color: rgb(25,25,50);
+  color: white;
+  margin-left: 10px;
+ &:hover{
+  color: white;
+ }
+}
 .form-control:focus {
   color: #212529;
   background-color: #fff;
@@ -32,22 +43,8 @@ a {
 .navbar-container-main {
   background-color: $bg-medium-orange;
 }
-
 .navbar-back-header {
   background-color: $bg-medium-orange;
-
-  .nav-search-button {
-    background-color: $bg-white;
-    color: black;
-  }
-
-  .nav-search-button {
-    font-size: 18px;
-    font-weight: 400;
-    color: black;
-    margin-left: 10px;
-
-  }
   .battery-item-dropdown:hover .bat-item-dropdownmenu {
     display: block;
     margin: 0;
@@ -996,11 +993,12 @@ i {
   .nav-menus-links {
     margin: 0px 20px;
 
-    // &:hover {
-    //     background-color: $bg-white !important;
-    //     color: $bg-medium-orange;
-    //     border-radius: 10px !important;
-    // }
+    &:hover {
+      background-color: $bg-medium-orange;
+      color: white !important;
+      font-weight: bold;
+      border-radius: 5px;
+    }
     // .active {
     //   background-color: $bg-medium-orange;
     //   color: white !important;
@@ -1020,6 +1018,7 @@ i {
       }
     }
   }
+  
 }
 
 .vehicle-nav-text {
@@ -1027,38 +1026,42 @@ i {
   color: white;
   list-style-type: none;
 }
-
 .vehicle-nav-text a {
   color: white;
   text-decoration: none;
-
-}
-
-.vehicle-nav-text a:hover {
-  color: white;
+  &:hover{
+    color: white;
+  }
 }
 
 .vehicle-nav-text i {
   color: rgb(29, 28, 28);
+  &:hover{
+    color: $bg-medium-orange;
+  }
 }
 
-.vehicle-nav-text i:hover {
-  color: $bg-medium-orange;
-}
-
+//cart 
 .cart-icon-container {
   position: relative;
   @include ft-size-16;
   list-style-type: none;
-}
+  .badge{
+    position: absolute;
+    top: 4px;
+    right: 0px;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background-color: white;
+    color: $bg-medium-orange;
+  }
+  .cart-text{
+    position: absolute;
+    top: 9px;
+    right: -30px;
+    color: white;
+  }
 
-.cart-icon-container .badge {
-  position: absolute;
-  top: 4px;
-  right: 0px;
-  transform: translate(50%, -50%);
-  border-radius: 50%;
-  background-color: $bg-medium-orange;
 }
 
 .search-container {

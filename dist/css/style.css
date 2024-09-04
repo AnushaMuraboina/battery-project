@@ -14,6 +14,17 @@ a {
   text-decoration: none;
 }
 
+.nav-search-button {
+  font-size: 18px;
+  font-weight: 400;
+  background-color: rgb(25, 25, 50);
+  color: white;
+  margin-left: 10px;
+}
+.nav-search-button:hover {
+  color: white;
+}
+
 .form-control:focus {
   color: #212529;
   background-color: #fff;
@@ -28,16 +39,6 @@ a {
 
 .navbar-back-header {
   background-color: #FF4500;
-}
-.navbar-back-header .nav-search-button {
-  background-color: white;
-  color: black;
-}
-.navbar-back-header .nav-search-button {
-  font-size: 18px;
-  font-weight: 400;
-  color: black;
-  margin-left: 10px;
 }
 .navbar-back-header .battery-item-dropdown:hover .bat-item-dropdownmenu {
   display: block;
@@ -830,6 +831,12 @@ i {
 .vehicle-batter-fluid .nav-menus-links {
   margin: 0px 20px;
 }
+.vehicle-batter-fluid .nav-menus-links:hover {
+  background-color: #FF4500;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 5px;
+}
 .vehicle-batter-fluid .nav-menus-links a {
   color: black !important;
   font-size: 18px;
@@ -853,7 +860,6 @@ i {
   color: white;
   text-decoration: none;
 }
-
 .vehicle-nav-text a:hover {
   color: white;
 }
@@ -861,7 +867,6 @@ i {
 .vehicle-nav-text i {
   color: rgb(29, 28, 28);
 }
-
 .vehicle-nav-text i:hover {
   color: #FF4500;
 }
@@ -872,14 +877,20 @@ i {
   font-weight: 400;
   list-style-type: none;
 }
-
 .cart-icon-container .badge {
   position: absolute;
   top: 4px;
   right: 0px;
   transform: translate(50%, -50%);
   border-radius: 50%;
-  background-color: #FF4500;
+  background-color: white;
+  color: #FF4500;
+}
+.cart-icon-container .cart-text {
+  position: absolute;
+  top: 9px;
+  right: -30px;
+  color: white;
 }
 
 .search-container {
