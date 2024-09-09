@@ -2087,20 +2087,6 @@ i {
   z-index: 2;
 }
 
-.cancelled .is-complete {
-  display: block;
-  position: relative;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  border: 0px solid #AFAFAF;
-  background-color: red;
-  margin: 0 auto;
-  transition: background 0.25s linear;
-  -webkit-transition: background 0.25s linear;
-  z-index: 2;
-}
-
 .order-tracking .is-complete:after {
   display: block;
   position: absolute;
@@ -2147,17 +2133,6 @@ i {
   color: #000;
 }
 
-.cancelled::before {
-  content: "";
-  display: block;
-  height: 3px;
-  width: calc(100% + 198px);
-  background-color: red;
-  top: 13px;
-  position: absolute;
-  left: -230%;
-}
-
 .order-tracking::before {
   content: "";
   display: block;
@@ -2168,6 +2143,37 @@ i {
   position: absolute;
   left: calc(-50% + 20px);
   z-index: 0;
+}
+
+.cancelled {
+  text-align: center;
+  /* width: 33.33%; */
+  width: 25%;
+  position: relative;
+  display: block;
+}
+.cancelled .is-complete {
+  display: block;
+  position: relative;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  border: 0px solid #AFAFAF;
+  background-color: red;
+  margin: 0 auto;
+  transition: background 0.25s linear;
+  -webkit-transition: background 0.25s linear;
+  z-index: 2;
+}
+.cancelled::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: calc(100% + 198px);
+  background-color: red;
+  top: 13px;
+  position: absolute;
+  left: -230%;
 }
 
 .assigned .is-complete {
