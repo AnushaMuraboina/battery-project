@@ -114,8 +114,9 @@ a {
   margin: 7px 0px;
   font-size: 18px;
   font-weight: 400;
-  color: black;
+  color: white;
   width: fit-content;
+  background-color: rgb(25, 25, 50);
 }
 
 .nav-menus-mobile {
@@ -123,45 +124,51 @@ a {
   border-bottom: 1px solid rgb(238, 234, 234);
 }
 
-.banner-image-section {
-  position: relative;
-}
-
-.banner-image-text {
-  position: absolute;
-  top: 25%;
-  max-width: 50%;
-}
-
-.banner-image-text1 {
-  font-size: 42px;
-  font-weight: 700;
-  color: rgb(255, 69, 0);
-  line-height: 55px;
-}
-
-.banner-image-text2 {
-  font-size: 42px;
-  font-weight: 700;
-  color: white;
-  line-height: 55px;
-}
-
-.banner-image-text3,
-.banner-image-text4 {
-  font-size: 17px;
-  font-weight: 400;
-  color: white;
-  line-height: 30px;
-}
-
-.banner-image-button {
-  font-size: 25px;
-  font-weight: 500;
-  color: white;
-  margin-top: 10px;
+.bars-mob-battery {
   background-color: #FF4500;
-  line-height: 30px;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 50%;
+}
+
+.profile-mob-icon {
+  color: #FF4500;
+}
+
+.cart-mob-shopping {
+  color: rgb(49, 48, 48);
+}
+
+.cart-mob-container {
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+  list-style-type: none;
+}
+.cart-mob-container .badge {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+  background-color: rgb(36, 34, 34);
+  color: white;
+}
+
+.batterirs-mob-sec li {
+  list-style-type: none !important;
+}
+.batterirs-mob-sec li img {
+  margin: 0px 5px;
+  background: orangered;
+  padding: 5px;
+  border-radius: 50px;
+  color: white !important;
+}
+
+.mobile-search-container {
+  list-style-type: none;
+  max-width: 50%;
 }
 
 .bat-provide-services {
@@ -2763,7 +2770,7 @@ legend {
 
 .check-cup-acct {
   font-size: 16px;
-  font-weight: 400px;
+  font-weight: 400;
 }
 
 .check-cup-accou-link {

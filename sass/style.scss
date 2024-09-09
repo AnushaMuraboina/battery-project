@@ -24,13 +24,15 @@ a {
 .nav-search-button {
   font-size: 18px;
   font-weight: 400;
-  background-color: rgb(25,25,50);
+  background-color: rgb(25, 25, 50);
   color: white;
   margin-left: 10px;
- &:hover{
-  color: white;
- }
+
+  &:hover {
+    color: white;
+  }
 }
+
 .form-control:focus {
   color: #212529;
   background-color: #fff;
@@ -43,13 +45,15 @@ a {
 .navbar-container-main {
   background-color: $bg-medium-orange;
 }
+
 .navbar-back-header {
   background-color: $bg-medium-orange;
+
   .battery-item-dropdown:hover .bat-item-dropdownmenu {
     display: block;
     margin: 0;
   }
-  
+
   .bat-item-dropdownmenu {
     margin-top: 0;
   }
@@ -162,9 +166,10 @@ a {
   margin: 7px 0px;
   font-size: 18px;
   font-weight: 400;
-  color: black;
+  color: white;
   // border: 1px solid black;
   width: fit-content;
+  background-color: $bg-dark-violet;
 }
 
 .nav-menus-mobile {
@@ -177,50 +182,102 @@ a {
 
 // banner section
 
-.banner-image-section {
-  position: relative;
-}
+// .banner-image-section {
+//   position: relative;
+// }
 
-.banner-image-text {
-  position: absolute;
-  top: 25%;
-  max-width: 50%;
-  // left: 15%;
-}
+// .banner-image-text {
+//   position: absolute;
+//   top: 25%;
+//   max-width: 50%;
+//   // left: 15%;
+// }
 
-.banner-image-text1 {
-  font-size: 42px;
-  font-weight: 700;
-  color: rgb(255, 69, 0);
-  line-height: 55px;
-}
+// .banner-image-text1 {
+//   font-size: 42px;
+//   font-weight: 700;
+//   color: rgb(255, 69, 0);
+//   line-height: 55px;
+// }
 
-.banner-image-text2 {
-  font-size: 42px;
-  font-weight: 700;
-  color: white;
-  line-height: 55px;
-}
+// .banner-image-text2 {
+//   font-size: 42px;
+//   font-weight: 700;
+//   color: white;
+//   line-height: 55px;
+// }
 
-.banner-image-text3,
-.banner-image-text4 {
-  font-size: 17px;
-  font-weight: 400;
-  color: white;
-  line-height: 30px;
-}
+// .banner-image-text3,
+// .banner-image-text4 {
+//   font-size: 17px;
+//   font-weight: 400;
+//   color: white;
+//   line-height: 30px;
+// }
 
-.banner-image-button {
-  @include ft-size-25;
-  color: white;
-  margin-top: 10px;
+// .banner-image-button {
+//   @include ft-size-25;
+//   color: white;
+//   margin-top: 10px;
+//   background-color: $bg-medium-orange;
+//   line-height: 30px;
+// }
+
+
+
+//icons
+.bars-mob-battery{
   background-color: $bg-medium-orange;
-  line-height: 30px;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 50%;
+}
+.profile-mob-icon {
+  color: $bg-medium-orange;
 }
 
+.cart-mob-shopping {
+  color: rgb(49, 48, 48);
 
+}
 
+.cart-mob-container {
+  position: relative;
+   @include ft-size-16;
+  list-style-type: none;
 
+  .badge {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background-color: rgb(36, 34, 34);
+    color: white;
+  }
+
+}
+
+.batterirs-mob-sec {
+  li {
+    list-style-type: none !important;
+
+    img {
+
+      margin: 0px 5px;
+      background: orangered;
+      padding: 5px;
+      border-radius: 50px;
+      color: white !important;
+    }
+  }
+
+}
+
+.mobile-search-container {
+  list-style-type: none;
+  max-width: 50%;
+}
 
 
 
@@ -990,6 +1047,7 @@ i {
 
 .vehicle-batter-fluid {
   border-bottom: 1px solid #cea99c;
+
   .nav-menus-links {
     margin: 0px 20px;
 
@@ -999,6 +1057,7 @@ i {
       font-weight: bold;
       border-radius: 5px;
     }
+
     // .active {
     //   background-color: $bg-medium-orange;
     //   color: white !important;
@@ -1010,7 +1069,8 @@ i {
       // @include ft-size-md;
       font-size: 18px;
       font-weight: 400;
-      &:hover{
+
+      &:hover {
         background-color: $bg-medium-orange;
         color: white !important;
         font-weight: bold;
@@ -1018,7 +1078,7 @@ i {
       }
     }
   }
-  
+
 }
 
 .vehicle-nav-text {
@@ -1026,17 +1086,20 @@ i {
   color: white;
   list-style-type: none;
 }
+
 .vehicle-nav-text a {
   color: white;
   text-decoration: none;
-  &:hover{
+
+  &:hover {
     color: white;
   }
 }
 
 .vehicle-nav-text i {
   color: rgb(29, 28, 28);
-  &:hover{
+
+  &:hover {
     color: $bg-medium-orange;
   }
 }
@@ -1046,7 +1109,8 @@ i {
   position: relative;
   @include ft-size-16;
   list-style-type: none;
-  .badge{
+
+  .badge {
     position: absolute;
     top: 4px;
     right: 0px;
@@ -1055,7 +1119,8 @@ i {
     background-color: white;
     color: $bg-medium-orange;
   }
-  .cart-text{
+
+  .cart-text {
     position: absolute;
     top: 9px;
     right: -30px;
@@ -2976,6 +3041,7 @@ legend {
     color: white;
   }
 }
+
 .roadside-page-head {
   font-size: 32px;
   font-weight: 500;
@@ -3310,15 +3376,16 @@ legend {
 }
 
 
-
+//apply coupon
 .check-cup-acct {
-  font-size: 16px;
-  font-weight: 400px;
+  @include ft-size-16;
 }
+
 .check-cup-accou-link {
   @include ft-size-md-wt;
   text-decoration: solid;
   color: $bg-medium-orange !important;
+
   // a:hover{
   //   color: #EEE4E3;
   // }
@@ -3326,16 +3393,19 @@ legend {
     color: $bg-medium-orange;
   }
 }
+
 .profile-tab-main-head {
   color: $bg-medium-orange;
   font-size: 15px;
   font-weight: 400;
 }
+
 .profile-tab-para {
   font-size: 15px;
   font-weight: 400;
   color: $bg-medium-orange;
 }
+
 .profile-card {
   // border: 1px solid transparent;
   // box-shadow: 0px 0px 3px 0px grey;
@@ -3374,50 +3444,47 @@ legend {
 
 
 // for the header footter top and bottom
-.main-page-head-footer{
+.main-page-head-footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-.invoice-subtotal-amt{
+
+.invoice-subtotal-amt {
   border: 0 !important;
 }
-// .table-bordered-1{
-  // border: 3px solid grey;
-  .invoice-tables th,
-  .invoice-tables td{
-    border: 2px solid grey;
-  }
 
-  // tr th,
-  // tr td{
-  //   border-bottom: 3px solid grey;
-  // }
-// }
-.invoice-sections{
-  .invoice-rows{
+.invoice-tables th,
+.invoice-tables td {
+  border: 2px solid grey;
+}
+
+.invoice-sections {
+  .invoice-rows {
     border-bottom: 4px solid black;
     display: flex;
     justify-content: space-between;
   }
-  .invoice-num-detail{
+
+  .invoice-num-detail {
     display: flex;
     justify-content: space-between;
-    h6{
+
+    h6 {
       font-size: 16px;
       font-weight: 600;
     }
-    p{
-      font-size: 16px;
-      font-weight: 400;
+
+    p {
+      @include ft-size-16;
     }
   }
-  
-  .invoice-text-bat{
-    font-size: 16px;
-    font-weight: 400;
+
+  .invoice-text-bat {
+    @include ft-size-16;
   }
-  .invoice-text-bathead{
+
+  .invoice-text-bathead {
     font-size: 20px;
     font-weight: 700;
   }
