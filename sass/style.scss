@@ -226,12 +226,13 @@ a {
 
 
 //icons
-.bars-mob-battery{
+.bars-mob-battery {
   background-color: $bg-medium-orange;
   color: white;
   padding: 5px 8px;
   border-radius: 50%;
 }
+
 .profile-mob-icon {
   color: $bg-medium-orange;
 }
@@ -243,7 +244,7 @@ a {
 
 .cart-mob-container {
   position: relative;
-   @include ft-size-16;
+  @include ft-size-16;
   list-style-type: none;
 
   .badge {
@@ -2508,7 +2509,8 @@ i {
 }
 
 .order-tracking,
-.cancelled {
+.cancelled,
+.assigned {
   text-align: center;
   /* width: 33.33%; */
   width: 25%;
@@ -2624,12 +2626,35 @@ i {
   position: absolute;
   left: calc(-50% + 20px);
   z-index: 0;
-  // width: calc(100% - -198px);
-  // background-color: red;
-  // top: 13px;
-  // position: absolute;
-  // left: calc(-50% + -180%);
 }
+
+//assigned
+.assigned {
+  .is-complete {
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    border: 0px solid #AFAFAF;
+    background-color: grey;
+    margin: 0 auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+    z-index: 2;
+  }
+  &::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: calc(100% + 9px);
+    background-color: grey;
+    top: 13px;
+    position: absolute;
+    left: -77%;
+  }
+}
+
 
 .order-tracking:first-child:before {
   display: none;

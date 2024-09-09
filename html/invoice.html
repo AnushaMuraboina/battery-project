@@ -5,67 +5,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container .invoice-sections {
+            width: 80%;
+
+        }
+
+        .invoice-rows {
+            display: flex;
+        }
+
+        .container .invoice-sections .invoice-logo {
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container .invoice-sections .invoice-text-sec2 {
+            width: 50%;
+
+        }
+
+        .container .invoice-sections .invoice-text-sec2 .invoice-text-info {
+            margin-top: 40px;
+
+        }
+
+        .container .invoice-sections .invoice-text-sec3 {
+            width: 25%;
+
+        }
+
+        .container .invoice-sections .invoice-rows-2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container .invoice-sections .invoice-rows-2 .invoice-rows2-text1 {
+            width: 85%;
+
+        }
+
+        .container .invoice-sections .invoice-rows-2 .invoice-rows2-text2 {
+            width: 15%;
+
+        }
+
+        .invoice-subtotal-amt {
+            border: 0 !important;
+
+        }
+
+        .invoice-sections .invoice-rows {
+            border-bottom: 4px solid black;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .invoice-sections .invoice-num-detail {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .invoice-sections .invoice-num-detail h6 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .invoice-sections .invoice-num-detail p {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .invoice-sections .invoice-text-bat {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 15px 0px;
+        }
+
+        .invoice-sections .invoice-text-bathead {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0px !important;
+        }
+
+        .table> :not(:last-child)> :last-child>* {
+            border-bottom-color: grey;
+        }
+
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .table th,
+        .table td {
+            padding: 10px;
+            border: 1px solid grey;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .invoice-rows {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .invoice-logo,
+            .invoice-text-sec2,
+            .invoice-text-sec3 {
+                width: 100%;
+            }
+
+            .table th,
+            .table td {
+                font-size: 14px;
+            }
+
+            .invoice-sections {
+                width: 100% !important;
+            }
+
+            .container .invoice-sections .invoice-text-sec2 {
+                width: 100%;
+                text-align: left;
+            }
+
+            .container .invoice-sections .invoice-rows-2 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .container .invoice-sections .invoice-rows-2 .invoice-rows2-text2 {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container" style=" width: 90%; background-color: white; border: grey;">
+    <div class="container">
         <div class="row invoice-sections">
-            <div class="invoice-rows py-4 flex-md-row flex-column ">
-                <div class="col-md-4 d-flex align-items-center justify-content-start">
-                    <!-- <h2>LOGO</h2> -->
-                     <img src="../images/bat_logo.jpeg" alt="" style="width: 50px; height: 50px;">
+            <div class="invoice-rows  ">
+                <div class="invoice-logo">
+                    <img src="../images/bat_logo.jpeg" alt="" style="width: 100px; height: 100px;"><br>
+
                 </div>
-                <div class="col-md-7 ">
-                    <h6 class="invoice-text-bathead" style="font-size: 20px;  font-weight: 700;">0800 JUMP ME 2022 LTD</h6>
+                <div class="col-md-7 invoice-text-sec2 ">
+                    <p></p>
+
+                    <h6 class="invoice-text-bathead" style="font-size: 20px;  font-weight: 700;">0800 JUMP ME 2022 LTD
+                    </h6>
                     <div class="pt-3">
-                        <h6 class="invoice-text-bat" style="font-size: 16px; font-weight: 400;">5 BECKETT WAY, MT ROSKILL</h6>
+                        <h6 class="invoice-text-bat" style="font-size: 16px; font-weight: 400;">5 BECKETT WAY, MT
+                            ROSKILL</h6>
                         <h6 class="invoice-text-bat" style="font-size: 16px; font-weight: 400;">AUCKLAND 1041</h6>
                     </div>
-                    <div class="pt-3">
+                    <div class="pt-3 invoice-text-info">
                         <h6 class="invoice-text-bat" style="font-size: 16px; font-weight: 400;">0800586763</h6>
-                        <h6 class="invoice-text-bat" style="font-size: 16px; font-weight: 400;">info@0800jumpme.co.nz</h6>
+                        <h6 class="invoice-text-bat" style="font-size: 16px; font-weight: 400;">info@0800jumpme.co.nz
+                        </h6>
                     </div>
                 </div>
-                <div class="col-md-1 ">
-                    <h2>QUOTE</h2>
+                <div class="col-md-1  invoice-text-sec3">
+                    <h2 class="" style="text-align: end; padding-right: 20px;">QUOTE</h2>
                 </div>
             </div>
 
-            <div class=" py-4 d-flex justify-content-between flex-md-row flex-column ">
-                <div class="col-md-4">
-                    <p class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Trading Name - 0800 Jump Me </p>
-                    <p class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Supplier ID - CUR003036161</p>
+            <div class=" py-4  invoice-rows-2">
+                <div class="col-md-4 invoice-rows2-text1">
+                    <p class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Trading Name - 0800 Jump
+                        Me </p>
+                    <p class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Supplier ID -
+                        CUR003036161</p>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 invoice-rows2-text2">
                     <div class="invoice-num-detail ">
-                        <p class="text-end">Invoice Number </p>
-                        <!-- <p></p> -->
+                        <p class="invoice-text-bat">Invoice Number </p>
+
                     </div>
                     <div class="invoice-num-detail ">
-                        <h6 class="text-end">Date </h6>
+                        <h6 class="" style="margin: 10px;">Date </h6>
                         <p>15/8/2024</p>
                     </div>
                     <div class=" invoice-num-detail ">
-                        <h6>Vehicle Rego </h6>
+                        <h6 style="margin: 10px;">Vehicle Rego </h6>
                         <p>NJU667</p>
                     </div>
                     <div class="invoice-num-detail ">
-                        <h6>Make </h6>
+                        <h6 style="margin: 10px;">Make </h6>
                         <p>BMW</p>
                     </div>
                     <div class=" invoice-num-detail ">
-                        <h6>Model </h6>
+                        <h6 style="margin: 10px;">Model </h6>
                         <p>320i</p>
                     </div>
 
                     <div class=" invoice-num-detail ">
-                        <p>Odometer</p>
-                        <!-- <p></p> -->
+                        <p class="invoice-text-bat">Odometer</p>
+
                     </div>
                 </div>
             </div>
 
 
-            <table class="table invoice-tables">
+            <table class="table invoice-tables  ">
                 <thead>
                     <tr class="invoice-tables">
                         <th scope="col">Description</th>
@@ -76,48 +235,50 @@
                 </thead>
                 <tbody>
                     <tr class="invoice-tables">
-                        <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Exide- SSAGM77EU </td>
+                        <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Exide- SSAGM77EU
+                        </td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">1</td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">NZ$541.00 </td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">NZ$541.00 </td>
 
                     </tr>
                     <tr class="invoice-tables">
-                        <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Call Out and Fitment of the Battery</td>
+                        <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Call Out and Fitment
+                            of the Battery</td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">1</td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">NZ$90.00 </td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">NZ$90.00 </td>
 
                     </tr>
                     <tr class="invoice-tables">
-                        <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Recoding the Battery</td>
+                        <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Recoding the Battery
+                        </td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">1</td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">NZ$70.00 </td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">NZ$70.00 </td>
 
                     </tr>
-                    <tr class="invoice-tables">
+                    <tr class="invoice-tables1">
                         <td colspan="2" class="invoice-subtotal-amt"></td>
                         <td><strong>Total</strong></td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">NZ$701.00</td>
                     </tr>
-                    <tr class="invoice-tables">
+                    <tr class="invoice-tables1">
                         <td colspan="2" class="invoice-subtotal-amt"></td>
                         <td><strong>GST</strong></td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">NZ$701.00</td>
                     </tr>
-                    <tr class="invoice-tables">
+                    <tr class="invoice-tables1">
                         <td colspan="2" class="invoice-subtotal-amt"></td>
                         <td><strong>Total including GST </strong></td>
                         <td class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">NZ$701.00</td>
                     </tr>
                 </tbody>
             </table>
-            <p class="py-4" >This Quote is valid for 7 days only. </p>
+            <p class="invoice-text-bat" style="padding: 10px 20px;">This Quote is valid for 7 days only. </p>
         </div>
     </div>
 
 </body>
+
 </html>
-
-
