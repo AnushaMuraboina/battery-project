@@ -1,45 +1,106 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
 
-/* tr:nth-child(even) {
+    .invoice-rows-2 {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .invoice-num-detail {
+      display: flex;
+      justify-content: space-between;
+    }
+    .invoice-rows2-text2{
+      width: 10%;
+    }
+    .invoice-text-bat {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 15px 0px;
+        }
+    /* tr:nth-child(even) {
   background-color: #dddddd;
 } */
-</style>
+  </style>
 </head>
+
 <body>
   <div class="" style="display: flex;justify-content: space-between;">
-  <div class="" style="width: 25%; display: flex; align-items: center; justify-content: center;">
-    <img src="../images/bat_logo.jpeg" alt="" width="50px" height="50px">
+    <div class="" style="width: 25%; display: flex; align-items: center; justify-content: center;">
+      <img src="../images/bat_logo.jpeg" alt="" width="50px" height="50px"> image logo
+    </div>
+    <div class="" style="margin: 0; width: 50%;">
+      <h2 class="" style="margin: 4px;">0800 JUMP ME 2022 LTD</h2>
+      <p>5 BECKETT WAY, MT ROSKILL</p>
+      <p>AUCKLAND 1041</p>
+      <p>0800586763</p>
+      <p>info@0800jumpme.co.nz</p>
+    </div>
+    <p style="text-align:right; margin-right: 6px; width: 25%;">QUOTE</p>
   </div>
-<div class="" style="margin: 0; width: 50%;">
-<h2 class="" style="margin: 4px;">0800 JUMP ME 2022 LTD</h2>
-<p>5 BECKETT WAY, MT ROSKILL</p>
-<p>AUCKLAND 1041</p>
-<p>0800586763</p>
-<p>info@0800jumpme.co.nz</p>
-</div>
-<p style="text-align:right; margin: 6px; width: 25%;">QUOTE</p>
-</div>
 
 
+
+  <div class=" py-2  invoice-rows-2">
+    <div class="col-md-4 invoice-rows2-text1">
+      <p class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Trading Name - 0800 Jump
+        Me </p>
+      <p class="invoice-text-bat" style="    font-size: 16px; font-weight: 400;">Supplier ID -
+        CUR003036161</p>
+    </div>
+    <div class="col-md-2 invoice-rows2-text2">
+      <div class="invoice-num-detail ">
+        <p class="invoice-text-bat" style="text-align: right;">Invoice Number </p>
+
+      </div>
+      <div class="invoice-num-detail ">
+        <h5 class="" style="margin-top: 15px;text-align: right;" >Date </h5>
+        <p>15/8/2024</p>
+      </div>
+      <div class=" invoice-num-detail ">
+        <h5 style="margin-top: 15px;text-align: right;">Vehicle Rego </h5>
+        <p>NJU667</p>
+      </div>
+      <div class="invoice-num-detail ">
+        <h5 style="margin-top: 15px;text-align: right;">Make </h5>
+        <p>BMW</p>
+      </div>
+      <div class=" invoice-num-detail ">
+        <h5 style="margin-top: 15px;text-align: right;">Model </h5>
+        <p>320i</p>
+      </div>
+
+      <div class=" invoice-num-detail ">
+        <p class="invoice-text-bat" style="text-align: left;">Odometer</p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- 
 <h3>Invoice Details</h3>
 <table>
   <tr>
@@ -74,53 +135,54 @@ td, th {
     <td>Odometer:</td>
     <td>&nbsp;</td>
   </tr>
-</table>
+</table> -->
 
-<h3>Invoice</h3>
-<table>
-  <tr>
-    <th>Description</th>
-    <th>Quantity</th>
-    <th>Unit price</th>
-    <th>Amount</th>
-  </tr>
-  <tr>
-    <td>Exide - SSAGM77EU</td>
-    <td>1</td>
-    <td>NZ$541.00</td>
-    <td>NZ$541.00</td>
-  </tr>
-  <tr>
-    <td>Call Out and Fitment of the Battery</td>
-    <td>1</td>
-    <td>NZ$90.00</td>
-    <td>NZ$90.00</td>
-  </tr>
-  <tr>
-    <td>Recoding the Battery</td>
-    <td>1</td>
-    <td>NZ$70.00</td>
-    <td>NZ$70.00</td>
-  </tr>
-  <tr>
-    <td style="border: 0;">&nbsp;</td>
-    <td style="border: 0;">&nbsp;</td>
-    <td>Total:</td>
-    <td>NZ$701.00</td>
-  </tr>
-  <tr>
-    <td style="border: 0;">&nbsp;</td>
-    <td style="border: 0;">&nbsp;</td>
-    <td>GST:</td>
-    <td>NZ$94.65</td>
-  </tr>
-  <tr>
-    <td style="border: 0;">&nbsp;</td>
-    <td style="border: 0;">&nbsp;</td>
-    <td>Total including GST:</td>
-    <td>NZ$795.65</td>
-  </tr>
-</table>
-<p>This Quote is valid for 7 days only.</p>
+  <h3>Invoice</h3>
+  <table>
+    <tr>
+      <th>Description</th>
+      <th>Quantity</th>
+      <th>Unit price</th>
+      <th>Amount</th>
+    </tr>
+    <tr>
+      <td>Exide - SSAGM77EU</td>
+      <td>1</td>
+      <td>NZ$541.00</td>
+      <td>NZ$541.00</td>
+    </tr>
+    <tr>
+      <td>Call Out and Fitment of the Battery</td>
+      <td>1</td>
+      <td>NZ$90.00</td>
+      <td>NZ$90.00</td>
+    </tr>
+    <tr>
+      <td>Recoding the Battery</td>
+      <td>1</td>
+      <td>NZ$70.00</td>
+      <td>NZ$70.00</td>
+    </tr>
+    <tr>
+      <td style="border: 0;">&nbsp;</td>
+      <td style="border: 0;">&nbsp;</td>
+      <td>Total:</td>
+      <td>NZ$701.00</td>
+    </tr>
+    <tr>
+      <td style="border: 0;">&nbsp;</td>
+      <td style="border: 0;">&nbsp;</td>
+      <td>GST:</td>
+      <td>NZ$94.65</td>
+    </tr>
+    <tr>
+      <td style="border: 0;">&nbsp;</td>
+      <td style="border: 0;">&nbsp;</td>
+      <td>Total including GST:</td>
+      <td>NZ$795.65</td>
+    </tr>
+  </table>
+  <p>This Quote is valid for 7 days only.</p>
 </body>
+
 </html>
