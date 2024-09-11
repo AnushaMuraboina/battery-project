@@ -14,6 +14,14 @@ a {
   text-decoration: none;
 }
 
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0rem grey;
+}
+
 .nav-search-button {
   font-size: 18px;
   font-weight: 400;
@@ -23,14 +31,6 @@ a {
 }
 .nav-search-button:hover {
   color: white;
-}
-
-.form-control:focus {
-  color: #212529;
-  background-color: #fff;
-  border-color: #86b7fe;
-  outline: 0;
-  box-shadow: 0 0 0 0rem grey;
 }
 
 .navbar-container-main {
@@ -122,6 +122,52 @@ a {
 .nav-menus-mobile {
   border-top: 1px solid rgb(238, 234, 234);
   border-bottom: 1px solid rgb(238, 234, 234);
+}
+
+.vehicle-batter-fluid {
+  border-bottom: 1px solid #cea99c;
+}
+.vehicle-batter-fluid .nav-menus-links {
+  margin: 0px 20px;
+}
+.vehicle-batter-fluid .nav-menus-links:hover {
+  background-color: #FF4500;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.vehicle-batter-fluid .nav-menus-links a {
+  color: black !important;
+  font-size: 18px;
+  font-weight: 400;
+}
+.vehicle-batter-fluid .nav-menus-links a:hover {
+  background-color: #FF4500;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.vehicle-nav-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  list-style-type: none;
+}
+
+.vehicle-nav-text a {
+  color: white;
+  text-decoration: none;
+}
+.vehicle-nav-text a:hover {
+  color: white;
+}
+
+.vehicle-nav-text i {
+  color: rgb(29, 28, 28);
+}
+.vehicle-nav-text i:hover {
+  color: #FF4500;
 }
 
 .bars-mob-battery {
@@ -830,52 +876,6 @@ i {
 .field-result {
   font-size: 18px;
   font-weight: 500;
-}
-
-.vehicle-batter-fluid {
-  border-bottom: 1px solid #cea99c;
-}
-.vehicle-batter-fluid .nav-menus-links {
-  margin: 0px 20px;
-}
-.vehicle-batter-fluid .nav-menus-links:hover {
-  background-color: #FF4500;
-  color: white !important;
-  font-weight: bold;
-  border-radius: 5px;
-}
-.vehicle-batter-fluid .nav-menus-links a {
-  color: black !important;
-  font-size: 18px;
-  font-weight: 400;
-}
-.vehicle-batter-fluid .nav-menus-links a:hover {
-  background-color: #FF4500;
-  color: white !important;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-.vehicle-nav-text {
-  font-size: 16px;
-  font-weight: 400;
-  color: white;
-  list-style-type: none;
-}
-
-.vehicle-nav-text a {
-  color: white;
-  text-decoration: none;
-}
-.vehicle-nav-text a:hover {
-  color: white;
-}
-
-.vehicle-nav-text i {
-  color: rgb(29, 28, 28);
-}
-.vehicle-nav-text i:hover {
-  color: #FF4500;
 }
 
 .cart-icon-container {

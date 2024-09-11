@@ -33,93 +33,12 @@
 
 <body>
 
-
-
-    <!-- mobile responsive navbar top -->
-
-    <nav class="navbar navbar-dropdown-full pe-2" >
-        <div class="container">
-            <button class="navbar-toggler  bars-mob-battery" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <i class="fa-solid fa-bars text-light">
-                </i>
-            </button>
- 
-            <li class="nav-item  align-items-center search-container mobile-search-container">
-                <input class="form-control" type="search" placeholder="Enter search here" aria-label="Search">
-                <i class="fa-solid fa-search search-icon"></i>
-            </li>
-
-
-            <i class="fa-regular fa-circle-user profile-mob-icon"></i>
-
-
-            <li class="nav-item d-flex align-items-center  cart-mob-container  ">
-                <a class="nav-link" href="#">
-                    <i class="fa-solid fa-cart-shopping  fa-lg cart-mob-shopping"></i>
-                    <span class="badge ">3</span>
-                </a>
-
-            </li>
-
-
-            <!-- <a class="navbar-brand text-light" href="#"><img src="../images/" alt="">LOGO HERE</a> -->
-            <!-- <button type="button " class="btn nav-search-mobile bg-light">Search Plates</button> -->
-
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header text-end">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close text-reset text-end" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body okka-offcanva-body">
-                    <ul class="navbar-nav  mb-2 mb-lg-0">
-                        <li class="nav-item nav-menus-mobile">
-                            <a class="nav-link active " aria-current="page" href="#">Home</a>
-                        </li>
-
-                        <li class="nav-item dropdown nav-menus-mobile">
-
-                            <a class="nav-link d-flex justify-content-between align-items-center " href="#"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Products &nbsp;<i class="fa-solid fa-chevron-down ms-auto pe-3"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Action</a></li>
-                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Another action</a>
-                                </li>
-                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Something else
-                                        here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item nav-menus-mobile">
-                            <a class="nav-link" href="#">Pages</a>
-                        </li>
-                        <li class="nav-item nav-menus-mobile">
-                            <a class="nav-link" href="#">News</a>
-                        </li>
-                        <li class="nav-item nav-menus-mobile">
-                            <a class="nav-link" href="#">Contact Us</a>
-                        </li>
-
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </nav>
-
-
-
-    <!-- main menu  -->
-
+    <!--top navbar -->
     <div class="container-fluid navbar-back-header main-navbar-okka">
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
                 <a class="navbar-brand text-light" href="#"><img src="../images/bat_logo.jpeg" alt="" width="60px"
                         height="60px"></a>
-
                 <div class="collapse navbar-collapse navbar-menus-sec d-flex justify-content-end "
                     id="navbarSupportedContent">
                     <ul class="navbar-nav  mb-2 ">
@@ -144,12 +63,9 @@
                                                 href="{% url 'my-account' %}">Dashboard</a></li>
                                         <li><a class="dropdown-item nav-dropdown-login" href="{% url 'user-order' %}"><i
                                                     class="fa-solid fa-list text-dark me-3"></i>Orders</a></li>
-                                        <!-- <li><a class="dropdown-item nav-dropdown-login" href="{% url 'balance' %}">Gift card balance</a></li> -->
-                                        <!-- <li><a class="dropdown-item nav-dropdown-login" href="#">Downloads</a></li> -->
                                         <li><a class="dropdown-item nav-dropdown-login" href="{% url 'address' %}"><i
                                                     class="fa-solid fa-location-pin me-3 text-dark"></i>Addresses</a>
                                         </li>
-                                        <!-- <li><a class="dropdown-item nav-dropdown-login" href="{% url 'warranty_requests' %}">Request Return</a></li> -->
                                         <li><a class="dropdown-item nav-dropdown-login"
                                                 href="{% url 'edit_account' %}"><i
                                                     class="fa-regular fa-user me-3 text-dark"></i>Account Details</a>
@@ -175,20 +91,19 @@
                 </div>
             </div>
         </nav>
-    </div>
+    </div> 
 
-    <!-- desktop navbar -->
+
+    <!-- desktop navbar 2nd navbar -->
     <div class="container-fluid vehicle-batter-fluid main-navbar-okka">
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
-
                 <div class="collapse navbar-collapse battery-navbar-collapse  d-flex  align-content-center"
                     id="navbarSupportedContent">
                     <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li class="nav-item nav-menus-links">
                             <a class="nav-link active " aria-current="page" href="#">Home</a>
                         </li>
-
                         <li class="nav-item dropdown nav-menus-links">
                             <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Products &nbsp;<i class="fa-solid fa-chevron-down text-dark"></i>
@@ -224,23 +139,79 @@
 
 
 
+    <!-- mobile responsive top navbar  -->
+    <nav class="navbar navbar-dropdown-full pe-2">
+        <div class="container">
+            <button class="navbar-toggler  bars-mob-battery" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <i class="fa-solid fa-bars text-light">
+                </i>
+            </button>
+            <li class="nav-item  align-items-center search-container mobile-search-container">
+                <input class="form-control" type="search" placeholder="Enter search here" aria-label="Search">
+                <i class="fa-solid fa-search search-icon"></i>
+            </li>
+            <i class="fa-regular fa-circle-user profile-mob-icon"></i>
+            <li class="nav-item d-flex align-items-center  cart-mob-container  ">
+                <a class="nav-link" href="#">
+                    <i class="fa-solid fa-cart-shopping  fa-lg cart-mob-shopping"></i>
+                    <span class="badge ">3</span>
+                </a>
+            </li>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header text-end">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close text-reset text-end" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body okka-offcanva-body">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link active " aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown nav-menus-mobile">
+                            <a class="nav-link d-flex justify-content-between align-items-center " href="#"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Products &nbsp;<i class="fa-solid fa-chevron-down ms-auto pe-3"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Action</a></li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Another action</a>
+                                </li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Something else
+                                        here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav> 
 
+<!-- mobile view 2nd navbar dispaly -->
     <nav class="navbar vehicle-batter-fluid navbar-dropdown-full ">
         <div class="container">
             <div class="collapse navbar-collapse  d-flex w-100 align-items-center" id="navbarSupportedContent">
-            <button type="button " class="btn  nav-search-button" >Search Plates</button>
- 
-            <ul class="d-flex batterirs-mob-sec align-items-center mb-0">
-                <li><img src="../images/truck-bat-mob.png" alt="" width="45px" height="45px"></li>
-                <li><img src="../images/bike-bat-mob.png" alt="" width="45px" height="45px"></li>
-              
-                <li><img src="../images/car-bat-mob.png" alt="" width="45px" height="45px"></li>
-                
-            </ul>
+                <button type="button " class="btn  nav-search-button">Search Plates</button>
+                <ul class="d-flex batterirs-mob-sec align-items-center mb-0">
+                    <li><img src="../images/truck-bat-mob.png" alt="" width="45px" height="45px"></li>
+                    <li><img src="../images/bike-bat-mob.png" alt="" width="45px" height="45px"></li>
+                    <li><img src="../images/car-bat-mob.png" alt="" width="45px" height="45px"></li>
+                </ul>
             </div>
         </div>
         </div>
-    </nav>
+    </nav> 
 
 
     <!-- <h1>VEHICLE BATTERIES</h1> -->
