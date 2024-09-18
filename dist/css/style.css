@@ -22,19 +22,12 @@ a {
   box-shadow: 0 0 0 0rem grey;
 }
 
-.nav-search-button {
-  font-size: 18px;
-  font-weight: 400;
-  background-color: rgb(25, 25, 50);
-  color: white;
-  margin-left: 10px;
-}
-.nav-search-button:hover {
-  color: white;
+.navbar-log-text {
+  background-color: #FF4500;
 }
 
-.navbar-container-main {
-  background-color: #FF4500;
+.dropdown-text-nav:hover {
+  color: #FF4500 !important;
 }
 
 .navbar-back-header {
@@ -48,64 +41,22 @@ a {
   margin-top: 0;
 }
 
-.main-navbar-okka {
-  display: none;
-}
-
-.navbar-dropdown-full,
-.main-banner-section-full {
-  display: block;
-}
-
-@media (max-width: 1150px) {
-  .main-banner-section-full {
-    display: block;
-  }
-}
-@media (min-width: 995px) {
-  .main-navbar-okka {
-    display: block;
-  }
-  .navbar-dropdown-full {
-    display: none;
-  }
-}
-@media (max-width: 995px) {
-  .main-navbar-okka {
-    display: none;
-  }
-  .navbar-dropdown-full {
-    display: block;
-  }
-  .register-sec-1 {
-    margin: 0px !important;
-  }
-  .col.ms-4.register-sec-2 {
-    margin-left: 0px !important;
-  }
-  .main-banner-section-full {
-    width: 100%;
-  }
-}
-.dropdown-text-nav:hover {
-  color: #FF4500 !important;
-}
-
-@media (max-width: 1200px) {
-  .cards-dispaly-services {
-    display: flex;
-    flex-direction: column;
-  }
-  .navbar-menus-sec {
-    justify-content: left !important;
-    padding: 0;
-  }
-}
 .nav-menus-mobile a {
   color: black;
 }
 .nav-menus-mobile a:hover {
   color: black;
+}
+
+.nav-search-button {
+  font-size: 18px;
+  font-weight: 400;
+  background-color: rgb(25, 25, 50);
+  color: white;
+  margin-left: 10px;
+}
+.nav-search-button:hover {
+  color: white;
 }
 
 .nav-search-mobile {
@@ -217,6 +168,55 @@ a {
   max-width: 50%;
 }
 
+.main-navbar-okka {
+  display: none;
+}
+
+.navbar-dropdown-full,
+.main-banner-section-full {
+  display: block;
+}
+
+@media (max-width: 1150px) {
+  .main-banner-section-full {
+    display: block;
+  }
+}
+@media (min-width: 995px) {
+  .main-navbar-okka {
+    display: block;
+  }
+  .navbar-dropdown-full {
+    display: none;
+  }
+}
+@media (max-width: 995px) {
+  .main-navbar-okka {
+    display: none;
+  }
+  .navbar-dropdown-full {
+    display: block;
+  }
+  .register-sec-1 {
+    margin: 0px !important;
+  }
+  .register-sec-2 {
+    margin-left: 0px !important;
+  }
+  .main-banner-section-full {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .cards-dispaly-services {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-menus-sec {
+    justify-content: left !important;
+    padding: 0;
+  }
+}
 .banner-image-text1 {
   font-size: 42px;
   font-weight: 700;
