@@ -140,9 +140,7 @@ a {
   width: fit-content;
   background-color: $bg-dark-violet;
 }
-
 .nav-menus-mobile {
-
   border-top: 1px solid rgb(238, 234, 234);
   border-bottom: 1px solid rgb(238, 234, 234);
 }
@@ -240,7 +238,7 @@ a {
     img {
 
       margin: 0px 5px;
-      background: orangered;
+      background: $bg-medium-orange;
       padding: 5px;
       border-radius: 50px;
       color: white !important;
