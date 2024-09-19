@@ -48,6 +48,26 @@ a {
   color: black;
 }
 
+.reg-bat-navbar {
+  border: 1px solid grey;
+  background-color: rgb(255, 205, 9);
+  align-items: center;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.reg-bat-navbar::placeholder {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(105, 101, 101);
+}
+
+.battery-addon2-text {
+  background-color: rgb(25, 25, 50);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .nav-search-button {
   font-size: 18px;
   font-weight: 400;
@@ -91,12 +111,15 @@ a {
   color: black !important;
   font-size: 18px;
   font-weight: 400;
+  border-radius: 5px;
 }
 .vehicle-batter-fluid .nav-menus-links a:hover {
   background-color: #FF4500;
   color: white !important;
-  font-weight: bold;
-  border-radius: 5px;
+}
+.vehicle-batter-fluid .battery-addon2-text {
+  background-color: rgb(25, 25, 50);
+  color: white;
 }
 
 .vehicle-nav-text {
@@ -230,12 +253,11 @@ a {
   }
 }
 @media (max-width: 1200px) {
-  .cards-dispaly-services {
-    display: flex;
-    flex-direction: column;
+  .nav-menus-links {
+    margin: 0px !important;
   }
   .navbar-menus-sec {
-    justify-content: left !important;
+    justify-content: right !important;
     padding: 0;
   }
 }
@@ -666,6 +688,15 @@ a {
     flex-direction: column;
   }
 }
+@media (max-width: 1024px) {
+  .footer-sec-battery {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-res-battery {
+    width: 100%;
+  }
+}
 .battery-conditions1 {
   border-right: 1px solid white;
   color: white !important;
@@ -812,7 +843,7 @@ a {
     background-color: #FF4500;
   }
   .bat-provide-services {
-    margin: 0px !important;
+    margin: 10px !important;
   }
   .footer-sub-text {
     text-align: left;
@@ -860,23 +891,37 @@ a {
     padding: 10px 0px !important;
   }
 }
-.input-group-text {
+.input-group-append .input-group-text {
   min-width: 35px;
   border: none;
   background: transparent;
   position: absolute;
   left: 0;
   z-index: 9;
-  padding: 0px 40px;
+  padding: 0px 20px;
   height: 100%;
+  display: block;
+  line-height: 17px;
+}
+.input-group-append .input-group-text span {
+  color: rgb(255, 211, 7);
+  font-size: 20px;
+  font-weight: 600;
 }
 
+.enter_reg-num {
+  border: 10px solid rgb(255, 211, 0) !important;
+  outline-offset: 5px;
+  padding: 60px 0px;
+}
 .enter_reg-num::placeholder {
   font-size: 20px;
   font-weight: 500;
   color: black;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  display: inline;
 }
 
 .number-button-close {
@@ -995,11 +1040,6 @@ i {
   padding-left: 20px;
 }
 
-.vehicle-models-design {
-  background-color: rgb(245, 242, 242);
-  box-shadow: 0px 0px 1px 1px rgb(196, 193, 193);
-}
-
 .vehicle-battery-row,
 .featured-battery-row {
   display: grid;
@@ -1088,7 +1128,7 @@ i {
 }
 
 .regular-text-vehicle {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   padding-bottom: 10px;
   line-height: 30px;
@@ -1407,7 +1447,7 @@ i {
 }
 
 .aboutus-page-text {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 30px;
   text-align: justify;
@@ -1435,7 +1475,7 @@ i {
     position: absolute;
     top: 10px;
     max-width: 100%;
-    left: 10px;
+    padding-left: 20px;
   }
   .banner-image-text {
     position: absolute;
@@ -1480,9 +1520,9 @@ i {
 .checkout-customer p {
   border: 1px solid rgb(170, 164, 164);
   padding: 10px 20px;
-  font-size: 18px;
-  display: inline-block;
+  font-size: 14px;
   font-weight: 400;
+  display: inline-block;
   border-radius: 5px;
   background-color: rgb(241, 241, 241);
 }
@@ -1507,7 +1547,7 @@ i {
   color: white;
 }
 .checkoutpage-container .checkout-form-lable {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
 }
 .checkoutpage-container .checkout-form-input {
@@ -1643,7 +1683,7 @@ i {
 
 .contact-address-info {
   line-height: 15px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
 }
 
@@ -1768,7 +1808,7 @@ i {
   border: none;
 }
 .news-cards-sec .card-title1 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
 }
 .news-cards-sec .card-title {
@@ -2741,6 +2781,60 @@ legend {
   color: rgb(80, 80, 80);
 }
 
+.dropdown .left-icon {
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.dropdown .left-icon i {
+  color: rgb(25, 25, 50);
+}
+.dropdown .right-icon {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  background: rgb(25, 25, 50);
+  height: 100%;
+  align-items: center;
+  padding: 0px 13px;
+  border-radius: 0 5px 5px 0;
+}
+.dropdown .selectmake {
+  font-weight: 400;
+  width: 100%;
+  padding: 15px 35px;
+  font-size: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.dropdown-icon {
+  position: absolute;
+}
+
+.vehicle-models-design {
+  background-color: rgb(245, 242, 242);
+  box-shadow: 0px 0px 1px 1px rgb(196, 193, 193);
+  border-radius: 5px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+  .num-vehicle-options,
+  .cards-dispaly-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .num-vehicle-options,
+  .cards-dispaly-services {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 .install-card-dispaly,
 .install-card-dispaly1 {
   border: 1px solid rgb(180, 175, 175);
