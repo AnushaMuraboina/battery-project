@@ -2996,4 +2996,33 @@ legend {
 
 .search-box:after {
   right: 5px;
+}
+
+.replacement-sections .replacement-sections1 {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #F9F5F4;
+}
+.replacement-sections .replacement-sections1 .replace-head-text {
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+}
+.replacement-sections .replacement-sections1 .replace-borders {
+  border-bottom: 4px solid #FF4500;
+  width: 20%;
+}
+.replacement-sections .replacement-sections1 .bat-btn-replace-sub {
+  color: #FF4500;
+  border: 2px solid #FF4500;
+  background-color: white;
+}
+.replacement-sections .replacement-sections1 .replacement-text {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: justify;
+}
+.replacement-sections .replacement-sections1 .replace-form-input {
+  border: 1px solid rgb(216, 209, 209);
+  padding: 10px 5px;
 }/*# sourceMappingURL=batterystyles.css.map */

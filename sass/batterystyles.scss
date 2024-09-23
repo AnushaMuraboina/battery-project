@@ -3474,3 +3474,35 @@ legend {
 //     bottom: 5px;
 //     left: 50%;
 // }
+
+
+.replacement-sections{
+  .replacement-sections1{
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #F9F5F4;
+    .replace-head-text{
+      font-size: 25px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .replace-borders{
+      border-bottom: 4px solid $bg-medium-orange;
+      width: 20%;
+    }
+  .bat-btn-replace-sub{
+    color:$bg-medium-orange;
+    border: 2px solid $bg-medium-orange;
+    background-color: white;
+  }
+  .replacement-text{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: justify;
+  }
+  .replace-form-input{
+    border: 1px solid rgb(216, 209, 209);
+    padding: 10px 5px;
+  }
+}
+}
