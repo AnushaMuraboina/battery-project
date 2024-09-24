@@ -2977,8 +2977,19 @@ legend {
   left: -77%;
 }
 
-.search-box:before,
-.search-box:after {
+.search-box1 {
+  position: relative;
+  margin-top: 4px;
+}
+.search-box1 input {
+  width: 100%;
+  border-color: #dfe3e8;
+  border-radius: 4px !important;
+  box-shadow: none;
+}
+
+.search-box1:before,
+.search-box1:after {
   content: "";
   position: absolute;
   height: 65%;
@@ -2990,11 +3001,11 @@ legend {
   background-repeat: no-repeat;
 }
 
-.search-box:before {
+.search-box1:before {
   left: 5px;
 }
 
-.search-box:after {
+.search-box1:after {
   right: 5px;
 }
 

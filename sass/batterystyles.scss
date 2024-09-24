@@ -1004,6 +1004,7 @@ a {
 }
 
 
+
 @media (max-width: 1200px) {
 
   .service_pro-image,
@@ -3445,8 +3446,21 @@ legend {
   }
 }
 
-    .search-box:before, 
-    .search-box:after {
+
+
+.search-box1 {
+  position: relative;
+  margin-top: 4px;
+
+  input {
+    width: 100%;
+    border-color: #dfe3e8;
+    border-radius: 4px !important;
+    box-shadow: none;
+  }
+}
+    .search-box1:before, 
+    .search-box1:after {
       content: "";
       position: absolute;
       height: 65%;
@@ -3460,10 +3474,10 @@ legend {
       background-repeat: no-repeat;
       // background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
   }
-  .search-box:before {
+  .search-box1:before {
       left: 5px;
   }
-  .search-box:after {
+  .search-box1:after {
       right: 5px;
   }
 //   .search-box:before {
