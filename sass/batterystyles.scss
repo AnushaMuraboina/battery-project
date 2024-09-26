@@ -1040,11 +1040,12 @@ a {
     padding: 0px 20px;
     height: 100%;
     display: block;
-    line-height:13px;
-    span{
-       color: rgb(255,211,7);
-       font-size: 14px;
-       font-weight: 600;
+    line-height: 13px;
+
+    span {
+      color: rgb(255, 211, 7);
+      font-size: 14px;
+      font-weight: 600;
     }
   }
 
@@ -1057,6 +1058,7 @@ a {
   border: 10px solid rgb(255, 211, 0) !important;
   outline-offset: 5px;
   padding: 36px 0px;
+
   // font-size: 30px;
   &::placeholder {
     @include ft-size-20;
@@ -1071,6 +1073,7 @@ a {
 .number-button-close {
   background-color: rgb(25, 25, 50);
   color: white;
+
   &:hover {
     color: white;
   }
@@ -1222,8 +1225,7 @@ i {
   }
 }
 
-.vehicle-dropdown-menu,
-.dropdown-menu {
+.vehicle-dropdown-menu {
   width: 225px;
   position: absolute;
   inset: 0px auto auto 0px;
@@ -3459,27 +3461,31 @@ legend {
     box-shadow: none;
   }
 }
-    .search-box1:before, 
-    .search-box1:after {
-      content: "";
-      position: absolute;
-      height: 65%;
-      width: 30px;
-      top: 25px;
-      background-image: radial-gradient(circle at center, rgb(255, 187, 0) 5px, transparent 5px), 
-                        radial-gradient(circle at center, rgb(255, 145, 0) 5px, transparent 5px);
-                        
-      background-size: 20px 20px;
-      background-position: top center, bottom center;
-      background-repeat: no-repeat;
-      // background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
-  }
-  .search-box1:before {
-      left: 5px;
-  }
-  .search-box1:after {
-      right: 5px;
-  }
+
+.search-box1:before,
+.search-box1:after {
+  content: "";
+  position: absolute;
+  height: 65%;
+  width: 30px;
+  top: 25px;
+  background-image: radial-gradient(circle at center, rgb(255, 187, 0) 5px, transparent 5px),
+    radial-gradient(circle at center, rgb(255, 145, 0) 5px, transparent 5px);
+
+  background-size: 20px 20px;
+  background-position: top center, bottom center;
+  background-repeat: no-repeat;
+  // background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+}
+
+.search-box1:before {
+  left: 5px;
+}
+
+.search-box1:after {
+  right: 5px;
+}
+
 //   .search-box:before {
 //     top: 5px;
 //     left: 50%;
@@ -3490,33 +3496,61 @@ legend {
 // }
 
 
-.replacement-sections{
-  .replacement-sections1{
+.replacement-sections {
+  .replacement-sections1 {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: #F9F5F4;
-    .replace-head-text{
+    .replace-head-text {
       font-size: 25px;
       font-weight: 500;
       text-align: center;
     }
-    .replace-borders{
+    .replace-borders {
       border-bottom: 4px solid $bg-medium-orange;
       width: 20%;
     }
-  .bat-btn-replace-sub{
-    color:$bg-medium-orange;
-    border: 2px solid $bg-medium-orange;
-    background-color: white;
-  }
-  .replacement-text{
-    font-size: 18px;
-    font-weight: 400;
-    text-align: justify;
-  }
-  .replace-form-input{
-    border: 1px solid rgb(216, 209, 209);
-    padding: 10px 5px;
+    .bat-btn-replace-sub {
+      color: $bg-medium-orange;
+      border: 2px solid $bg-medium-orange;
+      background-color: white;
+    }
+    .replacement-text {
+      font-size: 18px;
+      font-weight: 400;
+      text-align: justify;
+    }
+    .replace-form-input {
+      border: 1px solid rgb(216, 209, 209);
+      padding: 10px 5px;
+    }
   }
 }
+
+@media (max-width: 1150px) {
+  .replacement-sections1 {
+    width: 100%;
+  }
+  .replace-head-text {
+  @include ft-sie-bat-500;
+  }
+  .replacement-text {
+   @include ft-size-md-sm;
+  }
+}
+
+
+
+
+
+
+
+.profile-form-input1 {
+  border: 1px solid grey;
+  line-height: 35px;
+
+  &::placeholder {
+    font-size: 17px;
+    color: grey;
+  }
 }

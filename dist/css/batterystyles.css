@@ -1072,8 +1072,7 @@ i {
   font-size: 16px;
 }
 
-.vehicle-dropdown-menu,
-.dropdown-menu {
+.vehicle-dropdown-menu {
   width: 225px;
   position: absolute;
   inset: 0px auto auto 0px;
@@ -3036,4 +3035,26 @@ legend {
 .replacement-sections .replacement-sections1 .replace-form-input {
   border: 1px solid rgb(216, 209, 209);
   padding: 10px 5px;
+}
+
+@media (max-width: 1150px) {
+  .replacement-sections1 {
+    width: 100%;
+  }
+  .replace-head-text {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .replacement-text {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+.profile-form-input1 {
+  border: 1px solid grey;
+  line-height: 35px;
+}
+.profile-form-input1::placeholder {
+  font-size: 17px;
+  color: grey;
 }/*# sourceMappingURL=batterystyles.css.map */
