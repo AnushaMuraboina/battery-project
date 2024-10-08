@@ -2916,4 +2916,58 @@ legend {
 
 .table > :not(:last-child) > :last-child > * {
   border-bottom-color: grey;
+}
+
+.prod-dis-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0px;
+}
+.prod-dis-list-table th,
+.prod-dis-list-table td {
+  padding: 8px;
+  text-align: left;
+}
+.prod-dis-list-table td {
+  font-size: 14px;
+  font-weight: 400;
+}
+.prod-dis-list-table .prod-list-dis-tth th {
+  border-bottom: 2px solid rgb(25, 25, 50);
+  font-size: 14px;
+  font-weight: 700;
+}
+.prod-dis-list-table .prod-list-dis-tr td li::marker {
+  color: rgb(255, 153, 0);
+  font-size: 18px;
+}
+.prod-dis-list-table .prod-list-dis-tr {
+  border-bottom: 2px solid rgb(25, 25, 50);
+  margin: 30px 0px;
+}
+.prod-dis-list-table .prod-list-dis-tr:nth-child(even) {
+  background-color: rgb(246, 247, 246);
+}
+.prod-dis-list-table .prod-list-btns {
+  background-color: orangered;
+  color: white;
+  font-size: 14px;
+  padding: 3px;
+}
+
+@media screen and (max-width: 765px) {
+  .prod-dis-list-table,
+  .prod-dis-list-head,
+  .prod-dis-list-body,
+  .prod-dis-list-body tr th,
+  .prod-list-dis-tr td,
+  .prod-list-dis-tr {
+    display: block;
+  }
+  .prod-list-dis-tth th {
+    display: none;
+  }
+  .prod-list-dis-tr td {
+    position: relative;
+  }
 }/*# sourceMappingURL=stylemin.css.map */

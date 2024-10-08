@@ -174,16 +174,17 @@
                         <li class="nav-item nav-menus-links">
                             <a class="nav-link active " aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
-                        <li class="nav-item dropdown nav-menus-links">
+                        <!-- <li class="nav-item dropdown nav-menus-links">
                             <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Products &nbsp;<i class="fa-solid fa-chevron-down text-dark"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <!-- <li><a class="dropdown-item dropdown-text-nav text-dark" href="{% url 'vehicle_search' %}">Action</a></li>
+                                
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="{% url 'vehicle_search' %}">Action</a></li>
                                 <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Another action</a>
                                 </li>
                                 <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Something else
-                                        here</a></li> -->
+                                        here</a></li>
 
                                 <li><a class="dropdown-item dropdown-text-nav text-dark"
                                         href="{% url 'vehicle_search' %}">Car Batteries</a></li>
@@ -194,36 +195,52 @@
                                         href="{% url 'motorcycle_search' %}">Motorcycle Batteries
                                     </a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item nav-menus-links">
+                        </li> -->
+                        <!-- <li class="nav-item nav-menus-links">
                             <a class="nav-link" href="#">Pages</a>
                         </li>
                         <li class="nav-item nav-menus-links">
                             <a class="nav-link" href="#">News</a>
+                        </li> -->
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="{% url 'vehicle_search' %}">Car Batteries</a>
+                        </li>
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="{% url 'truck_search' %}">Truck Batteries</a>
+                        </li>
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="{% url 'motorcycle_search' %}">Motorcycle Batteries</a>
                         </li>
                         <li class="nav-item nav-menus-links">
                             <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
                         </li>
                         <!-- <button type="button" class="btn nav-search-button">Search Plates</button> -->
                         <!-- <a href="{% url 'vehicle_search' %}" class="btn nav-search-button">Browse by Vehicle</a> -->
-                        <li class="nav-item ">
+                        <!-- <li class="nav-item ">
                             <div class="input-group ">
                                 <input type="text" class="reg-bat-navbar " placeholder="ENTER REG"
                                     aria-label="Recipient's username" aria-describedby="battery-addon2">
                                 <span class="input-group-text battery-addon2-text" id="battery-addon2">GO</span>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                     <!-- <div class="input-group mb-3">
                     <input type="text" class="form-control " placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <span class="input-group-text" id="basic-addon2">com</span>
                   </div> -->
                 </div>
-                <div class="d-flex">
+                <!-- <div class="d-flex">
                     <a href="{% url 'vehicle_search' %}"><img src="../images/carbattery.png" alt="" class="px-3"></a>
                     <a href="{% url 'truck_search' %}"><img src="../images/truckbat.png" alt="" class="px-3"></a>
                     <a href="{% url 'motorcycle_search' %}"><img src="../images/scootybat.png" alt="" class="ps-3"></a>
-                </div>
+                </div> -->
+                <li class="nav-item " style="list-style-type: none;">
+                    <div class="input-group ">
+                        <input type="text" class="reg-bat-navbar " placeholder="ENTER REG"
+                            aria-label="Recipient's username" aria-describedby="battery-addon2">
+                        <span class="input-group-text battery-addon2-text" id="battery-addon2">GO</span>
+                    </div>
+                </li>
             </div>
         </nav>
     </div>
@@ -261,17 +278,17 @@
                         <li class="nav-item nav-menus-mobile">
                             <a class="nav-link active " aria-current="page" href="{% url 'home' %}">Home</a>
                         </li>
-                        <li class="nav-item dropdown nav-menus-mobile">
+                        <!-- <li class="nav-item dropdown nav-menus-mobile">
                             <a class="nav-link d-flex justify-content-between align-items-center " href="#"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Products &nbsp;<i class="fa-solid fa-chevron-down ms-auto pe-3"></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <!-- <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Action</a></li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Action</a></li>
                             <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Another action</a>
                             </li>
                             <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Something else
-                                    here</a></li> -->
+                                    here</a></li>
                                 <li><a class="dropdown-item dropdown-text-nav text-dark"
                                         href="{% url 'vehicle_search' %}">Car Batteries</a></li>
                                 <li><a class="dropdown-item dropdown-text-nav text-dark"
@@ -281,12 +298,21 @@
                                         href="{% url 'motorcycle_search' %}">Motorcycle Batteries
                                     </a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item nav-menus-mobile">
+                        </li> -->
+                        <!-- <li class="nav-item nav-menus-mobile">
                             <a class="nav-link" href="#">Pages</a>
                         </li>
                         <li class="nav-item nav-menus-mobile">
                             <a class="nav-link" href="#">News</a>
+                        </li> -->
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="{% url 'vehicle_search' %}">Car Batteries</a>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="{% url 'truck_search' %}">Truck Batteries</a>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="{% url 'motorcycle_search' %}">Motorcycle Batteries</a>
                         </li>
                         <li class="nav-item nav-menus-mobile">
                             <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
@@ -310,15 +336,14 @@
                         aria-label="Recipient's username" aria-describedby="battery-addon2">
                     <span class="input-group-text battery-addon2-text" id="battery-addon2">GO</span>
                 </div>
-
-                <ul class="d-flex batterirs-mob-sec align-items-center mb-0">
+                <!-- <ul class="d-flex batterirs-mob-sec align-items-center mb-0">
                     <li><a href="{% url 'vehicle_search' %}"><img src="../images/truck-bat-mob.png" alt="" width="45px"
                                 height="45px"></a></li>
                     <li><a href="{% url 'truck_search' %}"><img src="../images/bike-bat-mob.png" alt="" width="45px"
                                 height="45px"></a></li>
                     <li><a href="{% url 'motorcycle_search' %}"><img src="../images/car-bat-mob.png" alt="" width="45px"
                                 height="45px"></li></a>
-                </ul>
+                </ul> -->
             </div>
         </div>
         </div>
