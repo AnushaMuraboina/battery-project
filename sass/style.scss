@@ -3456,20 +3456,15 @@ legend {
 
 }
 
-
-
-
 // for the header footter top and bottom
 .main-page-head-footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
 .invoice-subtotal-amt {
   border: 0 !important;
 }
-
 .invoice-tables th,
 .invoice-tables td {
   border: 2px solid grey;
@@ -3510,7 +3505,7 @@ legend {
   border-bottom-color: grey;
 }
 
-
+// product dispaly
 .prod-dis-list-table {
   width: 100%;
   border-collapse: collapse;
