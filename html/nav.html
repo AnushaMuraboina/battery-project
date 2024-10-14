@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- font awesom -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+
+    <!-- slider  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+    <!-- product slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+    <link rel="stylesheet" href="../dist/css/batterystyles.css">
+    <!-- <link rel="stylesheet" href="../dist/css/style.css"> -->
+
+</head>
+
+<body>
+    <!--top navbar -->
+
+
+    
+    <!-- desktop navbar 2nd navbar -->
+    <div class="container-fluid vehicle-batter-fluid main-navbar-okka">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container d-flex justify-content-between align-content-center">
+                <div class="collapse navbar-collapse battery-navbar-collapse  d-flex  " id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link active " aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown nav-menus-links">
+                            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Products &nbsp;<i class="fa-solid fa-chevron-down text-dark"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="{% url 'vehicle_search' %}">Action</a></li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Another action</a>
+                                </li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Something else
+                                        here</a></li>
+
+                                <li><a class="dropdown-item dropdown-text-nav text-dark"
+                                        href="{% url 'vehicle_search' %}">Car Batteries</a></li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark"
+                                        href="{% url 'truck_search' %}">Truck Batteries</a>
+                                </li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark"
+                                        href="{% url 'motorcycle_search' %}">Motorcycle Batteries
+                                    </a></li>
+                            </ul>
+                        </li> -->
+                        <!-- <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="#">News</a>
+                        </li> -->
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="{% url 'vehicle_search' %}">Car Batteries</a>
+                        </li>
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="{% url 'truck_search' %}">Truck Batteries</a>
+                        </li>
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="{% url 'motorcycle_search' %}">Motorcycle Batteries</a>
+                        </li>
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
+                        </li>
+                        <!-- <button type="button" class="btn nav-search-button">Search Plates</button> -->
+                        <!-- <a href="{% url 'vehicle_search' %}" class="btn nav-search-button">Browse by Vehicle</a> -->
+                        <!-- <li class="nav-item ">
+                            <div class="input-group ">
+                                <input type="text" class="reg-bat-navbar " placeholder="ENTER REG"
+                                    aria-label="Recipient's username" aria-describedby="battery-addon2">
+                                <span class="input-group-text battery-addon2-text" id="battery-addon2">GO</span>
+                            </div>
+                        </li> -->
+                    </ul>
+                    <!-- <div class="input-group mb-3">
+                    <input type="text" class="form-control " placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2">com</span>
+                  </div> -->
+                </div>
+                <!-- <div class="d-flex">
+                    <a href="{% url 'vehicle_search' %}"><img src="../images/carbattery.png" alt="" class="px-3"></a>
+                    <a href="{% url 'truck_search' %}"><img src="../images/truckbat.png" alt="" class="px-3"></a>
+                    <a href="{% url 'motorcycle_search' %}"><img src="../images/scootybat.png" alt="" class="ps-3"></a>
+                </div> -->
+                <li class="nav-item " style="list-style-type: none;">
+                    <div class="input-group ">
+                        <input type="text" class="reg-bat-navbar " placeholder="ENTER REG"
+                            aria-label="Recipient's username" aria-describedby="battery-addon2">
+                        <span class="input-group-text battery-addon2-text" id="battery-addon2">GO</span>
+                    </div>
+                </li>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <!-- mobile responsive top navbar  -->
+    <nav class="navbar navbar-dropdown-full pe-2">
+        <div class="container">
+            <button class="navbar-toggler  bars-mob-battery" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <i class="fa-solid fa-bars text-light">
+                </i>
+            </button>
+            <li class="nav-item  align-items-center search-container mobile-search-container">
+                <input class="form-control" type="search" placeholder="Enter search here" aria-label="Search">
+                <i class="fa-solid fa-search search-icon"></i>
+            </li>
+            <i class="fa-regular fa-circle-user profile-mob-icon"></i>
+            <li class="nav-item d-flex align-items-center  cart-mob-container  ">
+                <a class="nav-link" href="#">
+                    <i class="fa-solid fa-cart-shopping  fa-lg cart-mob-shopping"></i>
+                    <span class="badge ">3</span>
+                </a>
+            </li>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header text-end">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close text-reset text-end" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body okka-offcanva-body">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link active " aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown nav-menus-mobile">
+                            <a class="nav-link d-flex justify-content-between align-items-center " href="#"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Products &nbsp;<i class="fa-solid fa-chevron-down ms-auto pe-3"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Action</a></li>
+                            <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Another action</a>
+                            </li>
+                            <li><a class="dropdown-item dropdown-text-nav text-dark" href="#">Something else
+                                    here</a></li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark"
+                                        href="{% url 'vehicle_search' %}">Car Batteries</a></li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark"
+                                        href="{% url 'truck_search' %}">Truck Batteries</a>
+                                </li>
+                                <li><a class="dropdown-item dropdown-text-nav text-dark"
+                                        href="{% url 'motorcycle_search' %}">Motorcycle Batteries
+                                    </a></li>
+                            </ul>
+                        </li> -->
+                        <!-- <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="#">Pages</a>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="#">News</a>
+                        </li> -->
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="{% url 'vehicle_search' %}">Car Batteries</a>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="{% url 'truck_search' %}">Truck Batteries</a>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="{% url 'motorcycle_search' %}">Motorcycle Batteries</a>
+                        </li>
+                        <li class="nav-item nav-menus-mobile">
+                            <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- mobile view 2nd navbar dispaly -->
+    <nav class="navbar vehicle-batter-fluid navbar-dropdown-full ">
+        <div class="container">
+            <div class="collapse navbar-collapse  d-flex w-100 align-items-center justify-content-end"
+                id="navbarSupportedContent">
+                <!-- <button type="button " class="btn  nav-search-button">Search Plates</button> -->
+
+                <div class="input-group ">
+                    <input type="text" class="form-control reg-bat-navbar " placeholder="ENTER REG"
+                        aria-label="Recipient's username" aria-describedby="battery-addon2">
+                    <span class="input-group-text battery-addon2-text" id="battery-addon2">GO</span>
+                </div>
+                <!-- <ul class="d-flex batterirs-mob-sec align-items-center mb-0">
+                    <li><a href="{% url 'vehicle_search' %}"><img src="../images/truck-bat-mob.png" alt="" width="45px"
+                                height="45px"></a></li>
+                    <li><a href="{% url 'truck_search' %}"><img src="../images/bike-bat-mob.png" alt="" width="45px"
+                                height="45px"></a></li>
+                    <li><a href="{% url 'motorcycle_search' %}"><img src="../images/car-bat-mob.png" alt="" width="45px"
+                                height="45px"></li></a>
+                </ul> -->
+            </div>
+        </div>
+        </div>
+    </nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.my-slider-3').slick({
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                arrows: true,
+                dots: false,
+                speed: 300,
+                infinite: true,
+                autoplaySpeed: 5000,
+                autoplay: true,
+                responsive: [
+                    {
+                        breakpoint: 1100,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+</body>
+
+</html>
