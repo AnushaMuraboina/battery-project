@@ -3564,3 +3564,116 @@ legend {
       display: none;
   }
 }
+
+
+
+.vehicle-buttons-sec{
+  width: 100%;
+  button{
+    background-color: rgb(25, 25, 50);
+    color: white;
+    width: 100%;
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: 600;
+    &:hover{
+      color: white;
+    }
+  }
+  .bat-search-field{
+    background-color: rgb(245,245,245);
+    border: 0px solid transparent !important;
+    .input-group-bat {
+      background-color: white !important;
+    }
+  }
+}
+
+.prod-dis-sect-bat{
+  .prod-item-name{
+    font-size: 50px;
+    font-weight: 400;
+    color: black;
+    border-bottom: 1px solid grey;
+  }
+  .bat-sec-spec-name{
+    background-color:rgb(245,245,245);
+    border-bottom: 1px solid grey;
+    padding: 10px ;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .spec-sec1-bat{
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    align-items: baseline;
+  }
+}
+.vehicle-addtocart1,
+.vehicle-buynow1
+{
+  border-radius: 5px;
+  background-color: $bg-medium-orange;
+  display: block;
+  padding: 5px 20px;
+  color: white;
+  text-align: center;
+  @include ft-size-20;
+  &:hover {
+    color: white;
+  }
+}
+.vehicle-cart-quantity1 {
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 20%;
+  .cartpage_minuicon,
+  .cartpage-counting,
+  .cartpage_plusicon {
+    @include ft-size-20;
+  }
+}
+.prod-sec-2-dis{
+  p{
+    font-size: 16px;
+    font-weight: 400;
+    color: grey;
+  }
+}
+
+@media (max-width: 1050px) {
+  .bat-sec-res-btn
+  {
+    display: flex;
+    flex-direction: column;
+  }
+  .vehicle-cart-quantity1{
+    width: 100%;
+    margin: 5px;
+  }
+  .vehicle-addtocart1,
+.vehicle-buynow1{
+  width: 100%;
+  margin: 5px;
+}
+}
+@media (max-width: 1050px) {
+  .battery-sec-product,
+  .bat-sec-rows{
+    display: flex;
+    flex-direction: column;
+  }
+  .bat-sec-rows1{
+    width: 100% !important;
+  }
+}
+
+
+
+.email-form-input{
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 3px;
+ width: 30%;
+ padding: 8px;
+}
