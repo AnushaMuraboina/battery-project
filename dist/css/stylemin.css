@@ -3079,4 +3079,72 @@ legend {
   border-radius: 3px;
   width: 30%;
   padding: 8px;
+}
+
+.battery-banner {
+  position: relative;
+  color: #fff;
+  height: 500px;
+  width: 100%;
+}
+.battery-banner .banner-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.battery-banner .banner-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  max-width: 80%;
+  text-align: left;
+}
+.battery-banner .banner-content .banner-heading, .battery-banner .banner-content .banner-subheading, .battery-banner .banner-content .banner-description {
+  margin: 0;
+}
+.battery-banner .banner-content .banner-heading {
+  font-size: 42px;
+  font-weight: 700;
+  color: rgb(255, 69, 0);
+}
+.battery-banner .banner-content .banner-subheading {
+  font-size: 42px;
+  font-weight: 700;
+  color: white;
+}
+.battery-banner .banner-content .banner-description {
+  margin-top: 0.5rem;
+  line-height: 1.3;
+  font-size: 17px;
+  font-weight: 400;
+  color: white;
+}
+@media (max-width: 968px) {
+  .battery-banner {
+    height: auto;
+  }
+  .battery-banner .banner-content {
+    max-width: 90%;
+  }
+  .battery-banner .banner-heading, .battery-banner .banner-subheading {
+    font-size: 1.5rem;
+  }
+  .battery-banner .banner-description {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .battery-banner {
+    height: auto;
+  }
+  .battery-banner .banner-content {
+    max-width: 90%;
+  }
+  .battery-banner .banner-heading, .battery-banner .banner-subheading {
+    font-size: 0.8rem;
+  }
+  .battery-banner .banner-description {
+    font-size: 0.5rem;
+  }
 }/*# sourceMappingURL=stylemin.css.map */

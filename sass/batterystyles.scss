@@ -3501,25 +3501,30 @@ legend {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: #F9F5F4;
+
     .replace-head-text {
       font-size: 25px;
       font-weight: 500;
       text-align: center;
     }
+
     .replace-borders {
       border-bottom: 4px solid $bg-medium-orange;
       width: 20%;
     }
+
     .bat-btn-replace-sub {
       color: $bg-medium-orange;
       border: 2px solid $bg-medium-orange;
       background-color: white;
     }
+
     .replacement-text {
       font-size: 18px;
       font-weight: 400;
       text-align: justify;
     }
+
     .replace-form-input {
       border: 1px solid rgb(216, 209, 209);
       padding: 10px 5px;
@@ -3531,11 +3536,13 @@ legend {
   .replacement-sections1 {
     width: 100%;
   }
+
   .replace-head-text {
-  @include ft-sie-bat-500;
+    @include ft-sie-bat-500;
   }
+
   .replacement-text {
-   @include ft-size-md-sm;
+    @include ft-size-md-sm;
   }
 }
 
@@ -3552,5 +3559,98 @@ legend {
   &::placeholder {
     font-size: 17px;
     color: grey;
+  }
+}
+
+
+
+
+
+
+
+
+
+  .battery-banner-sec {
+    position: relative;
+    color: #fff;
+    height: 500px;
+    width: 100%;
+  }
+  
+  .banner-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .banner-content-sec {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 80%;
+    /* padding: 1rem; */
+    text-align: left;
+
+  }
+  .banner-heading-text {
+    font-size: 42px;
+    font-weight: 700;
+    color: rgb(255, 69, 0);
+  }
+  .banner-subheading-text {
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .banner-heading-text,
+  .banner-subheading-text,
+  .banner-description-text {
+    margin: 0;
+  }
+  .banner-description-text {
+    margin-top: 0.5rem;
+    line-height: 1.3;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+  }
+  
+
+@media (max-width: 968px) {
+  .battery-banner-sec {
+    height: auto;
+  }
+  .banner-content-sec {
+    max-width: 90%;
+    padding: 0.5rem; 
+  }
+  .banner-heading-text,
+  .banner-subheading-text {
+    font-size: 1.5rem;
+  }
+  .banner-description-text {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .battery-banner-sec {
+    height: auto;
+
+  }
+
+  .banner-content-sec {
+    max-width: 90%;
+    // padding: 0.5rem; 
+  }
+
+  .banner-heading-text,
+  .banner-subheading-text {
+    font-size: 0.8rem;
+  }
+
+  .banner-description-text {
+    font-size: 0.5rem;
   }
 }
