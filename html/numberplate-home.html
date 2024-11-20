@@ -241,6 +241,7 @@
                         <span class="input-group-text battery-addon2-text" id="battery-addon2">GO</span>
                     </div>
                 </li>
+
             </div>
         </nav>
     </div>
@@ -346,7 +347,7 @@
                 </ul> -->
 
             </div>
-            <ul class=" d-flex align-content-center justify-content-between w-100 p-0 flex-md-row flex-column">
+            <!-- <ul class=" d-flex align-content-center justify-content-between w-100 p-0 flex-md-row flex-column">
                 <li class="nav-item nav-menus-mobile  " >
                     <a class="nav-link" href="{% url 'vehicle_search' %}">Car Batteries</a>
                 </li>
@@ -356,12 +357,35 @@
                 <li class="nav-item nav-menus-mobile">
                     <a class="nav-link" href="{% url 'motorcycle_search' %}">Motorcycle Batteries</a>
                 </li>
-            </ul>
+            </ul> -->
+
+
+            <div class="dropdown mt-3  mobile-drop-navbar" >
+                <a class="btn dropdown-toggle w-100 border d-flex justify-content-between align-items-center mobile-drop-toggles" href="#" role="" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu mobile-drop-menus" aria-labelledby="dropdownMenuLink">
+                  <li class="nav-menus-mobile"><a class="dropdown-item " href="{% url 'vehicle_search' %}">Car Batteries</a></li>
+                  <li class="nav-menus-mobile "><a class="dropdown-item" href="{% url 'truck_search' %}">Truck Batteries</a></li>
+                  <li class="nav-menus-mobile "><a class="dropdown-item" href="{% url 'motorcycle_search' %}">Motorcycle Batteries</a></li>
+                </ul>
+              </div>
         </div>
         </div>
     </nav>
 
 
+                <!-- <ul class=" d-flex align-content-center justify-content-between w-100 p-0 flex-md-row flex-column">
+                    <li class="nav-item nav-menus-mobile  " >
+                        <a class="nav-link" href="{% url 'vehicle_search' %}">Car Batteries</a>
+                    </li>
+                    <li class="nav-item nav-menus-mobile">
+                        <a class="nav-link" href="{% url 'truck_search' %}">Truck Batteries</a>
+                    </li>
+                    <li class="nav-item nav-menus-mobile">
+                        <a class="nav-link" href="{% url 'motorcycle_search' %}">Motorcycle Batteries</a>
+                    </li>
+                </ul>  -->
 
     <!-- <nav class="navbar vehicle-batter-fluid navbar-dropdown-full ">
     <div class="container">

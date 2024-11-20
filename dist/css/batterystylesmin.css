@@ -46,7 +46,6 @@ a {
 
 .nav-menus-mobile {
   list-style-type: none !important;
-  border: 1px solid rgb(231, 228, 228);
   box-shadow: 0px 0px 1px 0px white;
   border-radius: 3px;
   margin: 5px 0px;
@@ -1089,7 +1088,7 @@ i {
 }
 
 .vehicle-dropdown-menu,
-.dropdown-menu {
+.battery-login-menu {
   width: 225px;
   position: absolute;
   inset: 0px auto auto 0px;
@@ -1759,6 +1758,19 @@ i {
 .main-headings {
   font-size: 32px;
   font-weight: 500;
+}
+
+.mobile-drop-navbar {
+  width: -webkit-fill-available;
+}
+.mobile-drop-navbar .mobile-drop-toggles {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  box-shadow: 0px 0px 2px 0px grey;
+}
+.mobile-drop-navbar ul.dropdown-menu.mobile-drop-menus.show {
+  width: -webkit-fill-available;
 }
 
 .nav-log-wish {
