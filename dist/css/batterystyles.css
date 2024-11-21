@@ -1769,7 +1769,7 @@ i {
   color: black;
   box-shadow: 0px 0px 2px 0px grey;
 }
-.mobile-drop-navbar ul.dropdown-menu.mobile-drop-menus.show {
+.mobile-drop-navbar .mobile-drop-menus {
   width: -webkit-fill-available;
 }
 
@@ -2839,15 +2839,15 @@ legend {
   color: rgb(80, 80, 80);
 }
 
-.dropdown .left-icon {
+.vehicle-models-design .left-icon {
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
 }
-.dropdown .left-icon i {
+.vehicle-models-design .left-icon i {
   color: rgb(25, 25, 50);
 }
-.dropdown .right-icon {
+.vehicle-models-design .right-icon {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
@@ -2858,7 +2858,7 @@ legend {
   padding: 0px 13px;
   border-radius: 0 5px 5px 0;
 }
-.dropdown .selectmake {
+.vehicle-models-design .selectmake {
   font-weight: 400;
   width: 100%;
   padding: 15px 35px;
@@ -3065,6 +3065,15 @@ legend {
 
 .search-box:after {
   right: 5px;
+}
+
+.dropdown .selectmake {
+  font-weight: 400;
+  width: 100%;
+  padding: 15px 57px;
+  font-size: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
 }
 
 .replacement-sections .replacement-sections1 {
