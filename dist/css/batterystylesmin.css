@@ -103,6 +103,12 @@ a {
 .vehicle-batter-fluid {
   border-bottom: 1px solid #cea99c;
 }
+.vehicle-batter-fluid .navbar-fles-bat {
+  justify-content: space-around;
+}
+.vehicle-batter-fluid .container-battery {
+  width: 95%;
+}
 .vehicle-batter-fluid .nav-menus-links {
   margin: 0px 20px;
 }
@@ -232,7 +238,7 @@ a {
     display: block;
   }
 }
-@media (min-width: 995px) {
+@media (min-width: 1040px) {
   .main-navbar-okka {
     display: block;
   }
@@ -240,7 +246,7 @@ a {
     display: none;
   }
 }
-@media (max-width: 995px) {
+@media (max-width: 1040px) {
   .main-navbar-okka {
     display: none;
   }
@@ -258,12 +264,14 @@ a {
   }
 }
 @media (max-width: 1200px) {
-  .nav-menus-links {
-    margin: 0px !important;
-  }
   .navbar-menus-sec {
     justify-content: right !important;
     padding: 0;
+  }
+}
+@media (max-width: 1281px) {
+  .vehicle-batter-fluid .nav-menus-links {
+    margin: 0px !important;
   }
 }
 .banner-image-section {

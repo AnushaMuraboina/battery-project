@@ -100,7 +100,7 @@
 
     <div class="container-fluid navbar-back-header main-navbar-okka">
         <nav class="navbar navbar-expand-lg ">
-            <div class="container">
+            <div class="container ">
                 <a class="navbar-brand text-light" href="{% url 'home' %}"><img
                         src="{% static 'assets/images/Logo.png' %}" alt="" width="60px" height="60px"></a>
                 <div class="collapse navbar-collapse navbar-menus-sec d-flex justify-content-end "
@@ -166,9 +166,9 @@
 
 
     <!-- desktop navbar 2nd navbar -->
-    <div class="container-fluid vehicle-batter-fluid main-navbar-okka">
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container d-flex justify-content-between align-content-center">
+    <div class="container-fluid vehicle-batter-fluid main-navbar-okka ">
+        <nav class="navbar navbar-expand-lg navbar-fles-bat"  >
+            <div class=" container-battery d-flex justify-content-between align-content-center">
                 <div class="collapse navbar-collapse battery-navbar-collapse  d-flex  " id="navbarSupportedContent">
                     <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li class="nav-item nav-menus-links">
@@ -210,6 +210,9 @@
                         </li>
                         <li class="nav-item nav-menus-links">
                             <a class="nav-link" href="{% url 'motorcycle_search' %}">Motorcycle Batteries</a>
+                        </li>
+                        <li class="nav-item nav-menus-links">
+                            <a class="nav-link" href="{% url 'contactus' %}">About Us</a>
                         </li>
                         <li class="nav-item nav-menus-links">
                             <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>

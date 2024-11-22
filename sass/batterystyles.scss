@@ -118,6 +118,12 @@ a {
 .vehicle-batter-fluid {
   border-bottom: 1px solid #cea99c;
 
+  .navbar-fles-bat{
+    justify-content: space-around;
+  }
+  .container-battery{
+    width: 95%;
+   }
   .nav-menus-links {
     margin: 0px 20px;
 
@@ -266,7 +272,7 @@ a {
   }
 }
 
-@media (min-width: 995px) {
+@media (min-width: 1040px) {
   .main-navbar-okka {
     display: block;
   }
@@ -276,7 +282,7 @@ a {
   }
 }
 
-@media (max-width: 995px) {
+@media (max-width: 1040px) {
   .main-navbar-okka {
     display: none;
   }
@@ -303,13 +309,15 @@ a {
 }
 
 @media (max-width: 1200px) {
-  .nav-menus-links {
-    margin: 0px !important;
-  }
 
   .navbar-menus-sec {
     justify-content: right !important;
     padding: 0;
+  }
+}
+@media (max-width: 1281px) {
+  .vehicle-batter-fluid .nav-menus-links {
+    margin: 0px  !important;
   }
 }
 
