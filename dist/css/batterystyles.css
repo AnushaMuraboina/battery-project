@@ -1625,6 +1625,16 @@ i {
     font-weight: 500;
   }
 }
+@media (max-width: 1200px) {
+  .about-us-battery {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .about-us-battery {
+    width: 100%;
+  }
+}
 .installation-continue {
   margin: 5px 0px 10px 20px;
   background-color: #FF4500;

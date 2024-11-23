@@ -1878,7 +1878,20 @@ i {
       font-weight: 500;
     }
   }
+//   .about-us-battery{
+//     width: 50%;
+// }
 
+}
+@media (max-width: 1200px) {
+  .about-us-battery {
+    width: 50%;
+}
+}
+@media (max-width: 768px) {
+  .about-us-battery {
+    width: 100%;
+}
 }
 
 .installation-continue {
