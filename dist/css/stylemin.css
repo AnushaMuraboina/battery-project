@@ -2159,11 +2159,11 @@ i {
   content: "";
   display: block;
   height: 3px;
-  width: calc(100% - 40px);
+  width: calc(100% + 12px);
   background-color: rgb(206, 202, 202);
   top: 13px;
   position: absolute;
-  left: calc(-50% + 20px);
+  left: calc(-95% + 20px);
   z-index: 0;
 }
 

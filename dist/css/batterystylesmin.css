@@ -2300,18 +2300,6 @@ i {
   left: -230%;
 }
 
-.order-tracking::before {
-  content: "";
-  display: block;
-  height: 3px;
-  width: calc(100% - 40px);
-  background-color: rgb(206, 202, 202);
-  top: 13px;
-  position: absolute;
-  left: calc(-50% + 20px);
-  z-index: 0;
-}
-
 .order-tracking:first-child:before {
   display: none;
 }
@@ -3085,13 +3073,16 @@ legend {
   right: 5px;
 }
 
-.dropdown .selectmake {
-  font-weight: 400;
-  width: 100%;
-  padding: 15px 57px;
-  font-size: 15px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
+.order-tracking::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: calc(100% + 12px);
+  background-color: rgb(206, 202, 202);
+  top: 13px;
+  position: absolute;
+  left: calc(-95% + 20px);
+  z-index: 0;
 }
 
 .replacement-sections .replacement-sections1 {
